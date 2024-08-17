@@ -2,16 +2,16 @@
 # Site Settings
 # -----------------------------------------------------------------------------
 
-name: Haofei Yu
-email: haofeiy@cs.cmu.edu
-description: Personal website of Haofei Yu.
+name: Jinwei Yao
+email: jinweiy@illinois.edu
+description: Personal website of Jinwei Yao.
 
 # footer_text: >
 #   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 # last_updated: true
 
-repository: lwaekfjlk/lwaekfjlk.github.io
+repository: Kivi-Yao/Kivi-Yao.github.io
 url: https://Kivi-Yao.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/
 
