@@ -24,7 +24,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <!-- Avoid inline styles where possible and use a separate CSS file or <style> block -->
         <div class="profile-image-container">
             <!-- Use alt attribute for accessibility and descriptive image names -->
-            <img class="profile-img" src="{{ '/assets/img/self_pic_2.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Picture">
+            <img class="profile-img" src="{{ '/assets/img/self_pic_jw.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Picture">
             <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
         </div>
 
