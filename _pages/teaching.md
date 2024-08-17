@@ -11,7 +11,7 @@ description: listing TA experience, and academy roles
 <div class="card mt-3">
   <div class="p-3">
     <h6 class="font-italic mt-2 mt-sm-0">Reviewers for:</h6> 
-    <h6 class="font-italic mt-2 mt-sm-0">NeurIPS 2023 UniReps Workshop / ICLR 2024 AGI Workshop / ARR 2024</h6>
+    <h6 class="font-italic mt-2 mt-sm-0">Stay tuned....</h6>
   </div>
 </div>
 
