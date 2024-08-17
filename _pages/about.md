@@ -29,7 +29,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         </div>
 
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
-        <h4 style="color: #E84A27;">Background</h4>
+        <h4 style="color: #13294B;">Background</h4>
         <p>
             I am currently in the first year at UIUC, pursuing a (research-based) <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">Master of Science in Computer Science(MSCS)</a>. My advisor is <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">Prof.Jiaxuan You</a>.
         </p>
@@ -44,7 +44,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             At UIUC, my research focuses on Gen-AI Systems, like LLM inference efficiency. I am also interested in bringing distributed systems/database systems with LLMs.
         </p>
 
-        <h4 style="color: #E84A27;">Research Interest</h4>
+        <h4 style="color: #13294B;">Research Interest</h4>
         <p>
             I am intersted in machine learning systems (ML System), especially system designs for LLMs. My primary goal is to provide efficient, cheap and robust system services for real-world LLM applications. To achieve this goal, I identified three main challenges: 
         </p>
@@ -65,7 +65,12 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 
         <!-- <p> The following figure is an overview of 3 challenges in the observation-feedback loop for multimodal agent, accompanied by a snapshot of my current research progress on each of them, including ongoing work.</p> -->
 
-        <h4 style="color: #E84A27;">Miscellaneous</h4>
+        <h4 style="color: #13294B;">Miscellaneous</h4>
+        <p>
+            I am active in sharing paper readings on my another <a href="https://monstertail.github.io/#/" target="_blank" rel="noopener">Github Blog</a> and  <a href="https://www.zhihu.com/people/jing-wei-38-12" target="_blank" rel="noopener">Zhihu(知乎)</a>.
+
+            I like 🏀, 💪, 📚, 🐱, and 🎬.
+        </p>
 
         
     </section>
