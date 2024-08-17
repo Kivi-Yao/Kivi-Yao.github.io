@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /teaching/
-title: Academy Role
+title: Academic Role
 nav: teaching
-description: listing TA experience, and academy roles
+description: listing TA experience, and academic roles
 ---
 
 <h3 class="mt-4">Reviewing Service</h3>

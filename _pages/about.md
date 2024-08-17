@@ -3,13 +3,13 @@ layout: page
 permalink: /
 title: about
 nav: About
-description: <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" class="page-description" target="_blank">MSCS</a> • <a href="https://siebelschool.illinois.edu/" class="page-description" target="_blank">Sibel Computer Science Center</a> • <a href="https://illinois.edu/" class="page-description" target="_blank">UIUC</a>
+description: <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" class="page-description" target="_blank">Master of Science in Computer Science</a> • <a href="https://siebelschool.illinois.edu/" class="page-description" target="_blank">Sibel Computer Science Center</a> • <a href="https://illinois.edu/" class="page-description" target="_blank">UIUC</a>
 address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+Computer+Science/@40.1138069,-88.2274801,17z/data=!3m2!4b1!5s0x880cd76a5762dfb7:0xcf6a023935717398!4m6!3m5!1s0x880cd76baa8479a9:0x4e9f01d40d359630!8m2!3d40.1138028!4d-88.2249052!16s%2Fm%2F0yqkg1s?entry=ttu" class="page-description" target="_blank">201 N Goodwin Ave, Urbana, IL 61801</a>
 ---
 
 <div class="col p-0 pt-4 pb-4">
   <h1 class="title text-left font-weight-bold">Jinwei Yao</h1> 
-  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">Kivi</h6>
+  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">My English name is Kivi.</h6>
   <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.description }}</h6>
   {% if page.address %}
       <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.address }}</h6>
@@ -29,7 +29,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         </div>
 
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
-        <h4>Background</h4>
+        <h4 style="color: #E84A27;">Background</h4>
         <p>
             I am currently in the first year at UIUC, pursuing a (research-based) <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">Master of Science in Computer Science(MSCS)</a>. My advisor is <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">Prof.Jiaxuan You</a>.
         </p>
@@ -44,7 +44,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             At UIUC, my research focuses on Gen-AI Systems, like LLM inference efficiency. I am also interested in bringing distributed systems/database systems with LLMs.
         </p>
 
-        <h4>Research Interest</h4>
+        <h4 style="color: #E84A27;">Research Interest</h4>
         <p>
             I am intersted in machine learning systems (ML System), especially system designs for LLMs. My primary goal is to provide efficient, cheap and robust system services for real-world LLM applications. To achieve this goal, I identified three main challenges: 
         </p>
@@ -65,6 +65,9 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 
         <!-- <p> The following figure is an overview of 3 challenges in the observation-feedback loop for multimodal agent, accompanied by a snapshot of my current research progress on each of them, including ongoing work.</p> -->
 
+        <h4 style="color: #E84A27;">Miscellaneous</h4>
+
+        
     </section>
 </div>
 
