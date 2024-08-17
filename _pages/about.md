@@ -31,51 +31,44 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
         <h4>Background</h4>
         <p>
-            I am currently in the first year at UIUC, pursuing a Master of Science in Computer Science. I am intersted in machine learning systems (ML System), especially system design for LLMs.
+            I am currently in the first year at UIUC, pursuing a (research-based) <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">Master of Science in Computer Science(MSCS)</a>. My advisor is <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">Prof.Jiaxuan You</a>.
         </p>
 
         <p>
-            Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a PhD student in distributed systems,
-            <a href="http://ckc.zju.edu.cn/ckcen/" target="_blank" rel="noopener">ChuKochen Honors College</a> of
-            <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, where I obtained my Bachelor's degree in Computer Science and Technology (with honors). During my years there, I had the privilege of delving into Natural Language Processing (NLP) research, contributing to natural language processing research at
-            <a href="https://en.westlake.edu.cn/" target="_blank" rel="noopener">Westlake University</a> and
-            <a href="https://ai.tencent.com/ailab/nlp/en/index.html" target="_blank" rel="noopener">Tencent AI Lab's NLP Center</a>.
+            Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a felloship PhD student in distributed systems, where I laid my academic foundations. Leaving peaceful and beautiful Switzerland is a hard decision: after one year of thinking and suggestions by my career mentor <a href="https://people.epfl.ch/katerina.argyraki?lang=en" target="_blank" rel="noopener">Prof. Katerina Argyraki</a>, I followed my heart to explore ML System research. In <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, I obtained my Bachelor's degree in Electrical Science and Technology, with Outstanding Thesis Award for designing FPGA subsystem for GNN acceleration.  My graduation project was the start of my MLSys research. During my MLSys research journey, I was lucky to work with wonderful advisors-- <a href="https://wangzeke.github.io/" target="_blank" rel="noopener">Prof. Zeke Wang(Zhejiang University)</a>,
+            <a href="https://scholar.google.ch/citations?user=QE9pa_cAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Tao Lin(Westlake University)</a>,  and
+            <a href="https://binhangyuan.github.io/site/" target="_blank" rel="noopener">Prof. Binhang Yuan(HKUST)</a>.
         </p>
 
         <p>
-            At CMU, my research changing from natural language processing to more interesting and grounded stuff. Instead of doing research on traditional NLP tasks, I studied crafting language agents for better social interaction in negotiation and collaboration scenarios. Additionally, I worked on models that fuse multimodal information and models that generate executable actions like web navigation and code generation. 
-        </p>
-
-        <p>
-            Moreover, my 2023 summer internship at 
-            <a href="https://www.apple.com/siri/" target="_blank" rel="noopener">Apple's Siri Information and Intelligence Team</a> focuses on long-form Web QA to effectively resolve real Siri user queries in industry.
+            At UIUC, my research focuses on Gen-AI Systems, like LLM inference efficiency. I am also interested in bringing distributed systems/database systems with LLMs.
         </p>
 
         <h4>Research Interest</h4>
         <p>
-            My research enthusiasm lies in applying AI to grounded tasks. My primary goal is to develop a multimodal agent tailored for real-world applications, blending the practical with the magical in technology. To achieve this goal, I identified three main challenges: 
+            I am intersted in machine learning systems (ML System), especially system designs for LLMs. My primary goal is to provide efficient, cheap and robust system services for real-world LLM applications. To achieve this goal, I identified three main challenges: 
         </p>
         <p>
-        <strong>Challenge1 Multimodal Fusion</strong> <br>
-        How to allow the agent to fuse heterogeneous data and understand multimodal concepts like sarcasm.
+        <strong>Challenge1 LLM Inference Efficiency</strong> <br>
+        How to provide cheap and fast LLM inference service.
         </p>
 
         <p>
-        <strong>Challenge2 Multimodal Interaction</strong> <br>
-        How to enable the agent to provide feedback, including language and executable action, to the real world interactively.
+        <strong>Challenge2 LLM Training Efficiency</strong> <br>
+        How to provide efficient and robust LLM training.
         </p>
         
         <p>
-        <strong>Challenge3 Memory Management</strong> <br>
-        How to equip the agent with a memory system that adapts to new information while retaining past ones.
+        <strong>Challenge3 Trade-off between service-level-objects (SLOs) in ML and System</strong> <br>
+        How to do trade-offs between machine learning metrics (accuracy, PPL, etc) and system metrics (latency, throughtputs)
         </p>
 
-        <p> The following figure is an overview of 3 challenges in the observation-feedback loop for multimodal agent, accompanied by a snapshot of my current research progress on each of them, including ongoing work.</p>
+        <!-- <p> The following figure is an overview of 3 challenges in the observation-feedback loop for multimodal agent, accompanied by a snapshot of my current research progress on each of them, including ongoing work.</p>
 
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+        <!-- <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
             <!-- Use alt attribute for accessibility and descriptive image names -->
             <img class="profile-img" src="{{ '/assets/img/statement.png' | prepend: site.baseurl | prepend: site.url }}" alt="Research Line">
-        </div>
+        </div> --> -->
     </section>
 </div>
 
