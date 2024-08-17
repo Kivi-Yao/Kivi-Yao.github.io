@@ -1,68 +1,61 @@
 ---
 ---
 
-@inproceedings{zhou2023sotopia,
-  title     = {MMOE: Mixture of Multimodal Interaction Experts},
-  author    = {<nobr><em>Yu</em></nobr>, <nobr><em>Haofei</em></nobr> and Paul Pu Liang and Ruslan Salakhutdinov and Louis-Philippe Morency},
-  booktitle = {arXiv},
-  year      = {2023},
-  abbr      = {preprint},
-  pdf       = {https://arxiv.org/abs/2311.09580},
-  abstract  = {Multimodal machine learning, which studies the information and interactions across various input modalities, has made significant advancements in understanding the relationship between images and descriptive text. However, this is just a portion of the potential multimodal interactions seen in the real world and does not include new interactions between conflicting utterances and gestures in predicting sarcasm, for example. Notably, the current methods for capturing shared information often do not extend well to these more nuanced interactions, sometimes performing as low as 50% in binary classification. In this paper, we address this problem via a new approach called MMOE, which stands for a mixture of multimodal interaction experts. Our method automatically classifies data points from unlabeled multimodal datasets by their interaction type and employs specialized models for each specific interaction. Based on our experiments, this approach improves performance on these challenging interactions by more than 10%, leading to an overall increase of 2% for tasks like sarcasm prediction. As a result, interaction quantification provides new insights for dataset analysis and yields simple approaches that obtain state-of-the-art performance.}
+@article{yao2024deft,
+  title={DeFT: Flash Tree-attention with IO-Awareness for Efficient Tree-search-based LLM Inference},
+  author={<nobr><em>Yao</em></nobr>, <nobr><em>Jinwei</em></nobr> and Chen, Kaiqi and Zhang, Kexun and You, Jiaxuan and Yuan, Binhang and Wang, Zeke and Lin, Tao},
+  journal={arXiv preprint arXiv:2404.00242},
+  year={2024},
+  abbr     = {ICLR'24 AGI Workshop},
+  pdf       = {https://arxiv.org/abs/2404.00242},
+  abstract = {Given the increasing demand for tree-structured interactions with LLMs, we introduce DeFT (Decoding with Flash Tree-Attention), an IO-aware tree attention algorithm tailored for tree-structured inference. Unlike traditional sequence-based decoding, tree-structured decoding better accommodates modern task requirements, including self-consistency, few-shot prompting, multi-step reasoning, and multi-model/head coordination. However, existing sequence-based inference systems are ill-suited for tree-structured decoding, resulting in redundancy in computation, memory footprints, and memory access, thereby undermining inference efficiency. To address this challenge, DeFT maintains memory-efficient attention calculation with low memory footprints through two key stages: (1) QKV Preparation: We propose a KV-Guided Grouping Strategy with Tree Split to intelligently group QKV, optimizing GPU resource utilization while minimizing memory reads/writes for KV cache between GPU global memory and on-chip shared memory; (2)Attention Calculation: We compute partial attention of each QKV group in a fused kernel and employ a Tree-topology-aware Global Reduction strategy to obtain final attention. By reducing 73-99% KV cache IO and nearly 100% IO for partial results during attention calculation (e.g., Softmax), DeFT achieves up to 2.52/3.82x speedup in the end-to-end/attention latency across three practical tree-based workloads: namely, few-shot prompting, multi-step reasoning, and speculative decoding, over state-of-the-art attention algorithms.}
 }
 
-@inproceedings{yu2023mmoe,
-  title     = {SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents},
-  author    = {Xuhui Zhou* and Hao Zhu* and Mathur, Leena and Zhang, Ruohong and <nobr><em>Yu</em></nobr>, <nobr><em>Haofei</em></nobr> and Qi, Zhengyang and Morency, Louis-Philippe and Bisk, Yonatan and Fried, Daniel and Neubig, Graham and others},
-  booktitle = {arXiv},
-  year      = {2023},
-  abbr      = {preprint},
-  pdf       = {https://arxiv.org/abs/2310.11667},
-  code      = {https://github.com/sotopia-lab/sotopia},
-  abstract  = {Humans are social beings; we pursue social goals in our daily interactions, which is a crucial aspect of social intelligence. Yet, AI systems' abilities in this realm remain elusive. We present SOTOPIA, an open-ended environment to simulate complex social interactions between artificial agents and evaluate their social intelligence. In our environment, agents role-play and interact under a wide variety of scenarios; they coordinate, collaborate, exchange, and compete with each other to achieve complex social goals. We simulate the role-play interaction between LLM-based agents and humans within this task space and evaluate their performance with a holistic evaluation framework called SOTOPIA-Eval. With SOTOPIA, we find significant differences between these models in terms of their social intelligence, and we identify a subset of SOTOPIA scenarios, SOTOPIA-hard, that is generally challenging for all models. We find that on this subset, GPT-4 achieves a significantly lower goal completion rate than humans and struggles to exhibit social commonsense reasoning and strategic communication skills. These findings demonstrate SOTOPIA's promise as a general platform for research on evaluating and improving social intelligence in artificial agents.}
+@article{glamovcanin2023instruction,
+  title={Instruction-level power side-channel leakage evaluation of soft-core CPUs on shared FPGAs},
+  author={Glamo{\v{c}}anin, Ognjen and Shrivastava, Shashwat and <nobr><em>Yao</em></nobr>, <nobr><em>Jinwei</em></nobr> and Ardo, Nour and Payer, Mathias and Stojilovi{\'c}, Mirjana},
+  journal={Journal of Hardware and Systems Security},
+  volume={7},
+  number={2},
+  pages={72--99},
+  year={2023},
+  publisher={Springer},
+  abbr     = {HaaS 2023},
+  pdf       = {https://link.springer.com/article/10.1007/s41635-023-00135-1},
+  abstract ={Side-channel disassembly attacks recover CPU instructions from power or electromagnetic side-channel traces measured during code execution. These attacks typically rely on physical access, proximity to the victim device, and high sampling rate measuring instruments. In this work, however, we analyze the CPU instruction-level power side-channel leakage in an environment that lacks physical access or expensive measuring equipment. We show that instruction leakage is present even in a multitenant FPGA scenario, where the victim uses a soft-core CPU, and the adversary deploys on-chip voltage-fluctuation sensors. Unlike previous remote power side-channel attacks, which either require a considerable number of victim traces or attack large victim circuits such as machine learning accelerators, we take an evaluator’s point of view and provide an analysis of the instruction-level power side-channel leakage of a small open-source RISC-V soft processor core. To investigate whether the power side-channel traces leak secrets, we profile the victim device and implement various instruction opcode classifiers based on both classical machine learning algorithms used in disassembly attacks, and novel, deep learning approaches. We explore how parameters such as placement, trace averaging, profiling templates, and different FPGA families (including a cloud-scale FPGA) impact the classification accuracy. Despite the limited leakage of the soft-core CPU victim and a reduced accuracy and sampling rate of on-chip sensors, we show that in a worst-case scenario for the evaluator, i.e., an attacker breaching physical separation, we can identify the opcode of executed instructions with an average accuracy as high as 86.46%. Our analysis shows that determining the executed instruction type is not a classification bottleneck, while leakages between instructions of the same type can be challenging for deep learning models to distinguish. We also show that the instruction-level leakage is significantly reduced in a cloud-scale FPGA scenario with higher soft-core CPU frequencies. Nevertheless, our results show that even small circuits, such as soft-core CPUs, leak potentially exploitable information through on-chip power side channels, and users should deploy mitigation techniques against disassembly attacks to protect their proprietary code and data.}
 }
 
 
-@inproceedings{yu2023trams,
-  title     = {TRAMS: Training-free Memory Selection for Long-range Language Modeling},
-  author    = {<nobr><em>Yu*</em></nobr>, <nobr><em>Haofei</em></nobr> and Cunxiang Wang* and Yue Zhang and Wei Bi},
-  booktitle = {Findings of EMNLP},
-  year      = {2023},
-  abbr      = {EMNLP Findings 2023},
-  code      = {https://github.com/lwaekfjlk/TRAMS},
-  pdf       = {https://arxiv.org/abs/2310.15494},
-  abstract  = {The Transformer architecture is crucial for numerous AI models, but it still faces challenges in long-range language modeling. Though several specific transformer architectures have been designed to tackle issues of long-range dependencies, existing methods like Transformer-XL are plagued by a high percentage of ineffective memories. In this study, we present a plug-and-play strategy, known as TRAining-free Memory Selection (TRAMS), that selects tokens participating in attention calculation based on one simple metric. This strategy allows us to keep tokens that are likely to have a high attention score with the current queries and ignore the other ones. We have tested our approach on the word-level benchmark (WikiText-103) and the character-level benchmark (enwik8), and the results indicate an improvement without having additional training or adding additional parameters.}
-}
+% @inproceedings{zhou2023sotopia,
+%   title     = {MMOE: Mixture of Multimodal Interaction Experts},
+%   author    = {<nobr><em>Yu</em></nobr>, <nobr><em>Haofei</em></nobr> and Paul Pu Liang and Ruslan Salakhutdinov and Louis-Philippe Morency},
+%   booktitle = {arXiv},
+%   year      = {2023},
+%   abbr      = {preprint},
+%   pdf       = {https://arxiv.org/abs/2311.09580},
+%   abstract  = {Multimodal machine learning, which studies the information and interactions across various input modalities, has made significant advancements in understanding the relationship between images and descriptive text. However, this is just a portion of the potential multimodal interactions seen in the real world and does not include new interactions between conflicting utterances and gestures in predicting sarcasm, for example. Notably, the current methods for capturing shared information often do not extend well to these more nuanced interactions, sometimes performing as low as 50% in binary classification. In this paper, we address this problem via a new approach called MMOE, which stands for a mixture of multimodal interaction experts. Our method automatically classifies data points from unlabeled multimodal datasets by their interaction type and employs specialized models for each specific interaction. Based on our experiments, this approach improves performance on these challenging interactions by more than 10%, leading to an overall increase of 2% for tasks like sarcasm prediction. As a result, interaction quantification provides new insights for dataset analysis and yields simple approaches that obtain state-of-the-art performance.}
+% }
 
-@inproceedings{weissweiler2023counting,
-  title     = {Counting the Bugs in ChatGPT's Wugs: A Multilingual Investigation into the Morphological Capabilities of a Large Language Model},
-  author    = {Leonie Weissweiler* and Valentin Hofmann* and Kantharuban, Anjali and Cai, Anna and Dutt, Ritam and Hengle, Amey and Kabra, Anubha and Kulkarni, Atharva and Vijayakumar, Abhishek and <nobr><em>Yu</em></nobr>, <nobr><em>Haofei</em></nobr>  and others},
-  booktitle = {EMNLP},
-  year      = {2023},
-  abbr      = {EMNLP 2023},
-  pdf       = {https://arxiv.org/abs/2310.15113},
-  code      = {https://github.com/dmort27/chatgpts-wugs},
-  abstract  = {Large language models (LLMs) have recently reached an impressive level of linguistic capability, prompting comparisons with human language skills. However, there have been relatively few systematic inquiries into the linguistic capabilities of the latest generation of LLMs, and those studies that do exist (i) ignore the remarkable ability of humans to generalize, (ii) focus only on English, and (iii) investigate syntax or semantics and overlook other capabilities that lie at the heart of human language, like morphology. Here, we close these gaps by conducting the first rigorous analysis of the morphological capabilities of ChatGPT in four typologically varied languages (specifically, English, German, Tamil, and Turkish). We apply a version of Berko's (1958) wug test to ChatGPT, using novel, uncontaminated datasets for the four examined languages. We find that ChatGPT massively underperforms purpose-built systems, particularly in English. Overall, our results -- through the lens of morphology -- cast a new light on the linguistic capabilities of ChatGPT, suggesting that claims of human-like language skills are premature and misleading.}
-}
+% @inproceedings{yu2023mmoe,
+%   title     = {SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents},
+%   author    = {Xuhui Zhou* and Hao Zhu* and Mathur, Leena and Zhang, Ruohong and <nobr><em>Yu</em></nobr>, <nobr><em>Haofei</em></nobr> and Qi, Zhengyang and Morency, Louis-Philippe and Bisk, Yonatan and Fried, Daniel and Neubig, Graham and others},
+%   booktitle = {arXiv},
+%   year      = {2023},
+%   abbr      = {preprint},
+%   pdf       = {https://arxiv.org/abs/2310.11667},
+%   code      = {https://github.com/sotopia-lab/sotopia},
+%   abstract  = {Humans are social beings; we pursue social goals in our daily interactions, which is a crucial aspect of social intelligence. Yet, AI systems' abilities in this realm remain elusive. We present SOTOPIA, an open-ended environment to simulate complex social interactions between artificial agents and evaluate their social intelligence. In our environment, agents role-play and interact under a wide variety of scenarios; they coordinate, collaborate, exchange, and compete with each other to achieve complex social goals. We simulate the role-play interaction between LLM-based agents and humans within this task space and evaluate their performance with a holistic evaluation framework called SOTOPIA-Eval. With SOTOPIA, we find significant differences between these models in terms of their social intelligence, and we identify a subset of SOTOPIA scenarios, SOTOPIA-hard, that is generally challenging for all models. We find that on this subset, GPT-4 achieves a significantly lower goal completion rate than humans and struggles to exhibit social commonsense reasoning and strategic communication skills. These findings demonstrate SOTOPIA's promise as a general platform for research on evaluating and improving social intelligence in artificial agents.}
+% }
 
-@inproceedings{wang-etal-2023-rfid,
-  title     = {{RF}i{D}: Towards Rational Fusion-in-Decoder for Open-Domain Question Answering},
-  author    = {Cunxiang Wang* and <nobr><em>Yu*</em></nobr>, <nobr><em>Haofei</em></nobr> and Zhang, Yue},
-  booktitle = {Findings of ACL},
-  year      = {2023},
-  abbr      = {ACL Findings 2023},
-  code      = {https://github.com/wangcunxiang/RFiD},
-  pdf       = {https://arxiv.org/abs/2305.17041},
-  abstract  = {Open-Domain Question Answering (ODQA) systems necessitate a reader model capable of generating answers by simultaneously referring to multiple passages. Although representative models like Fusion-in-Decoder (FiD) have been proposed to address this challenge, these systems can inadvertently rely on spurious features instead of genuine causal relationships between the question and the passages to generate answers. To counter this problem, we introduce the Rational Fusion-in-Decoder (RFiD) model. Our model leverages the encoders of FiD to differentiate between causal relationships and spurious features, subsequently guiding the decoder to generate answers informed by this discernment. Experimental results on two ODQA datasets, Natural Questions (NQ) and TriviaQA (TQ), demonstrate that our model surpasses previous methods, achieving improvements of up to 1.5 and 0.7 in Exact Match scores on NQ, and exhibits an enhanced ability to identify causal relationships.}
-}
 
-@inproceedings{song-etal-2023-uni,
-  title     = {Uni-Encoder: A Fast and Accurate Response Selection Paradigm for Generation-Based Dialogue Systems},
-  author    = {Chiyu Song*  and Hongliang He*  and <nobr><em>Yu</em></nobr>, <nobr><em>Haofei</em></nobr>  and Fang, Pengfei  and Cui, Leyang  and Lan, Zhenzhong},
-  booktitle = {Findings of ACL},
-  year      = {2023},
-  abbr      = {ACL Findings 2023},
-  code = {https://github.com/dll-wu/Uni-Encoder},
-  pdf = {https://aclanthology.org/2023.findings-acl.388/},
-  abstract  = {Sample-and-rank is a key decoding strategy for modern generation-based dialogue systems. It helps achieve diverse and high-quality responses by selecting an answer from a small pool of generated candidates. The current state-of-the-art ranking methods mainly use an encoding paradigm called Cross-Encoder, which separately encodes each context-candidate pair and ranks the candidates according to their fitness scores. However, Cross-Encoder repeatedly encodes the same lengthy context for each candidate, resulting in high computational costs. Poly-Encoder addresses the above problems by reducing the interaction between context and candidates, but with a price of performance drop. In this work, we develop a new paradigm called Uni-Encoder, that keeps the full attention over each pair as in Cross-Encoder while only encoding the context once, as in Poly-Encoder. Uni-Encoder encodes all the candidates with the context in one forward pass. We use the same positional embedding for all candidates to ensure they are treated equally and design a new attention mechanism to avoid confusion. Our Uni-Encoder can simulate other ranking paradigms using different attention and response concatenation methods. Extensive experiments show that our proposed paradigm achieves new state-of-the-art results on four benchmark datasets with high computational efficiency. For instance, it improves R10@1 by 2.9{\%} with an approximately 4X faster inference speed on the Ubuntu V2 dataset.}
-}
+% @inproceedings{yu2023trams,
+%   title     = {TRAMS: Training-free Memory Selection for Long-range Language Modeling},
+%   author    = {<nobr><em>Yu*</em></nobr>, <nobr><em>Haofei</em></nobr> and Cunxiang Wang* and Yue Zhang and Wei Bi},
+%   booktitle = {Findings of EMNLP},
+%   year      = {2023},
+%   abbr      = {EMNLP Findings 2023},
+%   code      = {https://github.com/lwaekfjlk/TRAMS},
+%   pdf       = {https://arxiv.org/abs/2310.15494},
+%   abstract  = {The Transformer architecture is crucial for numerous AI models, but it still faces challenges in long-range language modeling. Though several specific transformer architectures have been designed to tackle issues of long-range dependencies, existing methods like Transformer-XL are plagued by a high percentage of ineffective memories. In this study, we present a plug-and-play strategy, known as TRAining-free Memory Selection (TRAMS), that selects tokens participating in attention calculation based on one simple metric. This strategy allows us to keep tokens that are likely to have a high attention score with the current queries and ignore the other ones. We have tested our approach on the word-level benchmark (WikiText-103) and the character-level benchmark (enwik8), and the results indicate an improvement without having additional training or adding additional parameters.}
+% }
+

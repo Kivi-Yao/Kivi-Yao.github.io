@@ -21,23 +21,23 @@ description: listing TA experience, and academy roles
   <div class="p-3">
     <div class="row">
       <div class="col-sm-10">
-        <h5 class="font-weight-bold">Multimodal Machine Learning</h5>
+        <h5 class="font-weight-bold">Introduction to Computer Science II</h5>
       </div>
       <div class="col-sm-2 text-left text-sm-right">
         <span class="badge font-weight-bold danger-color-dark darken-1 text-uppercase align-middle"  href="https://www.cmu.edu/mits/curriculum/core/05-834.html" target="_blank">
-            CMU 11-777
+            UIUC CS-128
         </span>
       </div>
     </div>
-    <h6 class="font-italic mt-2 mt-sm-0">Fall 2023: Teaching Assistant, Carnegie Mellon University (<a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2023/" target="_blank">course website</a>)</h6>
+    <h6 class="font-italic mt-2 mt-sm-0">Fall 2024: Teaching Assistant, UIUC (<a href="https://learncpp.online/about" target="_blank">course website</a>)</h6>
     <ul class="card-text font-weight-light list-group list-group-flush">
-      <li class="list-group-item">○ Graduate-level introduction to multimodal machine learning, taught by <a href="https://www.cs.cmu.edu/~morency/" target="_blank">Prof. Louis-Phillipe Morency</a> and <a href="https://www.cs.cmu.edu/~pliang/" target="_blank">Paul Pu Liang</a>.</li>
-      <li class="list-group-item">○ I co-hosted one lecture for future directions of multimodal machine learning, mentored groups of students working on class projects and graded homeworks.</li>
+      <li class="list-group-item">○ UG-level introduction to computer science, taught by <a href="https://michaelrnowak.com/" target="_blank">Prof. Michael R. Nowak</a>.</li>
+      <li class="list-group-item">○ I will mentor groups of students working on class projects and grade homeworks.</li>
     </ul>
   </div>
 </div>
 
-<div class="card mt-3">
+<!-- <div class="card mt-3">
   <div class="p-3">
     <div class="row">
       <div class="col-sm-10">
@@ -55,7 +55,7 @@ description: listing TA experience, and academy roles
       <li class="list-group-item">○ I prepared and designed research probes for discussion, co-hosted every course with lecturers, mentored groups of graduate students working on class projects and graded homeworks.</li>
     </ul>
   </div>
-</div>
+</div> -->
 
 <!-- <div class="card mt-3"> -->
 <!--   <div class="p-3"> -->
