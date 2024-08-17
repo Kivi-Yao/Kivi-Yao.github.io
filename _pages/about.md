@@ -65,10 +65,6 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 
         <!-- <p> The following figure is an overview of 3 challenges in the observation-feedback loop for multimodal agent, accompanied by a snapshot of my current research progress on each of them, including ongoing work.</p> -->
 
-        <!-- <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
-            <!-- Use alt attribute for accessibility and descriptive image names -->
-            <img class="profile-img" src="{{ '/assets/img/statement.png' | prepend: site.baseurl | prepend: site.url }}" alt="Research Line">
-        </div> -->
     </section>
 </div>
 
