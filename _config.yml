@@ -4,7 +4,7 @@
 
 name: Jinwei Yao
 email: jinweiy@illinois.edu
-description: Personal website of Jinwei Yao.
+description: Academic website of Jinwei Yao.
 
 # footer_text: >
 #   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -19,10 +19,10 @@ baseurl:  # the subpath of your site, e.g. /blog/
 # Social Integration
 # -----------------------------------------------------------------------------
 scholar_userid: EL-QbZ4AAAAJ
-github_username: lwaekfjlk
-linkedin_username: haofei-yu-a04247188
+github_username: Monstertail
+linkedin_username: jinwei-yao-541164190
 #facebook_username: 
-twitter_username: haofeiyu44
+twitter_username: KiwiJWY
 contact_note: Feel free to drop me a line via e-mail.
 
 

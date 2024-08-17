@@ -3,13 +3,13 @@ layout: page
 permalink: /
 title: about
 nav: About
-description: <a href="http://www.lti.cs.cmu.edu/" class="page-description" target="_blank">Language Technologies Institute</a> • <a href="http://www.cs.cmu.edu/" class="page-description" target="_blank">School of Computer Science</a> • <a href="http://www.cmu.edu/" class="page-description" target="_blank">Carnegie Mellon University</a>
-address: <a href="https://www.google.com/maps/place/Gates+Center+for+Computer+Science/@40.4432641,-79.9449469,19.18z/data=!4m5!3m4!1s0x8834f22175d2f3cf:0x963e80aba7fde2d0!8m2!3d40.4435476!4d-79.9446184" class="page-description" target="_blank">5000 Forbes Ave, Pittsburgh, PA 15213</a>
+description: <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" class="page-description" target="_blank">MSCS</a> • <a href="https://siebelschool.illinois.edu/" class="page-description" target="_blank">Sibel Computer Science Center</a> • <a href="https://illinois.edu/" class="page-description" target="_blank">UIUC</a>
+address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+Computer+Science/@40.1138069,-88.2274801,17z/data=!3m2!4b1!5s0x880cd76a5762dfb7:0xcf6a023935717398!4m6!3m5!1s0x880cd76baa8479a9:0x4e9f01d40d359630!8m2!3d40.1138028!4d-88.2249052!16s%2Fm%2F0yqkg1s?entry=ttu" class="page-description" target="_blank">201 N Goodwin Ave, Urbana, IL 61801</a>
 ---
 
 <div class="col p-0 pt-4 pb-4">
-  <h1 class="title text-left font-weight-bold">Haofei Yu</h1> 
-  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">于昊飞</h6>
+  <h1 class="title text-left font-weight-bold">Jinwei Yao</h1> 
+  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">姚锦炜</h6>
   <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.description }}</h6>
   {% if page.address %}
       <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.address }}</h6>
@@ -25,19 +25,17 @@ address: <a href="https://www.google.com/maps/place/Gates+Center+for+Computer+Sc
         <div class="profile-image-container">
             <!-- Use alt attribute for accessibility and descriptive image names -->
             <img class="profile-img" src="{{ '/assets/img/self_pic_2.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Picture">
-            <figcaption class="profile-caption">Taken at Göreme, Cappadocia, Turkey</figcaption>
+            <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
         </div>
 
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
         <h4>Background</h4>
         <p>
-            I am currently in the second year at Carnegie Mellon University, pursuing a Master of Science in Intelligent Information Systems within the 
-            <a href="http://www.lti.cs.cmu.edu/" target="_blank" rel="noopener">Language Technologies Institute</a> of the 
-            <a href="http://www.cs.cmu.edu/" target="_blank" rel="noopener">School of Computer Science</a>.
+            I am currently in the first year at UIUC, pursuing a Master of Science in Computer Science. I am intersted in machine learning systems (ML System), especially system design for LLMs.
         </p>
 
         <p>
-            Before my journey at CMU, I laid my academic foundations at the
+            Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a PhD student in distributed systems,
             <a href="http://ckc.zju.edu.cn/ckcen/" target="_blank" rel="noopener">ChuKochen Honors College</a> of
             <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, where I obtained my Bachelor's degree in Computer Science and Technology (with honors). During my years there, I had the privilege of delving into Natural Language Processing (NLP) research, contributing to natural language processing research at
             <a href="https://en.westlake.edu.cn/" target="_blank" rel="noopener">Westlake University</a> and

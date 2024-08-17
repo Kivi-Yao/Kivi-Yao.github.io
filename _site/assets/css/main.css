@@ -5309,11 +5309,11 @@ body.scrollable { overflow-y: auto; }
 
 .custom-file-input:lang(in) ~ .custom-file-label::after { content: "Pilih"; }
 
-.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "選擇"; }
+.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "閬告搰"; }
 
-.custom-file-input:lang(de) ~ .custom-file-label::after { content: "Wählen"; }
+.custom-file-input:lang(de) ~ .custom-file-label::after { content: "W盲hlen"; }
 
-.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "выбирать"; }
+.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "胁褘斜懈褉邪褌褜"; }
 
 .edge-header { display: block; height: 278px; background-color: #ccc; }
 
@@ -8122,11 +8122,11 @@ body.scrollable { overflow-y: auto; }
 
 .custom-file-input:lang(in) ~ .custom-file-label::after { content: "Pilih"; }
 
-.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "選擇"; }
+.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "閬告搰"; }
 
-.custom-file-input:lang(de) ~ .custom-file-label::after { content: "Wählen"; }
+.custom-file-input:lang(de) ~ .custom-file-label::after { content: "W盲hlen"; }
 
-.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "выбирать"; }
+.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "胁褘斜懈褉邪褌褜"; }
 
 .edge-header { display: block; height: 278px; background-color: #ccc; }
 
@@ -10935,11 +10935,11 @@ body.scrollable { overflow-y: auto; }
 
 .custom-file-input:lang(in) ~ .custom-file-label::after { content: "Pilih"; }
 
-.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "選擇"; }
+.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "閬告搰"; }
 
-.custom-file-input:lang(de) ~ .custom-file-label::after { content: "Wählen"; }
+.custom-file-input:lang(de) ~ .custom-file-label::after { content: "W盲hlen"; }
 
-.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "выбирать"; }
+.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "胁褘斜懈褉邪褌褜"; }
 
 .edge-header { display: block; height: 278px; background-color: #ccc; }
 
@@ -13880,11 +13880,11 @@ body.scrollable { overflow-y: auto; }
 
 .custom-file-input:lang(in) ~ .custom-file-label::after { content: "Pilih"; }
 
-.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "選擇"; }
+.custom-file-input:lang(zh) ~ .custom-file-label::after { content: "閬告搰"; }
 
-.custom-file-input:lang(de) ~ .custom-file-label::after { content: "Wählen"; }
+.custom-file-input:lang(de) ~ .custom-file-label::after { content: "W盲hlen"; }
 
-.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "выбирать"; }
+.custom-file-input:lang(ru) ~ .custom-file-label::after { content: "胁褘斜懈褉邪褌褜"; }
 
 .edge-header { display: block; height: 278px; background-color: #ccc; }
 
