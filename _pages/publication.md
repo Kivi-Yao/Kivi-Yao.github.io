@@ -4,7 +4,7 @@ permalink: /publication/
 title: Publication
 nav: publication
 description: <nobr><em>*</em></nobr> denotes equal contribution and joint lead authorship.
-years: [2024][2023]
+years: [2024,2023]
 ---
 
 <br/>
