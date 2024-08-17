@@ -9,7 +9,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 
 <div class="col p-0 pt-4 pb-4">
   <h1 class="title text-left font-weight-bold">Jinwei Yao</h1> 
-  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">姚锦炜</h6>
+  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">Kivi</h6>
   <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.description }}</h6>
   {% if page.address %}
       <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.address }}</h6>
