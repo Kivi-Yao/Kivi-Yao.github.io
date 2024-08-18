@@ -112,7 +112,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 
 <!-- News -->
 <div class="news mt-3 p-0">
-  <h3 class="title mb-4 p-0" style="color: #13294B;">News</h3>
+  <h3 class="title mb-4 p-0" style="color: rgb(19, 41, 35);">News</h3>
   {% assign news = site.news | reverse %}
   {% for item in news limit: site.news_limit %}
     <div class="row p-0">
