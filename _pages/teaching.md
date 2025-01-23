@@ -21,6 +21,26 @@ description: listing TA experience, and academic roles
   <div class="p-3">
     <div class="row">
       <div class="col-sm-10">
+        <h5 class="font-weight-bold">Topics in LLM Agents</h5>
+      </div>
+      <div class="col-sm-2 text-left text-sm-right">
+        <span class="badge font-weight-bold danger-color-dark darken-1 text-uppercase align-middle"  href="https://github.com/ulab-uiuc/CS598-Topics-in-LLM-Agents" target="_blank">
+            UIUC CS-598-JY2
+        </span>
+      </div>
+    </div>
+    <h6 class="font-italic mt-2 mt-sm-0">Spring 2025: Teaching Assistant, UIUC (<a href="https://github.com/ulab-uiuc/CS598-Topics-in-LLM-Agents" target="_blank">course website</a>)</h6>
+    <ul class="card-text font-weight-light list-group list-group-flush">
+      <li class="list-group-item">○ Graduate-level advanced discussion course about multimodal machine learning, taught by <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank">Prof. Jiaxuan You</a>.</li>
+      <li class="list-group-item">○ I prepared and designed research paper lists for discussion, co-hosted most of courses with lecturers, designed the course website and graded homeworks.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card mt-3">
+  <div class="p-3">
+    <div class="row">
+      <div class="col-sm-10">
         <h5 class="font-weight-bold">Introduction to Computer Science II</h5>
       </div>
       <div class="col-sm-2 text-left text-sm-right">
