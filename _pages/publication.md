@@ -9,7 +9,7 @@ years: [2025,2024,2023]
 
 <br/>
 
-<!-- ✅ Filter UI for multi-tag selection -->
+<!-- ✅ Tag selection UI -->
 <div class="mb-3">
   <strong>Filter by Tag:</strong>
   <div id="tagFilterButtons"></div>
@@ -26,25 +26,28 @@ years: [2025,2024,2023]
   </div>
 {% endfor %}
 
-<!-- ✅ Updated JavaScript for Multi-Tag Selection -->
+<!-- ✅ JavaScript for Multi-Tag Filtering (AND Logic) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
       generateTagButtons();
   });
 
-  let selectedTags = new Set();  // ✅ Stores selected tags
+  let selectedTags = new Set(); // ✅ Stores selected tags
 
   function generateTagButtons() {
       var tags = new Set();
       document.querySelectorAll(".publication-entry").forEach(function (pub) {
-          pub.getAttribute("data-tags").split(",").forEach(function (tag) {
-              tags.add(tag.trim());
-          });
+          var tagAttr = pub.getAttribute("data-tags");
+          if (tagAttr) {
+              tagAttr.split(",").forEach(function (tag) {
+                  tags.add(tag.trim());
+              });
+          }
       });
 
       var tagButtonsContainer = document.getElementById("tagFilterButtons");
       tagButtonsContainer.innerHTML = "";
-      
+
       tags.forEach(function (tag) {
           var btn = document.createElement("span");
           btn.className = "badge badge-primary tag-filter-button m-1";
@@ -69,7 +72,8 @@ years: [2025,2024,2023]
       publications.forEach(function(pub) {
           var tags = pub.getAttribute("data-tags").toLowerCase().split(",");
 
-          if (selectedTags.size === 0 || Array.from(selectedTags).every(t => tags.includes(t.toLowerCase()))) {
+          // ✅ AND logic: Show publication only if it contains *all* selected tags
+          if (selectedTags.size === 0 || [...selectedTags].every(t => tags.includes(t.toLowerCase()))) {
               pub.style.display = "";
           } else {
               pub.style.display = "none";
