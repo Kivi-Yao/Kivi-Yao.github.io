@@ -1,7 +1,8 @@
 ---
 ---
+<input type="text" id="tagFilter" placeholder="Filter by tag" onkeyup="filterPublications()" class="form-control mb-3">
 
-<div class="row m-0 mt-3 p-0">
+<div class="row m-0 mt-3 p-0 publication-entry" data-tags="{{ entry.tags | join: ',' }}">
   {% if entry.image %}
   <div class="col-sm-2 p-0">
     <img src="{{ entry.image | prepend: site.baseurl }}" alt="{{ entry.title }}" class="img-fluid rounded" style="max-width: 150px; height: auto;">
@@ -30,8 +31,9 @@
       <h5 class="title mb-0">{{entry.title}}.</h5>
       {% if entry.tags %}
       <div class="mt-1">
-        {% for tag in entry.tags %}
-          <span class="badge badge-info">{{ tag }}</span>
+        {% assign tag_list = entry.tags | split: "," %}
+        {% for tag in tag_list %}
+          <span class="badge badge-info">{{ tag | strip }}</span>
         {% endfor %}
       </div>
       {% endif %}
@@ -141,3 +143,19 @@
     </div>
   </div>
 </div>
+
+<script>
+  function filterPublications() {
+      var input = document.getElementById("tagFilter").value.toLowerCase();
+      var publications = document.querySelectorAll(".publication-entry");
+  
+      publications.forEach(function(pub) {
+          var tags = pub.getAttribute("data-tags").toLowerCase();
+          if (tags.includes(input)) {
+              pub.style.display = "";
+          } else {
+              pub.style.display = "none";
+          }
+      });
+  }
+  </script>
