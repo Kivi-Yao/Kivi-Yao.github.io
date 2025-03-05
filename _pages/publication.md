@@ -26,7 +26,7 @@ years: [2025,2024,2023]
   </div>
 {% endfor %}
 
-<!-- ✅ JavaScript for Multi-Tag Filtering (AND Logic) -->
+<!-- ✅ JavaScript for Multi-Tag Filtering (Fixed AND Logic) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
       generateTagButtons();
@@ -35,9 +35,9 @@ years: [2025,2024,2023]
   let selectedTags = new Set(); // ✅ Stores selected tags
 
   function generateTagButtons() {
-      var tags = new Set();
+      let tags = new Set();
       document.querySelectorAll(".publication-entry").forEach(function (pub) {
-          var tagAttr = pub.getAttribute("data-tags");
+          let tagAttr = pub.getAttribute("data-tags");
           if (tagAttr) {
               tagAttr.split(",").forEach(function (tag) {
                   tags.add(tag.trim());
@@ -45,11 +45,11 @@ years: [2025,2024,2023]
           }
       });
 
-      var tagButtonsContainer = document.getElementById("tagFilterButtons");
+      let tagButtonsContainer = document.getElementById("tagFilterButtons");
       tagButtonsContainer.innerHTML = "";
 
       tags.forEach(function (tag) {
-          var btn = document.createElement("span");
+          let btn = document.createElement("span");
           btn.className = "badge badge-primary tag-filter-button m-1";
           btn.textContent = tag;
           btn.setAttribute("onclick", `toggleTag('${tag}')`);
@@ -67,13 +67,13 @@ years: [2025,2024,2023]
   }
 
   function updateFilter() {
-      var publications = document.querySelectorAll(".publication-entry");
+      let publications = document.querySelectorAll(".publication-entry");
 
       publications.forEach(function(pub) {
-          var tags = pub.getAttribute("data-tags").toLowerCase().split(",");
+          let pubTags = pub.getAttribute("data-tags").toLowerCase().split(",").map(t => t.trim());
 
-          // ✅ AND logic: Show publication only if it contains *all* selected tags
-          if (selectedTags.size === 0 || [...selectedTags].every(t => tags.includes(t.toLowerCase()))) {
+          // ✅ Correct AND logic: Show publication if it contains *all* selected tags
+          if (selectedTags.size === 0 || [...selectedTags].every(t => pubTags.includes(t.toLowerCase()))) {
               pub.style.display = "";
           } else {
               pub.style.display = "none";
