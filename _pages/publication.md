@@ -9,7 +9,7 @@ years: [2025,2024,2023]
 
 <br/>
 
-<!-- ✅ Filter UI should be placed OUTSIDE the loop so it's not duplicated -->
+<!-- ✅ Filter UI for multi-tag selection -->
 <div class="mb-3">
   <strong>Filter by Tag:</strong>
   <div id="tagFilterButtons"></div>
@@ -26,11 +26,13 @@ years: [2025,2024,2023]
   </div>
 {% endfor %}
 
-<!-- ✅ JavaScript for Filtering Papers by Tags -->
+<!-- ✅ Updated JavaScript for Multi-Tag Selection -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
       generateTagButtons();
   });
+
+  let selectedTags = new Set();  // ✅ Stores selected tags
 
   function generateTagButtons() {
       var tags = new Set();
@@ -47,48 +49,40 @@ years: [2025,2024,2023]
           var btn = document.createElement("span");
           btn.className = "badge badge-primary tag-filter-button m-1";
           btn.textContent = tag;
-          btn.setAttribute("onclick", `filterByTag('${tag}')`);
+          btn.setAttribute("onclick", `toggleTag('${tag}')`);
           tagButtonsContainer.appendChild(btn);
       });
-
-      // Add reset button
-      var resetBtn = document.createElement("span");
-      resetBtn.className = "badge badge-secondary m-1";
-      resetBtn.textContent = "Clear Filter";
-      resetBtn.setAttribute("onclick", "resetFilter()");
-      tagButtonsContainer.appendChild(resetBtn);
   }
 
-  function filterByTag(tag) {
+  function toggleTag(tag) {
+      if (selectedTags.has(tag)) {
+          selectedTags.delete(tag); // ✅ Unselect tag if clicked again
+      } else {
+          selectedTags.add(tag); // ✅ Select tag
+      }
+      updateFilter();
+  }
+
+  function updateFilter() {
       var publications = document.querySelectorAll(".publication-entry");
 
       publications.forEach(function(pub) {
-          var tags = pub.getAttribute("data-tags").toLowerCase();
-          if (tags.includes(tag.toLowerCase())) {
+          var tags = pub.getAttribute("data-tags").toLowerCase().split(",");
+
+          if (selectedTags.size === 0 || Array.from(selectedTags).every(t => tags.includes(t.toLowerCase()))) {
               pub.style.display = "";
           } else {
               pub.style.display = "none";
           }
       });
 
-      // Highlight active filter
+      // ✅ Update button styles based on selection
       document.querySelectorAll(".tag-filter-button").forEach(function(btn) {
-          if (btn.textContent === tag) {
+          if (selectedTags.has(btn.textContent)) {
               btn.classList.add("badge-dark");
           } else {
               btn.classList.remove("badge-dark");
           }
-      });
-  }
-
-  function resetFilter() {
-      document.querySelectorAll(".publication-entry").forEach(function(pub) {
-          pub.style.display = "";
-      });
-
-      // Remove highlight from buttons
-      document.querySelectorAll(".tag-filter-button").forEach(function(btn) {
-          btn.classList.remove("badge-dark");
       });
   }
 </script>
