@@ -2,6 +2,12 @@
 ---
 
 <div class="row m-0 mt-3 p-0">
+  {% if entry.image %}
+  <div class="col-sm-2 p-0">
+    <img src="{{ entry.image | prepend: site.baseurl }}" alt="{{ entry.title }}" class="img-fluid rounded" style="max-width: 150px; height: auto;">
+  </div>
+  {% endif %}
+
     <div class="col-sm-10 p-0 iabbr">
         {% if entry.abbr %}
         {% if site.data.venues[entry.abbr] %}
@@ -22,6 +28,13 @@
     {% assign entry_id = entry.key | replace: ':', '-' %}
     <div id="{{entry_id}}" class="col p-0">
       <h5 class="title mb-0">{{entry.title}}.</h5>
+      {% if entry.tags %}
+      <div class="mt-1">
+        {% for tag in entry.tags %}
+          <span class="badge badge-info">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="author">
         {% for author in entry.author_array %}
           {% if forloop.length == 1 %}
