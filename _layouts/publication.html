@@ -1,6 +1,9 @@
 ---
 ---
-<input type="text" id="tagFilter" placeholder="Filter by tag" onkeyup="filterPublications()" class="form-control mb-3">
+<div class="mb-3">
+  <strong>Filter by Tag:</strong>
+  <div id="tagFilterButtons"></div>
+</div>
 
 <div class="row m-0 mt-3 p-0 publication-entry" data-tags="{{ entry.tags | join: ',' }}">
   {% if entry.image %}
@@ -144,18 +147,34 @@
   </div>
 </div>
 
+<!-- JavaScript for filtering papers by tags -->
 <script>
-  function filterPublications() {
-      var input = document.getElementById("tagFilter").value.toLowerCase();
+  function filterByTag(tag) {
       var publications = document.querySelectorAll(".publication-entry");
-  
+
       publications.forEach(function(pub) {
           var tags = pub.getAttribute("data-tags").toLowerCase();
-          if (tags.includes(input)) {
+          if (tags.includes(tag.toLowerCase())) {
               pub.style.display = "";
           } else {
               pub.style.display = "none";
           }
       });
+
+      // Update filter button display
+      document.getElementById("tagFilterButtons").innerHTML = `
+        <span class="badge badge-primary" onclick="resetFilter()">Clear Filter: ${tag}</span>
+      `;
   }
-  </script>
+
+  function resetFilter() {
+      var publications = document.querySelectorAll(".publication-entry");
+
+      publications.forEach(function(pub) {
+          pub.style.display = "";
+      });
+
+      // Clear the filter button display
+      document.getElementById("tagFilterButtons").innerHTML = "";
+  }
+</script>
