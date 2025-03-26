@@ -45,8 +45,16 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         </p>
 
         <h4 style="color: #E84A27;">Research Interest</h4>
+        
+        <div style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
+        <img src="{{ '/assets/img/research_overview.svg' | prepend: site.baseurl | prepend: site.url }}" alt="Research Overview" style="max-width: 100%; height: auto;">
+        <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research.I am currently focusing on efficient and effective algorithms design.</figcaption>
+        </div>
         <p>
-            I am intersted in machine learning systems (ML System), especially system designs for LLMs. My primary goal is to provide efficient, cheap and robust system services for real-world LLM applications. To achieve this goal, I identified three main challenges: 
+            <span style="color: #0455A4;">
+            I am interested in machine learning systems (ML System), especially algorithms co-design for systems and modeling.
+            </span> 
+        My primary goal is to provide efficient, cheap and robust system services for real-world LLM applications. To achieve this goal, I identified three main challenges: 
         </p>
         <p>
         <strong>Challenge1 LLM Inference Efficiency</strong> <br>
