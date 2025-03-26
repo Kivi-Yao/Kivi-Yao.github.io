@@ -50,6 +50,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <img src="{{ '/assets/img/research_overview.svg' | prepend: site.baseurl | prepend: site.url }}" alt="Research Overview" style="max-width: 100%; height: auto;">
         <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research.I am currently focusing on efficient and effective algorithms design.</figcaption>
         </div>
+        
         <p>
             <span style="color: #0455A4;">
             I am interested in machine learning systems (ML System), especially algorithms co-design for systems and modeling.
