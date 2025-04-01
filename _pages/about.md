@@ -41,25 +41,25 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         </p>
 
         <p>
-            At UIUC, my research focuses on Gen-AI Systems, like LLM inference efficiency. I am also interested in bringing distributed systems/database systems with LLMs.
+            At UIUC, my research focuses on System-algorithm co-design for GenAI. System is my start point but I am doing algorithms as well. You can find my research interests as follows.
         </p>
 
         <h4 style="color: #E84A27;">Research Interest</h4>
         
         <div style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
         <img src="{{ '/assets/img/research_overview.svg' | prepend: site.baseurl | prepend: site.url }}" alt="Research Overview" style="max-width: 100%; height: auto;">
-        <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research.I am currently focusing on efficient and effective algorithms design.</figcaption>
+        <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research.I am currently focusing on efficient and effective system-algorithm co-designs.</figcaption>
         </div>
 
         <p>
-        <span style="color: #0455A4;">
+        <span style="color: #E60000;">
             I am interested in machine learning systems (ML System), especially in algorithm co-design across modeling, systems, and hardware.
         </span>
-        There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms for real-world LLM applications.
+        There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms/systems for real-world LLM applications.
         </p>
 
         <p>
-        I categorize my research into three interdependent dimensions:
+        I categorize my research interests into three interdependent dimensions:
         </p>
 
         <ul>
