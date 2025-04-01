@@ -50,8 +50,40 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <img src="{{ '/assets/img/research_overview.svg' | prepend: site.baseurl | prepend: site.url }}" alt="Research Overview" style="max-width: 100%; height: auto;">
         <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research.I am currently focusing on efficient and effective algorithms design.</figcaption>
         </div>
-        
+
         <p>
+        <span style="color: #0455A4;">
+            I am interested in machine learning systems (ML System), especially in algorithm co-design across modeling, systems, and hardware.
+        </span>
+        There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms for real-world LLM applications.
+        </p>
+
+        <p>
+        I categorize my research into three interdependent dimensions:
+        </p>
+
+        <ul>
+        <li>
+            <strong>System: Efficiency & Robustness in LLM Infrastructure</strong><br>
+            <ul>
+            <li>LLM Inference Efficiency: How to provide cheap and fast LLM inference services?</li>
+            <li>LLM Training Efficiency: How to train LLMs with limited resources while ensuring robustness?</li>
+            <li>ML-System SLO Trade-off: How to balance ML performance metrics (e.g., accuracy, perplexity) with system metrics (e.g., latency, throughput)?</li>
+            </ul>
+        </li>
+
+        <li style="margin-top: 1rem;">
+            <strong>Modeling: Beyond Auto-Regressive Patterns</strong><br>
+            How can we rethink or extend generative modeling paradigms to overcome the limitations of auto-regressive generation?
+        </li>
+
+        <li style="margin-top: 1rem;">
+            <strong>Hardware: Hardware-Aware Algorithm Design</strong><br>
+            How can we design algorithms that take full advantage of modern heterogeneous hardware (e.g., FPGA, GPU, NPU) for LLM execution?
+        </li>
+        </ul>
+        
+        <!-- <p>
             <span style="color: #0455A4;">
             I am interested in machine learning systems (ML System), especially algorithms co-design for systems and modeling.
             </span> 
@@ -70,9 +102,9 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <p>
         <strong>Challenge3 Trade-off between service-level-objects (SLOs) in ML and System</strong> <br>
         How to do trade-offs between machine learning metrics (accuracy, PPL, etc) and system metrics (latency, throughtputs)
-        </p>
+        </p> -->
 
-        <!-- <p> The following figure is an overview of 3 challenges in the observation-feedback loop for multimodal agent, accompanied by a snapshot of my current research progress on each of them, including ongoing work.</p> -->
+        
 
         <h4 style="color: #E84A27;">Miscellaneous</h4>
         <p>
