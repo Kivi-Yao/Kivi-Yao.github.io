@@ -72,14 +72,22 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             </ul>
         </li>
 
-        <li style="margin-top: 1rem;">
-            <strong>Modeling: Beyond Auto-Regressive Patterns</strong><br>
-            How can we rethink or extend generative modeling paradigms to overcome the limitations of auto-regressive generation?
+          <li style="margin-top: 1rem;">
+        <strong>Modeling: Beyond Auto-Regressive Patterns</strong><br>
+        <ul>
+        <li>How can we rethink or extend generative modeling paradigms beyond the auto-regressive (AR) models?</li>
+        <li>How to design architectures that are more expressive and efficient than AR models?</li>
+        <li>How to unify multimodal inputs (e.g., text, vision, code) into a shared and coherent representation space?</li>
+        </ul>
         </li>
 
         <li style="margin-top: 1rem;">
             <strong>Hardware: Hardware-Aware Algorithm Design</strong><br>
-            How can we design algorithms that take full advantage of modern heterogeneous hardware (e.g., FPGA, GPU, NPU) for LLM execution?
+            <ul>
+            <li>How can we design algorithms that fully leverage heterogeneous hardware such as FPGAs, GPUs, and NPUs?</li>
+            <li>How to abstract hardware features into software libraries to simplify hardware-efficient algorithm development?</li>
+            <li>How to co-design algorithms with low-level primitives to maximize hardware utilization?</li>
+            </ul>
         </li>
         </ul>
         
