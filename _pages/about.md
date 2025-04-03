@@ -270,4 +270,4 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
   {% endfor %}
 </div>
 
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=700&t=tt&d=NhXj4joI7G-QcI07Qz4cPPkmnIj_bE-Zi4HhgEt-oCs"></script>
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=rh8EaugEE0CSbdOsjboVgNsiqIwoLvWU-B59Ft11K5k&cl=ffffff&w=a"></script>
