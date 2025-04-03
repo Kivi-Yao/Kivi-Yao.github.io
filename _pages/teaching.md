@@ -37,7 +37,7 @@ description: listing TA experience, and academic roles
   </div>
 </div>
 
-<div class="card mt-3">
+<div class="card mt-3 course-card">
   <div class="p-3">
     <div class="row">
       <div class="col-sm-10">
