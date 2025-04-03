@@ -28,6 +28,10 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
         </div>
 
+        <div class="motto">
+            "To breathe reality into imagination by crafting intelligent systems."
+        </div>
+
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
         <h4 style="color: #E84A27;">Background</h4>
         <p>
@@ -129,6 +133,22 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 <style>
 .profile {
     padding: 0;
+}
+.motto {
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #444;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.motto:hover {
+    color: #E84A27; /* UIUC orange */
+    text-shadow: 0 2px 8px rgba(232, 74, 39, 0.4);
+    transform: scale(1.03);
 }
 .profile-image-container {
     display: flex;
