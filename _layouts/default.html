@@ -43,25 +43,28 @@
   }
   
   .publication-entry {
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.08);
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
   
   body.light-mode .publication-entry {
     background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
   
   .publication-entry:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
   }
   
   body.light-mode .publication-entry:hover {
     background-color: rgba(0, 0, 0, 0.06);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
   }
 
   .motto-enhanced {
