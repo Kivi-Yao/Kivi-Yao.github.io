@@ -40,6 +40,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <p>
             I am currently in the first year at UIUC, pursuing a (research-based) <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">Master of Science in Computer Science(MSCS)</a>. My advisor is <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">Prof.Jiaxuan You</a>.
         </p>
+        <hr class="section-divider">
 
         <p>
             Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a felloship PhD student in distributed systems, where I laid my academic foundations. Leaving peaceful and beautiful Switzerland is a hard decision: after one year of thinking and discussion with my career mentor <a href="https://people.epfl.ch/katerina.argyraki?lang=en" target="_blank" rel="noopener">Prof. Katerina Argyraki</a>, I followed my heart to explore ML System research. In <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, I obtained my Bachelor's degree in Electronic Science and Technology, with Outstanding Thesis Award for designing FPGA subsystem for GNN acceleration, where was the start of my MLSys research. During my ML System research journey, I was lucky to work with wonderful advisors-- <a href="https://wangzeke.github.io/" target="_blank" rel="noopener">Prof. Zeke Wang(Zhejiang University)</a>,
@@ -77,6 +78,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             <li>LLM Training Efficiency: How to train LLMs with limited resources while ensuring robustness?</li>
             <li>ML-System SLO Trade-off: How to balance ML performance metrics (e.g., accuracy, perplexity) with system metrics (e.g., latency, throughput)?</li>
             </ul>
+        <hr class="section-divider">
         </li>
 
           <li style="margin-top: 1rem;">
