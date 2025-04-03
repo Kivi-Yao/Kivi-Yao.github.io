@@ -47,7 +47,7 @@
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease-in-out;
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
@@ -58,13 +58,16 @@
   }
   
   .publication-entry:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+    transform: translateY(-4px) scale(1.02);
+    transition: all 0.3s ease-in-out;
   }
   
   body.light-mode .publication-entry:hover {
     background-color: rgba(0, 0, 0, 0.06);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px) scale(1.01);
   }
 
   .motto-enhanced {
