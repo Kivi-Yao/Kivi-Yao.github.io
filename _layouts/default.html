@@ -34,12 +34,34 @@
   }
 
   .content {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
     position: relative;
     backdrop-filter: blur(4px);
     border-radius: 8px;
     padding: 1rem;
+  }
+  
+  .publication-entry {
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  body.light-mode .publication-entry {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .publication-entry:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  body.light-mode .publication-entry:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
 
   .motto-enhanced {
