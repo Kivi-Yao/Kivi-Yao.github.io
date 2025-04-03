@@ -8,7 +8,7 @@ description: listing TA experience, and academic roles
 
 <h3 class="mt-4">Reviewing Service</h3>
 
-<div class="card mt-3">
+<div class="card mt-3 course-card">
   <div class="p-3">
     <h6 class="font-italic mt-2 mt-sm-0">Reviewers for:</h6> 
     <h6 class="font-italic mt-2 mt-sm-0">Stay tuned....</h6>
@@ -17,7 +17,7 @@ description: listing TA experience, and academic roles
 
 <h3 class="mt-4">Teaching Service</h3>
 
-<div class="card mt-3">
+<div class="card mt-3 course-card">
   <div class="p-3">
     <div class="row">
       <div class="col-sm-10">
