@@ -28,8 +28,11 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
         </div>
 
-        <div class="motto">
-            "To breathe reality into imagination by crafting intelligent systems."
+        <div class="motto-enhanced">
+        ❄️ <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#E84A27" style="vertical-align: middle;">
+            <path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l1.41 1.41L10.83 6H20v2h-9.17l2.58 2.59L12 12l-4-4 4-4zm0 20l-1.41-1.41L13.17 18H4v-2h9.17l-2.58-2.59L12 12l4 4-4 4z"/>
+        </svg>
+        <span class="motto-text">To breathe reality into imagination by crafting intelligent systems.</span> ❄️
         </div>
 
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
@@ -149,6 +152,65 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
     color: #E84A27; /* UIUC orange */
     text-shadow: 0 2px 8px rgba(232, 74, 39, 0.4);
     transform: scale(1.03);
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+.motto-enhanced {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #e84a27cc, #f0c9b2cc);
+    padding: 1.2rem 1rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.motto-enhanced .motto-text {
+    z-index: 2;
+    position: relative;
+}
+
+.motto-enhanced:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(232, 74, 39, 0.3);
+}
+
+/* ❄️ Snow animation effect */
+.motto-enhanced::before, .motto-enhanced::after {
+    content: "❄️";
+    position: absolute;
+    font-size: 1.2rem;
+    animation: snow 8s linear infinite;
+    opacity: 0.8;
+}
+
+.motto-enhanced::after {
+    animation-delay: 4s;
+    left: 60%;
+}
+
+@keyframes snow {
+    0% {
+        top: -10%;
+        left: 20%;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(-30px);
+    }
 }
 .profile-image-container {
     display: flex;
