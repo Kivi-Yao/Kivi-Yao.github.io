@@ -27,6 +27,31 @@
     height: 100vh;
     pointer-events: none;
   }
+
+  body {
+    background: transparent !important;
+  }
+
+  .content {
+    background-color: rgba(255, 255, 255, 0.92);
+    z-index: 1;
+    position: relative;
+  }
+
+  .motto-enhanced {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    background: radial-gradient(circle at center, rgba(255,255,255,0.05), rgba(232, 74, 39, 0.2)),
+                linear-gradient(135deg, #e84a27cc, #f0c9b2cc);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+  }
   </style>
 </head>
 <body>
