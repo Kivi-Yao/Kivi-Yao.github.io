@@ -18,6 +18,7 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
 <body>
+  <canvas id="star-canvas"></canvas>
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
@@ -212,6 +213,109 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
+  </script>
+  <!-- 💫 星空背景动效 -->
+<script>
+  const canvas = document.getElementById('star-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  
+  function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  
+  function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+          stars.push({
+              x: Math.random() * canvas.width,
+              y: Math.random() * canvas.height,
+              r: Math.random() * 1.5 + 0.5,
+              speed: Math.random() * 0.2 + 0.05,
+              opacity: Math.random(),
+              flash: false
+          });
+      }
+  }
+  
+  function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255,255,255,${star.flash ? 1 : star.opacity})`;
+          ctx.fill();
+          star.y += star.speed;
+          if (star.y > canvas.height) {
+              star.y = 0;
+              star.x = Math.random() * canvas.width;
+          }
+      }
+  }
+  
+  function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
+  }
+  createStars(250);
+  animate();
+  
+  // 流星
+  function shootMeteor() {
+      let x = Math.random() * canvas.width;
+      let y = 0;
+      let length = 200;
+      let angle = Math.PI / 4;
+      let speed = 10;
+      let alpha = 1;
+  
+      function drawMeteor() {
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + length * Math.cos(angle), y + length * Math.sin(angle));
+          ctx.stroke();
+          ctx.restore();
+      }
+  
+      function animateMeteor() {
+          if (alpha <= 0) return;
+          drawStars();
+          drawMeteor();
+          x += speed * Math.cos(angle);
+          y += speed * Math.sin(angle);
+          alpha -= 0.02;
+          requestAnimationFrame(animateMeteor);
+      }
+  
+      animateMeteor();
+  }
+  
+  setInterval(() => {
+      if (Math.random() < 0.3) {
+          shootMeteor();
+      }
+  }, 5000);
+  
+  // 点击闪烁星星
+  canvas.addEventListener('click', e => {
+      const { offsetX, offsetY } = e;
+      for (let star of stars) {
+          const dx = star.x - offsetX;
+          const dy = star.y - offsetY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 40) {
+              star.flash = true;
+              setTimeout(() => (star.flash = false), 300);
+          }
+      }
+  });
   </script>
 </body>
 </html>
