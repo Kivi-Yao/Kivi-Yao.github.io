@@ -64,7 +64,82 @@
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0px); }
   }
+</style>
+  <style>
+  body {
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  body.light-mode {
+    background: #fdfdfd !important;
+    color: #000 !important;
+  }
+
+  body.light-mode .content {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+
+  body.light-mode .motto-enhanced {
+    background: linear-gradient(135deg, #ffeadb, #ffe6e6);
+    color: #222;
+  }
+
+  .academic-role-box {
+    background-color: rgba(255, 255, 255, 0.1); /* dark mode default */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  body.light-mode .academic-role-box {
+    background-color: rgba(0, 0, 0, 0.05); /* light mode adjustment */
+    color: #000;
+  }
   </style>
+  <style>
+    #mode-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #e84a27;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.createElement('button');
+      toggle.id = 'mode-toggle';
+      toggle.textContent = '☀️ / 🌙';
+      document.body.appendChild(toggle);
+
+      const setMode = (mode) => {
+        if (mode === 'light') {
+          document.body.classList.add('light-mode');
+        } else {
+          document.body.classList.remove('light-mode');
+        }
+        localStorage.setItem('mode', mode);
+      };
+
+      toggle.addEventListener('click', () => {
+        const isLight = document.body.classList.contains('light-mode');
+        setMode(isLight ? 'dark' : 'light');
+      });
+
+      // Apply saved mode
+      const saved = localStorage.getItem('mode');
+      if (saved === 'light') {
+        document.body.classList.add('light-mode');
+      }
+    });
+  </script>
 </head>
 <body>
   <canvas id="star-canvas"></canvas>
