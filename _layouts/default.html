@@ -125,6 +125,25 @@
     background-color: rgba(0, 0, 0, 0.05); /* light mode adjustment */
     color: #000;
   }
+  .abstract-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .abstract-card:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  body.light-mode .abstract-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+  }
+  
+  body.light-mode .abstract-card:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
   </style>
   <style>
   .course-card {
