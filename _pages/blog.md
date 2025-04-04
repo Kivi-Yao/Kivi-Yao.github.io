@@ -61,7 +61,8 @@ nav: Blog
     });
 
     const buttons = document.querySelectorAll('.tag-button');
-    buttons.forEach(btn => btn.classList.remove('badge-info'));
-    document.querySelector(`[data-tag="${tag}"]`).classList.add('badge-info');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.querySelector(`[data-tag="${tag}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
   }
 </script>
