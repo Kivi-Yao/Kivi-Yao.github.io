@@ -46,6 +46,12 @@ nav: Blog
     border-radius: 0.5rem;
     backdrop-filter: blur(4px);
   }
+  .tag-button.active {
+    background-color: #e84a27 !important;
+    color: white !important;
+    font-weight: bold;
+    box-shadow: 0 0 6px rgba(232, 74, 39, 0.5);
+  }
 </style>
 
 <script>

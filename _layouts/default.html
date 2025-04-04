@@ -261,37 +261,36 @@
         <ul class="navbar-nav ml-auto flex-nowrap">
             <li class="nav-item {% if page.title == "about" %}navbar-active font-weight-bold{% endif %}">
                 <a class="nav-link" href="{{ site.baseurl | prepend: site.url }}/">
-                About
-                {% if page.title == "about" %}
-                    <span class="sr-only">(current)</span>
-                {% endif %}
+                    About
+                    {% if page.title == "about" %}
+                        <span class="sr-only">(current)</span>
+                    {% endif %}
                 </a>
             </li>
 
-            <li class="nav-item {% if page.title == " about" %}navbar-active font-weight-bold{% endif %}">
+            <li class="nav-item {% if page.title == "cv" %}navbar-active font-weight-bold{% endif %}">
                 <a class="nav-link" href="{{ site.baseurl }}/assets/pdf/resume.pdf">
                     CV
                 </a>
             </li>
 
+            <li class="nav-item {% if page.title == "publication" %}navbar-active font-weight-bold{% endif %}">
+                <a class="nav-link" href="{{ site.baseurl | prepend: site.url }}/publication/">
+                    Publication
+                </a>
+            </li>
 
-            {% for p in site.pages %}
-                {% if p.title %}
-                    {% if p.title == "Projects" %}
-                        {% continue %}
-                    {% endif %}
-                    {% if p.url != "/" %}
-                        <li class="nav-item {% if page.nav == p.nav %}navbar-active font-weight-bold{% endif %}">
-                            <a class="nav-link" href="{{ p.url | prepend: site.baseurl | prepend: site.url }}">
-                                {{ p.title }}
-                                {% if page.nav == p.nav %}
-                                    <span class="sr-only">(current)</span>
-                                {% endif %}
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
+            <li class="nav-item {% if page.title == "blog" %}navbar-active font-weight-bold{% endif %}">
+                <a class="nav-link" href="{{ site.baseurl | prepend: site.url }}/blog/">
+                    Blog
+                </a>
+            </li>
+
+            <li class="nav-item {% if page.title == "academic role" %}navbar-active font-weight-bold{% endif %}">
+                <a class="nav-link" href="{{ site.baseurl | prepend: site.url }}/academic-role/">
+                    Academic Role
+                </a>
+            </li>
 
         </ul>
       </div>
