@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /teaching/
 title: Academic Role
-nav: teaching
+permalink: /teaching/
+nav: Academic Role
 description: listing TA experience, and academic roles
 ---
 
