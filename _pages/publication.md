@@ -48,6 +48,16 @@ years: [2025,2024,2023]
       let tagButtonsContainer = document.getElementById("tagFilterButtons");
       tagButtonsContainer.innerHTML = "";
 
+      // Ensure "Highlight" always appears first and styled differently
+      if (tags.has("Highlight")) {
+          let highlightBtn = document.createElement("span");
+          highlightBtn.className = "badge badge-danger font-weight-bold tag-filter-button m-1";
+          highlightBtn.textContent = "Highlight";
+          highlightBtn.setAttribute("onclick", `toggleTag('Highlight')`);
+          tagButtonsContainer.appendChild(highlightBtn);
+          tags.delete("Highlight"); // Remove it to avoid duplication
+      }
+
       tags.forEach(function (tag) {
           let btn = document.createElement("span");
           btn.className = "badge badge-primary tag-filter-button m-1";
