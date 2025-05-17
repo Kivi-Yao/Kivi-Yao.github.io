@@ -86,7 +86,7 @@ plugins:
 
 # Jekyll-Scholar
 scholar:
-  last_name: Yu
+  last_name: Yao
   style: apa
   locale: en
   sort_by: year
