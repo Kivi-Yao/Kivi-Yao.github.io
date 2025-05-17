@@ -52,7 +52,7 @@ years: [2025,2024,2023]
       if (tags.has("Highlight")) {
           let highlightBtn = document.createElement("span");
           highlightBtn.className = "badge badge-danger font-weight-bold tag-filter-button m-1";
-          highlightBtn.textContent = "Highlight";
+          highlightBtn.textContent = "🏅 Highlight";
           highlightBtn.setAttribute("onclick", `toggleTag('Highlight')`);
           tagButtonsContainer.appendChild(highlightBtn);
           tags.delete("Highlight"); // Remove it to avoid duplication
