@@ -30,6 +30,7 @@ years: [2025,2024,2023]
 <script>
   document.addEventListener("DOMContentLoaded", function () {
       generateTagButtons();
+      styleHighlightBadges();   // 🏅 make inner “Highlight” badges red
   });
 
   let selectedTags = new Set(); // ✅ Stores selected tags
@@ -96,6 +97,16 @@ years: [2025,2024,2023]
               btn.classList.add("badge-dark");
           } else {
               btn.classList.remove("badge-dark");
+          }
+      });
+  }
+  // 🏅 Convert inner Highlight badges to red medal style
+  function styleHighlightBadges() {
+      document.querySelectorAll(".publication-entry span.badge").forEach(function (el) {
+          if (el.textContent.trim() === "Highlight" || el.textContent.trim() === "🏅 Highlight") {
+              el.classList.remove("badge-primary");
+              el.classList.add("badge-danger", "font-weight-bold");
+              el.textContent = "🏅 Highlight";
           }
       });
   }
