@@ -100,13 +100,20 @@ years: [2025,2024,2023]
           }
       });
   }
-  // 🏅 Convert inner Highlight badges to red medal style
+  // 🏅 Convert inner Highlight badges to red medal style, force inline color in case CSS is overridden
   function styleHighlightBadges() {
       document.querySelectorAll(".publication-entry span.badge").forEach(function (el) {
-          if (el.textContent.trim() === "Highlight" || el.textContent.trim() === "🏅 Highlight") {
-              el.classList.remove("badge-primary");
+          const txt = el.textContent.trim().replace("🏅", "").trim();
+          if (txt === "Highlight") {
+              // Remove any previous color classes
+              el.classList.remove("badge-primary", "badge-info", "badge-secondary");
+              // Add red badge class
               el.classList.add("badge-danger", "font-weight-bold");
+              // Ensure label & medal
               el.textContent = "🏅 Highlight";
+              // Fallback inline style if css fails
+              el.style.backgroundColor = "#dc3545";
+              el.style.color = "#fff";
           }
       });
   }
