@@ -22,10 +22,35 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 <div style="display: flex; flex-wrap: wrap;">
     <section class="profile">
         <!-- Avoid inline styles where possible and use a separate CSS file or <style> block -->
-        <div class="profile-image-container">
-            <!-- Use alt attribute for accessibility and descriptive image names -->
-            <img class="profile-img" src="{{ '/assets/img/self_pic_jw.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Picture">
-            <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
+        <!--
+        To add more photos:
+             1. Upload the image to /assets/img/ (e.g., self_pic_4.jpg)
+             2. Copy a <div class="carousel-item">...</div> block below and update image path + caption
+             3. Ensure only one <div> has class="carousel-item active"
+        -->
+        <div id="profileCarousel" class="carousel slide profile-image-container" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 profile-img" src="{{ '/assets/img/self_pic_jw.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Zakynthos, Greece">
+              <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 profile-img" src="{{ '/assets/img/Jinwei_pic.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Photo 2">
+              <figcaption class="profile-caption">Taken at Bali, Indonesia</figcaption>
+            </div>
+            <!-- <div class="carousel-item">
+              <img class="d-block w-100 profile-img" src="{{ '/assets/img/self_pic_3.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Photo 3">
+              <figcaption class="profile-caption">Sunny Campus Day</figcaption>
+            </div> -->
+          </div>
+          <a class="carousel-control-prev" href="#profileCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#profileCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
 
         <div class="motto-enhanced">
