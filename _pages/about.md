@@ -88,7 +88,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         <span style="color: #E60000;">
             I am interested in machine learning systems (ML System), especially in algorithm co-design across modeling, systems, and hardware.
         </span>
-        There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms/systems for real-world LLM applications.
+        There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms/systems for real-world large model applications.
         </p>
 
         <p>
@@ -128,7 +128,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
             <span style="color: #0455A4;">
             I am interested in machine learning systems (ML System), especially algorithms co-design for systems and modeling.
             </span> 
-        My primary goal is to provide efficient, cheap and robust system services for real-world LLM applications. To achieve this goal, I identified three main challenges: 
+        My primary goal is to provide efficient, cheap and robust system services for real-world LM applications. To achieve this goal, I identified three main challenges: 
         </p>
         <p>
         <strong>Challenge1 LLM Inference Efficiency</strong> <br>
