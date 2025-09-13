@@ -28,7 +28,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
              2. Copy a <div class="carousel-item">...</div> block below and update image path + caption
              3. Ensure only one <div> has class="carousel-item active"
         -->
-        <div id="profileCarousel" class="carousel slide profile-image-container" data-ride="carousel">
+        <div id="profileCarousel" class="carousel slide profile-image-container" data-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100 profile-img" src="{{ '/assets/img/self_pic_jw.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Zakynthos, Greece">
@@ -53,6 +53,26 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
           </a>
         </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var $c = $('#profileCarousel');
+  if ($c.length) {
+    var $items = $c.find('.carousel-item');
+    var n = $items.length;
+    if (n > 0) {
+      // Pick a random starting slide
+      var idx = Math.floor(Math.random() * n);
+      $items.removeClass('active');
+      $items.eq(idx).addClass('active');
+    }
+    // Initialize Bootstrap carousel with manual control only
+    $c.carousel({ interval: false, ride: false, wrap: true, keyboard: true });
+    // Ensure no auto-cycling
+    $c.carousel('pause');
+  }
+});
+</script>
+
         <div class="motto-enhanced">
         ❄️ <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#E84A27" style="vertical-align: middle;">
             <path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l1.41 1.41L10.83 6H20v2h-9.17l2.58 2.59L12 12l-4-4 4-4zm0 20l-1.41-1.41L13.17 18H4v-2h9.17l-2.58-2.59L12 12l4 4-4 4z"/>
@@ -68,13 +88,13 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         
 
         <p>
-            Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a felloship PhD student in distributed systems, where I laid my academic foundations. Leaving peaceful and beautiful Switzerland is a hard decision: after one year of thinking and discussion with my career mentor <a href="https://people.epfl.ch/katerina.argyraki?lang=en" target="_blank" rel="noopener">Prof. Katerina Argyraki</a>, I followed my heart to explore ML System research. In <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, I obtained my Bachelor's degree in Electronic Science and Technology, with Outstanding Thesis Award for designing FPGA subsystem for GNN acceleration, where was the start of my MLSys research. During my ML System research journey, I was lucky to work with wonderful advisors-- <a href="https://wangzeke.github.io/" target="_blank" rel="noopener">Prof. Zeke Wang(Zhejiang University)</a>,
+            Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a fellowship PhD student in distributed systems, where I laid my academic foundations. Leaving peaceful and beautiful Switzerland is a hard decision: after one year of thinking and discussion with my career mentor <a href="https://people.epfl.ch/katerina.argyraki?lang=en" target="_blank" rel="noopener">Prof. Katerina Argyraki</a>, I followed my heart to explore ML System research. In <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, I obtained my Bachelor's degree in Electronic Science and Technology, with Outstanding Thesis Award for designing FPGA subsystem for GNN acceleration, where was the start of my MLSys research. During my ML System research journey, I was lucky to work with wonderful advisors-- <a href="https://wangzeke.github.io/" target="_blank" rel="noopener">Prof. Zeke Wang(Zhejiang University)</a>,
             <a href="https://scholar.google.ch/citations?user=QE9pa_cAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Tao Lin(Westlake University)</a>,  and
             <a href="https://binhangyuan.github.io/site/" target="_blank" rel="noopener">Prof. Binhang Yuan(HKUST)</a>.
         </p>
 
         <p>
-            At UIUC, my research focuses on System-algorithm co-design for GenAI. System is my start point but I am doing algorithms as well. You can find my research interests as follows.
+            At UIUC, my research focuses on system-algorithm co-design for large models. System is my start point but I am doing algorithms as well. You can find my research interests as follows.
         </p>
         <hr class="section-divider">
         <h4 style="color: #E84A27;">Research Interest</h4>
@@ -86,7 +106,7 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
 
         <p>
         <span style="color: #E60000;">
-            I am interested in machine learning systems (ML System), especially in algorithm co-design across modeling, systems, and hardware.
+            I am interested in machine learning systems (MLSys), especially in algorithm co-design across modeling, systems, and hardware.
         </span>
         There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms/systems for real-world large model applications.
         </p>

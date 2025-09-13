@@ -52,7 +52,7 @@ description: listing TA experience, and academic roles
     <h6 class="font-italic mt-2 mt-sm-0">Fall 2024: Teaching Assistant, UIUC (<a href="https://learncpp.online/about" target="_blank">course website</a>)</h6>
     <ul class="card-text font-weight-light list-group list-group-flush">
       <li class="list-group-item">○ UG-level introduction to computer science, taught by <a href="https://michaelrnowak.com/" target="_blank">Prof. Michael R. Nowak</a>.</li>
-      <li class="list-group-item">○ I will mentor groups of students working on class projects and grade homeworks.</li>
+      <li class="list-group-item">○ I will mentor groups of students working on class projects and lead the discussion.</li>
     </ul>
   </div>
 </div>
