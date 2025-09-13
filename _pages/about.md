@@ -74,14 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
         <div class="motto-enhanced">
-        ❄️ <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#E84A27" style="vertical-align: middle;">
-            <path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l1.41 1.41L10.83 6H20v2h-9.17l2.58 2.59L12 12l-4-4 4-4zm0 20l-1.41-1.41L13.17 18H4v-2h9.17l-2.58-2.59L12 12l4 4-4 4z"/>
-        </svg>
-        <span class="motto-text">Imagination...dissolves, diffuses, dissipates, in order to re-create.
-        <div style="text-align:right; font-size:0.9em; margin-top:0.3em;">
-          — Samuel Taylor Coleridge
-        </div>❄️
-        </div>
+    ❄️ <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#E84A27" style="vertical-align: middle;">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M12 2l1.41 1.41L10.83 6H20v2h-9.17l2.58 2.59L12 12l-4-4 4-4zm0 20l-1.41-1.41L13.17 18H4v-2h9.17l-2.58-2.59L12 12l4 4-4 4z"/>
+    </svg>
+    <span class="motto-text">Imagination...dissolves, diffuses, dissipates, in order to re-create.</span>
+    <div style="text-align:right; font-size:0.9em; margin-top:0.3em;">— Samuel Taylor Coleridge</div>
+    ❄️
+  </div>
 
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
         <h4 style="color: #E84A27;">Background</h4>
