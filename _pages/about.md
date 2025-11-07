@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener">
               <strong>lm-evaluation-harness</strong>
             </a>
-            — contributed improvements to evaluation workflows and benchmark integration with SGLang framework.
+            — <a href="https://www.linkedin.com/posts/sgl-project_sglang-powers-lm-eval-harness-the-gold-standard-activity-7300198413252317185-vc2E/" target="_blank" rel="noopener">lead the integration of SGLang as a backend in lm-eval-harness</a>.
           </li>
         </ul>
 
