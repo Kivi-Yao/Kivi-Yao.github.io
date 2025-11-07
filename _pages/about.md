@@ -168,7 +168,21 @@ document.addEventListener('DOMContentLoaded', function () {
         How to do trade-offs between machine learning metrics (accuracy, PPL, etc) and system metrics (latency, throughtputs)
         </p> -->
 
-        
+        <h4 style="color: #E84A27;">Open Source Contributions</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener">
+              <strong>sglang</strong>
+            </a>
+            — contributor and learner at this wonderful community.
+          </li>
+          <li>
+            <a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener">
+              <strong>lm-evaluation-harness</strong>
+            </a>
+            — contributed improvements to evaluation workflows and benchmark integration with SGLang.
+          </li>
+        </ul>
 
         <h4 style="color: #E84A27;">Miscellaneous</h4>
         <p>
