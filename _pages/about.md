@@ -86,7 +86,23 @@ document.addEventListener('DOMContentLoaded', function () {
         <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
         <h4 style="color: #E84A27;">Background</h4>
         <p>
-            I am currently in the first year at UIUC, pursuing a (research-based) <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">Master of Science in Computer Science(MSCS)</a>. My advisor is <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">Prof.Jiaxuan You</a>.
+            I am currently in the second year at UIUC, pursuing a (research-based)
+            <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">
+              Master of Science in Computer Science (MSCS)
+            </a>.
+            My advisor is
+            <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">
+              Prof. Jiaxuan You
+            </a>.
+            I have also gained invaluable insights into modeling from
+            <a href="https://www.mit.edu/~geliu/" target="_blank" rel="noopener">
+              Prof. Ge Liu (UIUC)
+            </a>
+            and into systems from
+            <a href="https://www.fanlai.me/" target="_blank" rel="noopener">
+              Prof. Fan Lai (UIUC)
+            </a>,
+            which together inspired my current research interest in system–modeling co-design.
         </p>
         
 
