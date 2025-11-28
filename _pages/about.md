@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener">
               <strong>sglang</strong>
             </a>
-            — contributor and learner at this wonderful community.
+            — Leading the SGLang diffusion LLM team. Contributor and learner at this wonderful community. 
           </li>
           <li>
             <a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener">
