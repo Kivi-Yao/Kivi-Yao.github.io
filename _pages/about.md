@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <li style="margin-top: 1rem;">
             <strong>Hardware: Hardware-Aware Algorithm Design</strong><br>
             <ul>
-            <li>How can we design algorithms that fully leverage heterogeneous hardware such as FPGAs, GPUs, and NPUs?</li>
-            <li>How to abstract hardware features into software libraries to simplify hardware-efficient algorithm development?</li>
+            <!-- <li>How can we design algorithms that fully leverage heterogeneous hardware such as FPGAs, GPUs, and NPUs?</li>
+            <li>How to abstract hardware features into software libraries to simplify hardware-efficient algorithm development?</li> -->
             <li>How to co-design algorithms with low-level primitives to maximize hardware utilization?</li>
             </ul>
         </li>
