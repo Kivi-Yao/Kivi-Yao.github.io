@@ -190,7 +190,13 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener">
               <strong>sglang</strong>
             </a>
-            — Leading the SGLang diffusion LLM team. Contributor and learner at this wonderful community. 
+            — Leading the SGLang diffusion LLM team. Contributor and learner in this wonderful community. 
+            <ul>
+              <li>
+                Initiated block diffusion serving with a flexible decoding algorithm interface 
+                (<a href="https://lmsys.org/blog/2025-12-19-diffusion-llm/" target="_blank" rel="noopener">blog post</a>)
+              </li>
+            </ul>
           </li>
           <li>
             <a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener">
