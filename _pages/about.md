@@ -188,21 +188,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <h4 style="color: #E84A27;">Research Philosophy</h4>
 
-        <h5 style="margin-top: 1rem;">I. The Hard Truths</h5>
+        <h5 style="margin-top: 1rem;">I. The Principle of System and Algorithm Co-design</h5>
         <ul>
-          <li><strong>[Lag]</strong> Systems research is inherently reactive to algorithmic bursts.</li>
-          <li><strong>[Scale]</strong> Algorithms that do not scale are effectively obsolete.</li>
-          <li><strong>[Trade-off]</strong> Quality is the initial goal; efficiency is the ultimate survival.</li>
-          <li><strong>[Hardware Lottery]</strong> Efficiency is not just a metric; it defines an algorithm’s destiny.</li>
+          <li><strong>[Algorithm &rarr; System]</strong> System researchers are too late to know the promising ML algorithms.</li>
+          <li><strong>[More is Different in Scaling]</strong> Most of the algorithms are meaningless at scale.</li>
+          <li><strong>[Quality-Efficiency Tradeoffs]</strong> Quality is prioritized before efficiency at the beginning, but efficiency determines the end.</li>
+          <li><strong>[Hardware Lottery]</strong> Eventually, algorithms don't survive just by being smart, but by being efficient on current hardware.</li>
         </ul>
 
-        <h5 style="margin-top: 1rem;">II. The Principles</h5>
+        <h5 style="margin-top: 1rem;">II. The Principle of Good Research in Machine Learning Systems</h5>
         <ul>
-          <li><strong>[Duality]</strong> Master either the sprint of delivery or the marathon of theory.</li>
-          <li><strong>[Open-source]</strong> Impact is measured by code (e.g., SGLang), not just citations.</li>
-          <li><strong>[Vision]</strong> Solve the bottlenecks the next generation of models will scream for.</li>
+          <li><strong>[Two Ends]</strong> Two ends are both fine: fast delivery (e.g., system) on practical projects, or slow science with principles (e.g., theory).</li>
+          <li><strong>[Open-source]</strong> Great open-source (like SGLang, FlashInfer, etc.) is impactful.</li>
+          <li><strong>[Identify the True Bottleneck]</strong> Don't optimize for the sake of optimization; solve the bottleneck that the next generation of models will scream for.</li>
         </ul>
-        
+
         <hr class="section-divider">
         <h4 style="color: #E84A27;">Open Source Contributions</h4>
         <ul>
