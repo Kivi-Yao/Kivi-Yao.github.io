@@ -184,6 +184,25 @@ document.addEventListener('DOMContentLoaded', function () {
         How to do trade-offs between machine learning metrics (accuracy, PPL, etc) and system metrics (latency, throughtputs)
         </p> -->
 
+        <hr class="section-divider">
+
+        <h4 style="color: #E84A27;">Research Philosophy</h4>
+
+        <h5 style="margin-top: 1rem;">I. The Hard Truths</h5>
+        <ul>
+          <li><strong>[Lag]</strong> Systems research is inherently reactive to algorithmic bursts.</li>
+          <li><strong>[Scale]</strong> Algorithms that do not scale are effectively obsolete.</li>
+          <li><strong>[Trade-off]</strong> Quality is the initial goal; efficiency is the ultimate survival.</li>
+          <li><strong>[Hardware Lottery]</strong> Efficiency is not just a metric; it defines an algorithm’s destiny.</li>
+        </ul>
+
+        <h5 style="margin-top: 1rem;">II. The Principles</h5>
+        <ul>
+          <li><strong>[Duality]</strong> Master either the sprint of delivery or the marathon of theory.</li>
+          <li><strong>[Open-source]</strong> Impact is measured by code (e.g., SGLang), not just citations.</li>
+          <li><strong>[Vision]</strong> Solve the bottlenecks the next generation of models will scream for.</li>
+        </ul>
+
         <h4 style="color: #E84A27;">Open Source Contributions</h4>
         <ul>
           <li>
