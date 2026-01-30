@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
         How to do trade-offs between machine learning metrics (accuracy, PPL, etc) and system metrics (latency, throughtputs)
         </p> -->
 
-        <hr class="section-divider">
+        
 
         <h4 style="color: #E84A27;">Research Philosophy</h4>
 
@@ -202,7 +202,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <li><strong>[Open-source]</strong> Impact is measured by code (e.g., SGLang), not just citations.</li>
           <li><strong>[Vision]</strong> Solve the bottlenecks the next generation of models will scream for.</li>
         </ul>
-
+        
+        <hr class="section-divider">
         <h4 style="color: #E84A27;">Open Source Contributions</h4>
         <ul>
           <li>
