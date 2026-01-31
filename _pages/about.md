@@ -190,13 +190,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <h5 style="margin-top: 1rem;">I. The Principle of System and Algorithm Co-design</h5>
         <ul>
-          <li><strong>[Algorithm &rarr; System]</strong> System researchers are too late to know the promising ML algorithms.</li>
-          <li><strong>[More is Different in Scaling]</strong> Most of the algorithms are meaningless at scale.</li>
+          <li><strong>[Algorithm &rarr; System]</strong> Pure system researchers are too late to know the promising ML algorithms in advance.</li>
+          <li><strong>[System &rarr; Algorithm]</strong> More is Different--most of the algorithms are meaningless at scale.</li>
           <li><strong>[Quality-Efficiency Tradeoffs]</strong> Quality is prioritized before efficiency at the beginning, but efficiency determines the end.</li>
           <li><strong>[Hardware Lottery]</strong> Eventually, algorithms don't survive just by being smart, but by being efficient on current hardware.</li>
         </ul>
 
-        <h5 style="margin-top: 1rem;">II. The Principle of Good Research in Machine Learning Systems</h5>
+        <h5 style="margin-top: 1rem;">II. My definition of Good Research in Machine Learning Systems</h5>
         <ul>
           <li><strong>[Two Ends]</strong> Two ends are both fine: fast delivery (e.g., system) on practical projects, or slow science with principles (e.g., theory).</li>
           <li><strong>[Open-source]</strong> Great open-source (like SGLang, FlashInfer, etc.) is impactful.</li>
