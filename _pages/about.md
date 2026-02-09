@@ -190,8 +190,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <h5 style="margin-top: 1rem;">I. The Principle of System and Algorithm Co-design</h5>
         <ul>
-          <li><strong>[Algorithm &rarr; System]</strong> Pure system researchers are too late to know the promising ML algorithms in advance.</li>
-          <li><strong>[System &rarr; Algorithm]</strong> More is Different--most of the algorithms are meaningless at scale.</li>
+          <li><strong>[Algorithm &rarr; System]</strong> Pure system researchers are too late to know the promising ML algorithms in advance. To design effective systems, one must actively learn, understand, and anticipate emerging ML algorithms.</li>
+          <li><strong>[System &rarr; Algorithm]</strong> <em>More is Different.</em>
+          Many algorithms that appear elegant in isolation fail to remain meaningful at scale. Understanding how algorithms behave under real system constraints and scaling regimes is essential.</li>
           <li><strong>[Quality-Efficiency Tradeoffs]</strong> Quality is prioritized before efficiency at the beginning, but efficiency determines the end.</li>
           <li><strong>[Hardware Lottery]</strong> Eventually, algorithms don't survive just by being smart, but by being efficient on current hardware.</li>
         </ul>
