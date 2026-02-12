@@ -124,14 +124,22 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
 
         <p>
-        <span style="color: #E60000;">
-            I am interested in machine learning systems (MLSys), especially in algorithm co-design across modeling, systems, and hardware.
-        </span>
-        There exists a significant gap between generative model design, system implementation, and hardware capabilities. My research aims to bridge this gap by developing efficient, robust, and scalable algorithms/systems for real-world large model applications.
+          <u><strong>Research Goal</strong></u>:
+          To advance <span style="color: #E60000;">modeling–algorithm–system co-design</span> for large-scale machine learning systems by bridging generative model design, system implementation, and hardware constraints.
         </p>
 
         <p>
-        I categorize my research interests into three interdependent dimensions:
+          <u><strong>Research Interests</strong></u>:
+          Machine learning systems (MLSys), with a focus on the interaction between <strong>sequential</strong> and <strong>parallel</strong> generation in language modeling and inference systems.
+        </p>
+
+        <p>
+          <u><strong>Core Research Questions</strong></u>:
+          How can we systematically trade off <em>efficiency</em> and <em>effectiveness</em> of large models through joint modeling, algorithmic, and system-level design?
+        </p>
+
+        <p>
+        In details, I categorize my research interests into three interdependent dimensions:
         </p>
 
         <ul>
