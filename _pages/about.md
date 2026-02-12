@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
 
         <p>
-            At UIUC, my research focuses on system-algorithm co-design for large models. System is my start point but I am doing algorithms as well. You can find my research interests as follows.
+            At UIUC, my research focuses on system-algorithm-modeling co-design for large models. System is my start point but I am doing algorithms/modeling as well. You can find my research interests as follows.
         </p>
         <hr class="section-divider">
         <h4 style="color: #E84A27;">Research Interest</h4>
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
 
         <li style="margin-top: 1rem;">
-            <strong>Hardware: Hardware-Aware Algorithm Design</strong><br>
+            <strong>Algorithm: Hardware-Aware Algorithm Design</strong><br>
             <ul>
             <!-- <li>How can we design algorithms that fully leverage heterogeneous hardware such as FPGAs, GPUs, and NPUs?</li>
             <li>How to abstract hardware features into software libraries to simplify hardware-efficient algorithm development?</li> -->
