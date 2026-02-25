@@ -130,11 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <p style="font-style: italic; color: #555; margin-top: 1rem;">
           “A deeper understanding of the theoretical framework that shapes the design space is essential to building systems that surpass the performance, scalability, and robustness of the state of the art; and, conversely, the problems that arise when addressing systems’ pain points can serve as a compass to guide us to exciting new theory.”
-          — <a href="https://principled.cs.cornell.edu/" target="_blank" rel="noopener">Principled Machine Learning Systems</a>
+          — <a href="https://principled.cs.cornell.edu/" target="_blank" rel="noopener">Theory meets Practice @ Cornell, by Professor Lorenzo Alvisi</a>
         </p>
 
         <p style="margin-top: 0.8rem;">
-          My research aims to bridge theory and practice in machine learning systems.
+          My research aims to <span style="color: #E60000;">bridge theory and practice</span> in machine learning systems.
         </p>
 
         <p>
