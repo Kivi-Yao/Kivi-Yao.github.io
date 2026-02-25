@@ -90,18 +90,18 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">
               Master of Science in Computer Science (MSCS)
             </a>.
-            My advisor is
+            I am co-advised by
             <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">
-              Prof. Jiaxuan You
-            </a>.
-            I have also gained invaluable insights into modeling from
+              Prof. Jiaxuan You(UIUC)
+            </a>
+            and 
             <a href="https://www.mit.edu/~geliu/" target="_blank" rel="noopener">
               Prof. Ge Liu (UIUC)
-            </a>
-            and into systems from
+            </a>, whose guidance has shaped my research perspective on efficient modeling. In addition,
+            I have also gained invaluable insights into systems from
             <a href="https://www.fanlai.me/" target="_blank" rel="noopener">
               Prof. Fan Lai (UIUC)
-            </a>,
+            </a> in his wonderful GenAI system course,
             which together inspired my current research interest in system–modeling co-design.
         </p>
         
