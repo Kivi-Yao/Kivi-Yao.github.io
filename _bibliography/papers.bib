@@ -3,6 +3,18 @@
 
 
 
+@inproceedings{zhang2026d2sd,
+  title={D²SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models},
+  author={Zhang, Liyuan and Zhang, Jiarui and <nobr><em>Yao</em></nobr>, <nobr><em>Jinwei</em></nobr> and Yan, Ran and Yang, Yuchen and Zhang, Jiahao and Yang, Tongkai and Wu, Yi and Yuan, Binhang},
+  booktitle={arXiv preprint arXiv:2606.04446},
+  year={2026},
+  abbr     = {arXiv 2026},
+  pdf      = {https://arxiv.org/abs/2606.04446},
+  tags     = {LLM, Parallel Generation},
+  image    = {/assets/img/D2SD.png},
+  abstract = {Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D²SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D²SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.}
+}
+
 @inproceedings{glamovcanin2023instruction,
   title={Instruction-level power side-channel leakage evaluation of soft-core CPUs on shared FPGAs},
   author={Glamo{\v{c}}anin, Ognjen and Shrivastava, Shashwat and <nobr><em>Yao</em></nobr>, <nobr><em>Jinwei</em></nobr> and Ardo, Nour and Payer, Mathias and Stojilovi{\'c}, Mirjana},
