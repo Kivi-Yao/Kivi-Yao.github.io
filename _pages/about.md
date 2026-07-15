@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <h4 style="color: #E84A27;">Research Interest</h4>
         
         <div style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
-        <img src="{{ '/assets/img/research_overview.svg' | prepend: site.baseurl | prepend: site.url }}" alt="Research Overview" style="max-width: 100%; height: auto;">
-        <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research.I am currently focusing on efficient and effective system-algorithm co-designs.</figcaption>
+        {% include research_overview.html %}
+        <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research. I am currently focusing on efficient and effective system-algorithm co-designs.</figcaption>
         </div>
 
         <p>
