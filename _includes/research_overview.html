@@ -8,11 +8,11 @@ Application on the right, four research lines in the corners.
 <style>
   .ro-wrap {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: minmax(0, 1fr) auto auto auto minmax(0, 1fr);
     grid-template-areas:
-      "lt  stack rt"
-      "alg stack app"
-      "lb  stack rb";
+      "lt  lt  stack rt  rt"
+      "alg ar1 stack ar2 app"
+      "lb  lb  stack rb  rb";
     gap: 16px 12px;
     align-items: center;
     max-width: 800px;
@@ -57,11 +57,13 @@ Application on the right, four research lines in the corners.
   body.light-mode .ro-algorithm   { background: #f8cecc; color: #7a3230; }
   body.light-mode .ro-application { background: #fff2cc; color: #6e5b1e; }
 
-  /* Algorithm / Application rows with double-headed arrows */
-  .ro-side { display: flex; align-items: center; gap: 8px; }
-  .ro-alg { grid-area: alg; justify-self: end; }
-  .ro-app { grid-area: app; justify-self: start; }
+  /* Algorithm / Application nodes and double-headed arrows */
+  .ro-algorithm   { grid-area: alg; justify-self: end; }
+  .ro-application { grid-area: app; justify-self: start; }
+  .ro-arrow-codesign { grid-area: ar1; }
+  .ro-arrow-support  { grid-area: ar2; }
   .ro-arrow-box {
+    justify-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,9 +153,9 @@ Application on the right, four research lines in the corners.
   @media (max-width: 700px) {
     .ro-wrap {
       grid-template-columns: 1fr;
-      grid-template-areas: "alg" "stack" "app" "lt" "lb" "rt" "rb";
+      grid-template-areas: "lt" "lb" "alg" "ar1" "stack" "ar2" "app" "rt" "rb";
     }
-    .ro-alg, .ro-app { justify-self: center; flex-direction: column; gap: 4px; }
+    .ro-algorithm, .ro-application { justify-self: center; }
     .ro-arrow-box { flex-direction: row; align-items: center; gap: 8px; }
     .ro-arrow-box svg.ro-arrow-h { display: none; }
     .ro-arrow-box svg.ro-arrow-v { display: block; }
@@ -169,35 +171,33 @@ Application on the right, four research lines in the corners.
     <div class="ro-node ro-hardware">🖥️ Hardware</div>
   </div>
 
-  <div class="ro-side ro-alg">
-    <div class="ro-node ro-algorithm">🧮 Algorithm</div>
-    <div class="ro-arrow-box ro-arrow-codesign">
-      <span>Co-design</span>
-      <svg class="ro-arrow-h" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
-        <path d="M9 8 H55 M9 8 l7 -5.5 M9 8 l7 5.5 M55 8 l-7 -5.5 M55 8 l-7 5.5"
-              stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <svg class="ro-arrow-v" width="16" height="44" viewBox="0 0 16 44" aria-hidden="true">
-        <path d="M8 9 V35 M8 9 l-5.5 7 M8 9 l5.5 7 M8 35 l-5.5 -7 M8 35 l5.5 -7"
-              stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+  <div class="ro-node ro-algorithm">🧮 Algorithm</div>
+
+  <div class="ro-arrow-box ro-arrow-codesign">
+    <span>Co-design</span>
+    <svg class="ro-arrow-h" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
+      <path d="M9 8 H55 M9 8 l7 -5.5 M9 8 l7 5.5 M55 8 l-7 -5.5 M55 8 l-7 5.5"
+            stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="ro-arrow-v" width="16" height="44" viewBox="0 0 16 44" aria-hidden="true">
+      <path d="M8 9 V35 M8 9 l-5.5 7 M8 9 l5.5 7 M8 35 l-5.5 -7 M8 35 l5.5 -7"
+            stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 
-  <div class="ro-side ro-app">
-    <div class="ro-arrow-box ro-arrow-support">
-      <span>Support</span>
-      <svg class="ro-arrow-h" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
-        <path d="M9 8 H55 M9 8 l7 -5.5 M9 8 l7 5.5 M55 8 l-7 -5.5 M55 8 l-7 5.5"
-              stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <svg class="ro-arrow-v" width="16" height="44" viewBox="0 0 16 44" aria-hidden="true">
-        <path d="M8 9 V35 M8 9 l-5.5 7 M8 9 l5.5 7 M8 35 l-5.5 -7 M8 35 l5.5 -7"
-              stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    <div class="ro-node ro-application">🤖 Application</div>
+  <div class="ro-arrow-box ro-arrow-support">
+    <span>Support</span>
+    <svg class="ro-arrow-h" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
+      <path d="M9 8 H55 M9 8 l7 -5.5 M9 8 l7 5.5 M55 8 l-7 -5.5 M55 8 l-7 5.5"
+            stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="ro-arrow-v" width="16" height="44" viewBox="0 0 16 44" aria-hidden="true">
+      <path d="M8 9 V35 M8 9 l-5.5 7 M8 9 l5.5 7 M8 35 l-5.5 -7 M8 35 l5.5 -7"
+            stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
+
+  <div class="ro-node ro-application">🤖 Application</div>
 
   {% for line in site.data.research.lines %}
     <div class="ro-line{% if line.focus %} ro-focus{% endif %}" style="grid-area: {{ line.side | slice: 0 }}{{ line.row | slice: 0 }};">
