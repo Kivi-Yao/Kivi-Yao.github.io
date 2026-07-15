@@ -95,6 +95,32 @@ Application on the right, four research lines in the corners.
   }
   body.light-mode .ro-line-title { color: #a0527d; }
 
+  /* Current-focus emphasis (set focus: true in _data/research.yml) */
+  .ro-line.ro-focus {
+    border-color: rgba(232, 74, 39, 0.6);
+    box-shadow: 0 0 16px rgba(232, 74, 39, 0.22);
+  }
+  body.light-mode .ro-line.ro-focus {
+    border-color: rgba(232, 74, 39, 0.45);
+    box-shadow: 0 2px 12px rgba(232, 74, 39, 0.15);
+    background: rgba(232, 74, 39, 0.03);
+  }
+  .ro-focus-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #e84a27;
+    border-radius: 999px;
+    padding: 1px 9px;
+    margin-left: 7px;
+    vertical-align: 2px;
+    white-space: nowrap;
+  }
+
   .ro-paper {
     display: block;
     font-size: 0.85rem;
@@ -140,7 +166,7 @@ Application on the right, four research lines in the corners.
   </div>
 
   <div class="ro-side ro-alg">
-    <div class="ro-node ro-algorithm">🧠 Algorithm</div>
+    <div class="ro-node ro-algorithm">🧮 Algorithm</div>
     <div class="ro-arrow-box ro-arrow-codesign">
       <span>Co-design</span>
       <svg width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
@@ -162,8 +188,8 @@ Application on the right, four research lines in the corners.
   </div>
 
   {% for line in site.data.research.lines %}
-    <div class="ro-line" style="grid-area: {{ line.side | slice: 0 }}{{ line.row | slice: 0 }};">
-      <div class="ro-line-title">{{ line.title }}</div>
+    <div class="ro-line{% if line.focus %} ro-focus{% endif %}" style="grid-area: {{ line.side | slice: 0 }}{{ line.row | slice: 0 }};">
+      <div class="ro-line-title">{{ line.title }}{% if line.focus %}<span class="ro-focus-badge">Current focus</span>{% endif %}</div>
       {% for p in line.papers %}
         {% if p.url %}
           <a class="ro-paper" href="{{ p.url }}" target="_blank" rel="noopener">

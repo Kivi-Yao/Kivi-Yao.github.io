@@ -7,22 +7,23 @@
 #     url: https://...              (optional; makes the entry clickable)
 #     note: extra remark            (optional; shown in parentheses)
 # Set `more: true` on a line to show "more works to appear".
+# Set `focus: true` on a line to highlight it as the current focus.
 
 lines:
   - title: System-modeling co-design
     side: left
     row: top
     more: true
+    focus: true
     papers:
       - name: D²SD
         venue: arXiv'26
         url: https://arxiv.org/abs/2606.04446
-      - name: GRAPE
-        venue: CS546 Project
 
   - title: Hardware-efficient algorithms
     side: left
     row: bottom
+    focus: true
     papers:
       - name: DeFT
         venue: ICLR'25 Spotlight
