@@ -392,4 +392,4 @@ document.addEventListener('DOMContentLoaded', function () {
   {% endfor %}
 </div>
 
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=rh8EaugEE0CSbdOsjboVgNsiqIwoLvWU-B59Ft11K5k&cl=ffffff&w=a"></script>
+<script type="text/javascript" id="clustrmaps" async src="//clustrmaps.com/map_v2.js?d=rh8EaugEE0CSbdOsjboVgNsiqIwoLvWU-B59Ft11K5k&cl=ffffff&w=a"></script>

@@ -209,52 +209,50 @@
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
   }
   </style>
+</head>
+<body>
+  <!-- Theme toggle: runs immediately (not on DOMContentLoaded) so the button and the
+       saved mode apply even while slow third-party scripts are still loading -->
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.createElement('button');
-    toggle.id = 'mode-toggle';
-    toggle.textContent = '☀️ / 🌙';
-    document.body.appendChild(toggle);
- 
+  (function () {
     const transition = () => {
       document.documentElement.classList.add('mode-transition');
       window.setTimeout(() => {
         document.documentElement.classList.remove('mode-transition');
       }, 500);
     };
- 
-    const setMode = (mode) => {
-      transition();
+
+    const setMode = (mode, animate) => {
+      if (animate) transition();
       if (mode === 'light') {
         document.body.classList.add('light-mode');
       } else {
         document.body.classList.remove('light-mode');
       }
-      localStorage.setItem('mode', mode);
+      try { localStorage.setItem('mode', mode); } catch (e) { /* private mode */ }
     };
- 
+
+    const toggle = document.createElement('button');
+    toggle.id = 'mode-toggle';
+    toggle.textContent = '☀️ / 🌙';
     toggle.addEventListener('click', () => {
       const isLight = document.body.classList.contains('light-mode');
-      setMode(isLight ? 'dark' : 'light');
+      setMode(isLight ? 'dark' : 'light', true);
     });
- 
+    document.body.appendChild(toggle);
+
     // Step 1: Check localStorage first
-    const saved = localStorage.getItem('mode');
+    let saved = null;
+    try { saved = localStorage.getItem('mode'); } catch (e) { /* private mode */ }
     if (saved === 'light' || saved === 'dark') {
-      setMode(saved);
+      setMode(saved, false);
     } else {
       // Step 2: Auto set based on local time
       const hour = new Date().getHours();
-      if (hour >= 6 && hour < 18) {
-        setMode('light');
-      } else {
-        setMode('dark');
-      }
+      setMode(hour >= 6 && hour < 18 ? 'light' : 'dark', false);
     }
-  });
+  })();
   </script>
-</head>
-<body>
   <canvas id="star-canvas"></canvas>
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
