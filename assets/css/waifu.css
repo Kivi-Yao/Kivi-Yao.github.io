@@ -135,6 +135,9 @@ body:not(.light-mode) .waifu-tips {
   animation: wa2Breath 6s ease-in-out infinite;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
   transition: transform 0.3s ease;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .wa2-chara:hover { transform: scale(1.04); }

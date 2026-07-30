@@ -38,10 +38,10 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
               <img class="d-block w-100 profile-img" src="{{ '/assets/img/Jinwei_pic.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Photo 2">
               <figcaption class="profile-caption">Taken at Bali, Indonesia</figcaption>
             </div>
-            <!-- <div class="carousel-item">
-              <img class="d-block w-100 profile-img" src="{{ '/assets/img/self_pic_3.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Photo 3">
-              <figcaption class="profile-caption">Sunny Campus Day</figcaption>
-            </div> -->
+            <div class="carousel-item">
+              <img class="d-block w-100 profile-img" src="{{ '/assets/img/self_pic_champaign.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Champaign, United States">
+              <figcaption class="profile-caption">Taken at Champaign, United States</figcaption>
+            </div>
           </div>
           <a class="carousel-control-prev" href="#profileCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

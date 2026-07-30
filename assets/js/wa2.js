@@ -65,7 +65,7 @@
       '<button class="wa2-switch" title="换人">⇄</button>' +
       '<button class="wa2-dress" title="换装">👗</button>' +
     '</div>' +
-    '<img class="wa2-chara" src="' + CHARACTERS.setsuna.outfits[0] + '" alt="WA2 heroine">';
+    '<img class="wa2-chara" src="' + CHARACTERS.setsuna.outfits[0] + '" alt="WA2 heroine" draggable="false">';
 
   function wa2Tips(text) {
     var el = wa2.querySelector('.wa2-tips');
