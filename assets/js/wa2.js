@@ -118,21 +118,43 @@
     var host = document.createElement('div');
     host.id = 'bgm-player';
     document.body.appendChild(host);
-    new window.APlayer({
-      container: host,
-      fixed: true,
-      mini: true,
-      loop: 'all',
-      preload: 'none',
-      volume: 0.6,
-      mutex: true,
-      audio: [{
-        name: '届かない恋',
-        artist: '上原れな',
-        url: '/assets/audio/todokanai-koi.mp3',
-        cover: '/assets/img/wa2/cover.jpg'
-      }]
-    });
+
+    var COVER = '/assets/img/wa2/cover.jpg';
+    var LOCAL_MP3 = '/assets/audio/todokanai-koi.mp3';
+    /* Piano cover with an open outer link on NetEase Music; the original
+     * song forbids hotlinking, so it only plays if a locally hosted file
+     * exists (drop it into assets/audio/, see the README there). */
+    var playlist = [{
+      name: '届かない恋 (Piano Cover)',
+      artist: '遥君',
+      url: 'https://music.163.com/song/media/outer/url?id=1446912475.mp3',
+      cover: COVER
+    }];
+
+    function start() {
+      new window.APlayer({
+        container: host,
+        fixed: true,
+        mini: true,
+        loop: 'all',
+        preload: 'none',
+        volume: 0.6,
+        mutex: true,
+        audio: playlist
+      });
+    }
+
+    fetch(LOCAL_MP3, { method: 'HEAD' }).then(function (res) {
+      if (res.ok) {
+        playlist.unshift({
+          name: '届かない恋',
+          artist: '上原れな',
+          url: LOCAL_MP3,
+          cover: COVER
+        });
+      }
+      start();
+    }).catch(start);
   }
 
   function boot() {
