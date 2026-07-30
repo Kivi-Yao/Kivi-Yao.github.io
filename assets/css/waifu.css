@@ -147,6 +147,10 @@ body:not(.light-mode) .waifu-tips {
   -webkit-user-drag: none;
   user-select: none;
   -webkit-user-select: none;
+  /* Some game sprites bleed off the top edge (esp. Kazusa); fade the
+   * top out softly instead of showing a hard cut line. */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 26px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 26px);
 }
 
 .wa2-chara:hover { transform: scale(1.04); }
