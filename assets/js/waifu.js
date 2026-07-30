@@ -150,11 +150,20 @@
       showTips(line.hitokoto + '<br><span class="waifu-tips-from">—— ' + line.from + '</span>', true);
     } else if (act === 'close') {
       showTips(CLICK_TIPS.close, true);
-      setTimeout(function () { wrap.style.display = 'none'; }, 1600);
+      setTimeout(function () {
+        wrap.style.display = 'none';
+        // Bring Kazusa (wa2.js) back into the left slot.
+        if (window.wa2Left) window.wa2Left.show();
+      }, 1600);
     }
   }
 
+  /* Hidden by default — Kazusa (wa2.js) owns the left slot on load; her
+   * switch button calls waifuWidget.show(). Model loads on first show. */
+  var waifuLoaded = false;
+
   function initWaifu() {
+    wrap.style.display = 'none';
     document.body.appendChild(wrap);
     tipsEl = wrap.querySelector('.waifu-tips');
     canvas = wrap.querySelector('#live2d');
@@ -169,8 +178,17 @@
       btn.addEventListener('click', function () { handleTool(act); });
     });
 
-    dressup(false);
-    setTimeout(loopTips, 3000);
+    window.waifuWidget = {
+      show: function () {
+        wrap.style.display = '';
+        if (!waifuLoaded) {
+          waifuLoaded = true;
+          dressup(false);
+          setTimeout(loopTips, 3000);
+        }
+      },
+      hide: function () { wrap.style.display = 'none'; }
+    };
   }
 
   /* ---------------- Cat-rope back-to-top ---------------- */

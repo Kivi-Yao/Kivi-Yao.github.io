@@ -116,10 +116,19 @@ body:not(.light-mode) .waifu-tips {
   100% { transform: translateY(0); }
 }
 
-/* White Album 2 corner widget */
+/* White Album 2 corner widgets: Setsuna right, Kazusa left */
 #wa2-widget {
   position: fixed;
   right: 100px;
+  bottom: 14px;
+  z-index: 99;
+  width: 170px;
+  text-align: center;
+}
+
+#wa2-widget-left {
+  position: fixed;
+  left: 20px;
   bottom: 14px;
   z-index: 99;
   width: 170px;
@@ -190,7 +199,7 @@ body.light-mode .wa2-tips {
   transition: opacity 0.3s ease;
 }
 
-#wa2-widget:hover .wa2-tools { opacity: 1; }
+.wa2-box:hover .wa2-tools { opacity: 1; }
 
 .wa2-tools button {
   width: 28px;
@@ -213,5 +222,5 @@ body.light-mode .wa2-tips {
 .aplayer.aplayer-fixed .aplayer-body { left: 290px; right: auto; width: 360px; }
 
 @media screen and (max-width: 767px) {
-  #waifu-wrap, #cat-rope, #wa2-widget, .aplayer.aplayer-fixed { display: none; }
+  #waifu-wrap, #cat-rope, #wa2-widget, #wa2-widget-left, .aplayer.aplayer-fixed { display: none; }
 }

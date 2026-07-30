@@ -1,20 +1,18 @@
 /*
- * White Album 2 corner widget (static sprite, breathing animation, quotes,
- * outfit switch) + background music via self-hosted APlayer.
- * Desktop only, same policy as the Live2D waifu.
+ * White Album 2 corner widgets + BGM.
+ * Default layout: Kazusa on the left, Setsuna on the right (both on screen).
+ * The left slot toggles between Kazusa and the Live2D waifu (waifu.js):
+ * Kazusa's switch button brings in the Live2D girl; closing her brings
+ * Kazusa back. Desktop only.
  */
 (function () {
   'use strict';
 
   if (window.matchMedia('(max-width: 767px)').matches) return;
 
-  /* ---------------- Setsuna sprite widget ---------------- */
-
-  /* Two heroines; short character lines & ambient phrases — no song lyrics. */
+  /* Short character lines & ambient phrases — no song lyrics. */
   var CHARACTERS = {
     setsuna: {
-      name: 'Setsuna',
-      greet: 'はーい、雪菜だよ☆',
       outfits: [
         '/assets/img/wa2/setsuna-winter.png',
         '/assets/img/wa2/setsuna-uniform.png',
@@ -32,8 +30,6 @@
       ]
     },
     kazusa: {
-      name: 'Kazusa',
-      greet: '……呼んだ？',
       outfits: [
         '/assets/img/wa2/kazusa-winter.png',
         '/assets/img/wa2/kazusa-uniform.png',
@@ -52,58 +48,80 @@
     }
   };
 
-  var charaKey = 'setsuna';
-  var outfitIdx = 0;
-  var lineIdx = 0;
-  var tipsTimer = null;
+  /* Sprite widget factory shared by both sides. */
+  function makeWidget(id, charaKey, withSwitch, onSwitch) {
+    var chara = CHARACTERS[charaKey];
+    var outfitIdx = 0;
+    var lineIdx = 0;
+    var tipsTimer = null;
 
-  var wa2 = document.createElement('div');
-  wa2.id = 'wa2-widget';
-  wa2.innerHTML =
-    '<div class="wa2-tips"></div>' +
-    '<div class="wa2-tools">' +
-      '<button class="wa2-switch" title="换人">⇄</button>' +
-      '<button class="wa2-dress" title="换装">👗</button>' +
-    '</div>' +
-    '<img class="wa2-chara" src="' + CHARACTERS.setsuna.outfits[0] + '" alt="WA2 heroine" draggable="false">';
+    var el = document.createElement('div');
+    el.id = id;
+    el.className = 'wa2-box';
+    el.innerHTML =
+      '<div class="wa2-tips"></div>' +
+      '<div class="wa2-tools">' +
+        (withSwitch ? '<button class="wa2-switch" title="换成看板娘">⇄</button>' : '') +
+        '<button class="wa2-dress" title="换装">👗</button>' +
+      '</div>' +
+      '<img class="wa2-chara" src="' + chara.outfits[0] + '" alt="' + charaKey + '" draggable="false">';
 
-  function wa2Tips(text) {
-    var el = wa2.querySelector('.wa2-tips');
-    el.textContent = text;
-    el.classList.add('wa2-tips-active');
-    clearTimeout(tipsTimer);
-    tipsTimer = setTimeout(function () { el.classList.remove('wa2-tips-active'); }, 4000);
-  }
+    var img = el.querySelector('.wa2-chara');
+    var tipsEl = el.querySelector('.wa2-tips');
 
-  function initWa2() {
-    document.body.appendChild(wa2);
-    var img = wa2.querySelector('.wa2-chara');
-
-    function chara() { return CHARACTERS[charaKey]; }
+    function tips(text) {
+      tipsEl.textContent = text;
+      tipsEl.classList.add('wa2-tips-active');
+      clearTimeout(tipsTimer);
+      tipsTimer = setTimeout(function () { tipsEl.classList.remove('wa2-tips-active'); }, 4000);
+    }
 
     img.addEventListener('click', function () {
-      wa2Tips(chara().lines[lineIdx % chara().lines.length]);
+      tips(chara.lines[lineIdx % chara.lines.length]);
       lineIdx++;
     });
 
-    wa2.querySelector('.wa2-dress').addEventListener('click', function (e) {
+    el.querySelector('.wa2-dress').addEventListener('click', function (e) {
       e.stopPropagation();
-      outfitIdx = (outfitIdx + 1) % chara().outfits.length;
-      img.src = chara().outfits[outfitIdx];
-      wa2Tips('この服、どうかな？');
+      outfitIdx = (outfitIdx + 1) % chara.outfits.length;
+      img.src = chara.outfits[outfitIdx];
+      tips('この服、どうかな？');
     });
 
-    wa2.querySelector('.wa2-switch').addEventListener('click', function (e) {
-      e.stopPropagation();
-      charaKey = charaKey === 'setsuna' ? 'kazusa' : 'setsuna';
-      outfitIdx = 0;
-      lineIdx = 0;
-      img.src = chara().outfits[0];
-      img.alt = chara().name;
-      wa2Tips(chara().greet);
+    if (withSwitch) {
+      el.querySelector('.wa2-switch').addEventListener('click', function (e) {
+        e.stopPropagation();
+        onSwitch();
+      });
+    }
+
+    document.body.appendChild(el);
+    return {
+      el: el,
+      tips: tips,
+      show: function () { el.style.display = ''; },
+      hide: function () { el.style.display = 'none'; }
+    };
+  }
+
+  var kazusaLeft, setsunaRight;
+
+  function initWidgets() {
+    // Right: Setsuna, always present.
+    setsunaRight = makeWidget('wa2-widget', 'setsuna', false);
+
+    // Left: Kazusa by default; her switch swaps in the Live2D waifu.
+    kazusaLeft = makeWidget('wa2-widget-left', 'kazusa', true, function () {
+      kazusaLeft.hide();
+      if (window.waifuWidget) window.waifuWidget.show();
     });
 
-    // Preload the other outfits and the other heroine after idle.
+    // waifu.js calls this when the Live2D girl is closed.
+    window.wa2Left = {
+      show: function () { kazusaLeft.show(); kazusaLeft.tips('……戻ったわよ。'); }
+    };
+
+    // Preload the other outfits after idle.
     setTimeout(function () {
       Object.keys(CHARACTERS).forEach(function (k) {
         CHARACTERS[k].outfits.forEach(function (src) { (new Image()).src = src; });
@@ -158,7 +176,7 @@
   }
 
   function boot() {
-    initWa2();
+    initWidgets();
     initBgm();
   }
 
