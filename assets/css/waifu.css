@@ -175,11 +175,21 @@ body.light-mode .wa2-tips {
 
 .wa2-tips-active { opacity: 1; }
 
-.wa2-dress {
+.wa2-tools {
   position: absolute;
   top: -14px;
-  right: 8px;
+  right: 4px;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#wa2-widget:hover .wa2-tools { opacity: 1; }
+
+.wa2-tools button {
   width: 28px;
   height: 28px;
   padding: 0;
@@ -190,12 +200,14 @@ body.light-mode .wa2-tips {
   line-height: 28px;
   color: #fff;
   background: rgba(100, 130, 180, 0.8);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-#wa2-widget:hover .wa2-dress { opacity: 1; }
-.wa2-dress:hover { transform: scale(1.12); background: #6482b4; }
+.wa2-tools button:hover { transform: scale(1.12); background: #6482b4; }
+
+/* Keep the fixed BGM player clear of the Live2D waifu (280px wide, left). */
+.aplayer.aplayer-fixed { left: 290px; right: auto; }
+.aplayer.aplayer-fixed .aplayer-body { left: 290px; right: auto; width: 360px; }
 
 @media screen and (max-width: 767px) {
   #waifu-wrap, #cat-rope, #wa2-widget, .aplayer.aplayer-fixed { display: none; }
