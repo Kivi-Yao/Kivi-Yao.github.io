@@ -110,12 +110,14 @@
      random WA2 scene showing through a translucent white veil. */
   body.light-mode.snow-mode {
     background:
-      linear-gradient(rgba(253, 253, 253, 0.86), rgba(253, 253, 253, 0.86)),
+      linear-gradient(rgba(253, 253, 253, 0.72), rgba(253, 253, 253, 0.72)),
       var(--snow-bg, none) center / cover no-repeat fixed !important;
   }
 
   body.light-mode.snow-mode .content {
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
 
   @media (max-width: 767px) {
