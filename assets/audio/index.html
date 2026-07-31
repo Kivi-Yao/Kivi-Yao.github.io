@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Jinwei Yao | BGM audio files</title>
+  <meta name="description" content="Academic website of Jinwei Yao.">
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/all.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/main.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/APlayer.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/waifu.css?v=1785537551">
+  <script src="https://Kivi-Yao.github.io/live2d/live2d.min.js"></script>
+</link>
+  <link rel="canonical" href="https://Kivi-Yao.github.io/assets/audio/">
+  <style>
+  #star-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  body {
+    background: radial-gradient(ellipse at bottom, #0d1a26 0%, #000000 100%) fixed !important;
+    color: #fff;
+  }
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .publication-entry {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  body.light-mode .publication-entry {
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .publication-entry:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+    transform: translateY(-4px) scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body.light-mode .publication-entry:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px) scale(1.01);
+  }
+
+  .motto-enhanced {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    background: radial-gradient(circle at center, rgba(255,255,255,0.08), rgba(232, 74, 39, 0.15)),
+                linear-gradient(135deg, #e84a27cc, #f0c9b2cc);
+    animation: float 6s ease-in-out infinite;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    color: #fff;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+  <style>
+  body {
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  body.light-mode {
+    background: #fdfdfd !important;
+    color: #000 !important;
+  }
+
+  /* ❄️ Snow mode (WHITE ALBUM 2 easter egg): light-mode styling with a
+     random WA2 scene showing through a translucent white veil. */
+  body.light-mode.snow-mode {
+    background:
+      linear-gradient(rgba(253, 253, 253, 0.72), rgba(253, 253, 253, 0.72)),
+      var(--snow-bg, none) center / cover no-repeat fixed !important;
+  }
+
+  body.light-mode.snow-mode .content {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  @media (max-width: 767px) {
+    /* fixed background attachments misbehave on mobile Safari */
+    body.light-mode.snow-mode { background-attachment: scroll !important; }
+  }
+
+  body.light-mode .content {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+
+  body.light-mode .motto-enhanced {
+    background: linear-gradient(135deg, #ffeadb, #ffe6e6);
+    color: #222;
+  }
+
+  .academic-role-box {
+    background-color: rgba(255, 255, 255, 0.1); /* dark mode default */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  body.light-mode .academic-role-box {
+    background-color: rgba(0, 0, 0, 0.05); /* light mode adjustment */
+    color: #000;
+  }
+  .abstract-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .abstract-card:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  body.light-mode .abstract-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+  }
+  
+  body.light-mode .abstract-card:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  </style>
+  <style>
+  .course-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .course-card .list-group-item {
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  body:not(.light-mode) .course-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+  }
+  
+  body:not(.light-mode) .course-card .list-group-item {
+    background-color: transparent;
+    color: #ddd;
+  }
+  
+  body:not(.light-mode) .course-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.3);
+  }
+  </style>
+  <style>
+    #mode-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #e84a27;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    html.mode-transition, html.mode-transition * {
+      transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease !important;
+    }
+  </style>
+  <style>
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    border: none;
+    margin: 2.5rem auto;
+    max-width: 90%;
+  }
+  
+  body.light-mode .section-divider {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+  }
+  </style>
+</head>
+<body>
+  <!-- Theme toggle: runs immediately (not on DOMContentLoaded) so the button and the
+       saved mode apply even while slow third-party scripts are still loading -->
+  <script>
+  (function () {
+    const transition = () => {
+      document.documentElement.classList.add('mode-transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('mode-transition');
+      }, 500);
+    };
+
+    // ❄️ Snow mode is a WHITE ALBUM 2 easter egg: light styling with a
+    // random WA2 scene behind a translucent veil, re-rolled every visit.
+    const SNOW_BGS = [
+      '/assets/img/snow-bg/snow-1.jpg',
+      '/assets/img/snow-bg/snow-2.jpg',
+      '/assets/img/snow-bg/snow-3.jpg'
+    ];
+    const MODE_ICON = { light: '☀️', dark: '🌙', snow: '❄️' };
+    let currentMode = 'dark';
+
+    const toggle = document.createElement('button');
+    toggle.id = 'mode-toggle';
+    toggle.title = '切换主题 ☀️→🌙→❄️';
+
+    const setMode = (mode, animate) => {
+      if (animate) transition();
+      currentMode = mode;
+      // Snow rides on light-mode styling so every light rule applies;
+      // snow-mode itself only swaps the page background.
+      document.body.classList.toggle('light-mode', mode === 'light' || mode === 'snow');
+      document.body.classList.toggle('snow-mode', mode === 'snow');
+      if (mode === 'snow') {
+        const bg = SNOW_BGS[Math.floor(Math.random() * SNOW_BGS.length)];
+        document.body.style.setProperty('--snow-bg', 'url(' + bg + ')');
+      }
+      toggle.textContent = MODE_ICON[mode];
+      try { localStorage.setItem('mode', mode); } catch (e) { /* private mode */ }
+    };
+
+    toggle.addEventListener('click', () => {
+      setMode(currentMode === 'light' ? 'dark' : currentMode === 'dark' ? 'snow' : 'light', true);
+    });
+    document.body.appendChild(toggle);
+
+    // Step 1: Check localStorage first
+    let saved = null;
+    try { saved = localStorage.getItem('mode'); } catch (e) { /* private mode */ }
+    if (saved === 'light' || saved === 'dark' || saved === 'snow') {
+      setMode(saved, false);
+    } else {
+      // Step 2: Auto set based on local time
+      const hour = new Date().getHours();
+      setMode(hour >= 6 && hour < 18 ? 'light' : 'dark', false);
+    }
+  })();
+  </script>
+  <canvas id="star-canvas"></canvas>
+  <!-- Header -->
+  <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
+    <div class="container-fluid p-0">
+      
+        <a class="navbar-brand title font-weight-lighter" href="https://Kivi-Yao.github.io/"><span class="font-weight-bold">Jinwei</span> Yao</a>
+      
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/">
+                    About
+                    
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/resume.pdf">
+                    CV
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/publication/">
+                    Publication
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/blog/">
+                    Blog
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/teaching/">
+                    Academic Role
+                </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scrolling Progress Bar -->
+  <progress id="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+
+  <!-- Content -->
+  <div class="content">
+    
+  <h1>BGM audio files</h1>
+  <h6></h6>
+
+
+<h1 id="bgm-audio-files">BGM audio files</h1>
+
+<p>The BGM player (<code class="highlighter-rouge">assets/js/wa2.js</code>) streams via NetEase Music’s outer-link
+API (only versions that allow hotlinking):</p>
+
+<ol>
+  <li>届かない恋（冬马和纱 Ver.）— vocal</li>
+  <li>届かない恋 (Piano Cover)</li>
+</ol>
+
+<p>The playlist is shuffled on every page load; all tracks (streamed and
+local) share the same random pool with equal probability.</p>
+
+<p>Local track slots — the player probes these files on load and adds each
+one it finds to the pool (no code change needed):</p>
+
+<ul>
+  <li><code class="highlighter-rouge">todokanai-koi-setsuna.mp3</code> → 届かない恋 (小木曽雪菜 Ver., 米澤円)</li>
+  <li><code class="highlighter-rouge">todokanai-koi.mp3</code> → 届かない恋 (上原れな original)</li>
+</ul>
+
+<p>These versions forbid hotlinking on every streaming platform, so they can
+only play self-hosted. Drop the file(s) into this folder and commit.</p>
+
+<p>To add more tracks, extend <code class="highlighter-rouge">LOCAL_TRACKS</code> or <code class="highlighter-rouge">playlist</code> in
+<code class="highlighter-rouge">assets/js/wa2.js</code>.</p>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Copyright 2026 Jinwei Yao.
+    
+    
+  </footer>
+
+  <!-- Core JavaScript Files -->
+  <script src="https://Kivi-Yao.github.io/assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/popper.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/mdb.min.js" type="text/javascript"></script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/common.js"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/waifu.js?v=1785537551"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/APlayer.min.js"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/wa2.js?v=1785537551"></script>
+
+  <!-- Per-page setup: runs on first load and after every pjax swap -->
+  <script type="text/javascript">
+    function pageSetup() {
+      var navbarHeight = $('#navbar').outerHeight(true);
+      $('body').css({ 'padding-top': navbarHeight });
+      $('progress-container').css({ 'padding-top': navbarHeight });
+      var progressBar = $('#progress');
+      progressBar.css({ 'top': navbarHeight });
+      if ('max' in document.createElement('progress')) {
+        progressBar.attr({ max: $(document).height() - $(window).height(), value: $(window).scrollTop() });
+      }
+
+      // Project cards masonry layout
+      var $grid = $('#projects');
+      if ($grid.length) {
+        $grid.imagesLoaded().progress(function() {
+          $grid.masonry({ percentPosition: true });
+          $grid.masonry('layout');
+        });
+      }
+
+      // Tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Syntax highlighting for pjax-swapped content (initial load is
+      // covered by initHighlightingOnLoad; .hljs marks processed blocks)
+      if (window.hljs) {
+        $('.content pre code:not(.hljs)').each(function(i, block) { hljs.highlightBlock(block); });
+      }
+
+      // MathJax re-typeset for swapped content
+      if (window.MathJax && MathJax.Hub) {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, document.querySelector('.content')]);
+      }
+    }
+
+    $(document).ready(function() {
+      var progressBar = $('#progress');
+      var getMax = function() { return $(document).height() - $(window).height(); }
+      var getValue = function() { return $(window).scrollTop(); }
+      // Check if the browser supports the progress element.
+      if ('max' in document.createElement('progress')) {
+        $(document).on('scroll', function() {
+          progressBar.attr({ value: getValue() });
+        });
+        $(window).resize(function() {
+          var navbarHeight = $('#navbar').outerHeight(true);
+          $('body').css({ 'padding-top': navbarHeight });
+          $('progress-container').css({ 'padding-top': navbarHeight });
+          progressBar.css({ 'top': navbarHeight });
+          progressBar.attr({ max: getMax(), value: getValue() });
+        });
+      } else {
+        var max = getMax(), value, width;
+        var getWidth = function() {
+          value = getValue();
+          width = (value/max) * 100;
+          return width + '%';
+        }
+        var setWidth = function() { progressBar.css({ width: getWidth() }); };
+        setWidth();
+        $(document).on('scroll', setWidth);
+        $(window).on('resize', function() {
+          max = getMax();
+          setWidth();
+        });
+      }
+      pageSetup();
+    });
+
+    document.addEventListener('pjax:done', function() {
+      pageSetup();
+      if (typeof gtag === 'function') {
+        gtag('event', 'page_view', { page_location: location.href, page_title: document.title });
+      }
+    });
+  </script>
+
+  <!-- Code Syntax Highlighting -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <script src="https://Kivi-Yao.github.io/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Script Used for Randomizing the Projects Order -->
+  <!-- <script type="text/javascript">
+    $.fn.shuffleChildren = function() {
+      $.each(this.get(), function(index, el) {
+        var $el = $(el);
+        var $find = $el.children();
+
+        $find.sort(function() {
+          return 0.5 - Math.random();
+        });
+
+        $el.empty();
+        $find.appendTo($el);
+      });
+    };
+    $("#projects").shuffleChildren();
+  </script> -->
+
+  <!-- Masonry & tooltips now run inside pageSetup() above -->
+
+  <!-- pjax: swap only the content area on in-site navigation, keeping
+       the BGM player / Live2D / sprites alive across pages -->
+  <script src="https://Kivi-Yao.github.io/assets/js/pjax.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-15KDGWRRRM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-15KDGWRRRM');
+  </script>
+  <!-- 💫 星空背景动效 -->
+<script>
+  const canvas = document.getElementById('star-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  
+  function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  
+  function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+          stars.push({
+              x: Math.random() * canvas.width,
+              y: Math.random() * canvas.height,
+              r: Math.random() * 1.5 + 0.5,
+              speed: Math.random() * 0.2 + 0.05,
+              opacity: Math.random(),
+              flash: false
+          });
+      }
+  }
+  
+  function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255,255,255,${star.flash ? 1 : star.opacity})`;
+          ctx.fill();
+          star.y += star.speed;
+          if (star.y > canvas.height) {
+              star.y = 0;
+              star.x = Math.random() * canvas.width;
+          }
+      }
+  }
+  
+  function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
+  }
+  createStars(250);
+  animate();
+  
+  // 流星
+  function shootMeteor() {
+      let x = Math.random() * canvas.width;
+      let y = 0;
+      let length = 200;
+      let angle = Math.PI / 4;
+      let speed = 10;
+      let alpha = 1;
+  
+      function drawMeteor() {
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + length * Math.cos(angle), y + length * Math.sin(angle));
+          ctx.stroke();
+          ctx.restore();
+      }
+  
+      function animateMeteor() {
+          if (alpha <= 0) return;
+          drawStars();
+          drawMeteor();
+          x += speed * Math.cos(angle);
+          y += speed * Math.sin(angle);
+          alpha -= 0.02;
+          requestAnimationFrame(animateMeteor);
+      }
+  
+      animateMeteor();
+  }
+  
+  setInterval(() => {
+      if (Math.random() < 0.3) {
+          shootMeteor();
+      }
+  }, 5000);
+  
+  // 点击闪烁星星
+  canvas.addEventListener('click', e => {
+      const { offsetX, offsetY } = e;
+      for (let star of stars) {
+          const dx = star.x - offsetX;
+          const dy = star.y - offsetY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 40) {
+              star.flash = true;
+              setTimeout(() => (star.flash = false), 300);
+          }
+      }
+  });
+  </script>
+</body>
+</html>

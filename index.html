@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Jinwei Yao</title>
+  <meta name="description" content="Academic website of Jinwei Yao.">
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/all.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/main.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/APlayer.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/waifu.css?v=1785537551">
+  <script src="https://Kivi-Yao.github.io/live2d/live2d.min.js"></script>
+</link>
+  <link rel="canonical" href="https://Kivi-Yao.github.io/">
+  <style>
+  #star-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  body {
+    background: radial-gradient(ellipse at bottom, #0d1a26 0%, #000000 100%) fixed !important;
+    color: #fff;
+  }
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .publication-entry {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  body.light-mode .publication-entry {
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .publication-entry:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+    transform: translateY(-4px) scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body.light-mode .publication-entry:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px) scale(1.01);
+  }
+
+  .motto-enhanced {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    background: radial-gradient(circle at center, rgba(255,255,255,0.08), rgba(232, 74, 39, 0.15)),
+                linear-gradient(135deg, #e84a27cc, #f0c9b2cc);
+    animation: float 6s ease-in-out infinite;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    color: #fff;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+  <style>
+  body {
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  body.light-mode {
+    background: #fdfdfd !important;
+    color: #000 !important;
+  }
+
+  /* ❄️ Snow mode (WHITE ALBUM 2 easter egg): light-mode styling with a
+     random WA2 scene showing through a translucent white veil. */
+  body.light-mode.snow-mode {
+    background:
+      linear-gradient(rgba(253, 253, 253, 0.72), rgba(253, 253, 253, 0.72)),
+      var(--snow-bg, none) center / cover no-repeat fixed !important;
+  }
+
+  body.light-mode.snow-mode .content {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  @media (max-width: 767px) {
+    /* fixed background attachments misbehave on mobile Safari */
+    body.light-mode.snow-mode { background-attachment: scroll !important; }
+  }
+
+  body.light-mode .content {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+
+  body.light-mode .motto-enhanced {
+    background: linear-gradient(135deg, #ffeadb, #ffe6e6);
+    color: #222;
+  }
+
+  .academic-role-box {
+    background-color: rgba(255, 255, 255, 0.1); /* dark mode default */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  body.light-mode .academic-role-box {
+    background-color: rgba(0, 0, 0, 0.05); /* light mode adjustment */
+    color: #000;
+  }
+  .abstract-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .abstract-card:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  body.light-mode .abstract-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+  }
+  
+  body.light-mode .abstract-card:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  </style>
+  <style>
+  .course-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .course-card .list-group-item {
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  body:not(.light-mode) .course-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+  }
+  
+  body:not(.light-mode) .course-card .list-group-item {
+    background-color: transparent;
+    color: #ddd;
+  }
+  
+  body:not(.light-mode) .course-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.3);
+  }
+  </style>
+  <style>
+    #mode-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #e84a27;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    html.mode-transition, html.mode-transition * {
+      transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease !important;
+    }
+  </style>
+  <style>
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    border: none;
+    margin: 2.5rem auto;
+    max-width: 90%;
+  }
+  
+  body.light-mode .section-divider {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+  }
+  </style>
+</head>
+<body>
+  <!-- Theme toggle: runs immediately (not on DOMContentLoaded) so the button and the
+       saved mode apply even while slow third-party scripts are still loading -->
+  <script>
+  (function () {
+    const transition = () => {
+      document.documentElement.classList.add('mode-transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('mode-transition');
+      }, 500);
+    };
+
+    // ❄️ Snow mode is a WHITE ALBUM 2 easter egg: light styling with a
+    // random WA2 scene behind a translucent veil, re-rolled every visit.
+    const SNOW_BGS = [
+      '/assets/img/snow-bg/snow-1.jpg',
+      '/assets/img/snow-bg/snow-2.jpg',
+      '/assets/img/snow-bg/snow-3.jpg'
+    ];
+    const MODE_ICON = { light: '☀️', dark: '🌙', snow: '❄️' };
+    let currentMode = 'dark';
+
+    const toggle = document.createElement('button');
+    toggle.id = 'mode-toggle';
+    toggle.title = '切换主题 ☀️→🌙→❄️';
+
+    const setMode = (mode, animate) => {
+      if (animate) transition();
+      currentMode = mode;
+      // Snow rides on light-mode styling so every light rule applies;
+      // snow-mode itself only swaps the page background.
+      document.body.classList.toggle('light-mode', mode === 'light' || mode === 'snow');
+      document.body.classList.toggle('snow-mode', mode === 'snow');
+      if (mode === 'snow') {
+        const bg = SNOW_BGS[Math.floor(Math.random() * SNOW_BGS.length)];
+        document.body.style.setProperty('--snow-bg', 'url(' + bg + ')');
+      }
+      toggle.textContent = MODE_ICON[mode];
+      try { localStorage.setItem('mode', mode); } catch (e) { /* private mode */ }
+    };
+
+    toggle.addEventListener('click', () => {
+      setMode(currentMode === 'light' ? 'dark' : currentMode === 'dark' ? 'snow' : 'light', true);
+    });
+    document.body.appendChild(toggle);
+
+    // Step 1: Check localStorage first
+    let saved = null;
+    try { saved = localStorage.getItem('mode'); } catch (e) { /* private mode */ }
+    if (saved === 'light' || saved === 'dark' || saved === 'snow') {
+      setMode(saved, false);
+    } else {
+      // Step 2: Auto set based on local time
+      const hour = new Date().getHours();
+      setMode(hour >= 6 && hour < 18 ? 'light' : 'dark', false);
+    }
+  })();
+  </script>
+  <canvas id="star-canvas"></canvas>
+  <!-- Header -->
+  <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
+    <div class="container-fluid p-0">
+      
+        <div class="row ml-1 ml-sm-0">
+          <span class="contact-icon text-center" style="line-height: 1em;">
+            <a href="mailto:jinweiy@illinois.edu"><i class="fa fa-envelope-square gm-icon"></i></a>
+            <a href="https://scholar.google.com/citations?userid=idZOK_kAAAAJ&user=idZOK_kAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar-square gs-icon"></i></a>
+            <a href="https://www.github.com/Monstertail" target="_blank" title="GitHub"><i class="fab fa-github-square gh-icon"></i></a>
+            <a href="https://www.linkedin.com/in/jinwei-yao-541164190" target="_blank" title="LinkedIn"><i class="fab fa-linkedin li-icon"></i></a>
+            <!--<a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-square fb-icon"></i></a>-->
+            <a href="https://twitter.com/KiwiJWY" target="_blank" title="Twitter"><i class="fab fa-twitter-square tw-icon"></i></a>
+          </span>
+        </div>
+      
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item navbar-active font-weight-bold">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/">
+                    About
+                    
+                        <span class="sr-only">(current)</span>
+                    
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/resume.pdf">
+                    CV
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/publication/">
+                    Publication
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/blog/">
+                    Blog
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/teaching/">
+                    Academic Role
+                </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scrolling Progress Bar -->
+  <progress id="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+
+  <!-- Content -->
+  <div class="content">
+    
+
+<div class="col p-0 pt-4 pb-4">
+  <h1 class="title text-left font-weight-bold">Jinwei Yao</h1> 
+  <h6 class="pb-3 m-0 mb-2" style="font-size: 0.83em;">My English name is Kivi.</h6>
+  <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" class="page-description" target="_blank">Master of Science in Computer Science</a> • <a href="https://siebelschool.illinois.edu/" class="page-description" target="_blank">Sibel Computer Science Center</a> • <a href="https://illinois.edu/" class="page-description" target="_blank">UIUC</a></h6>
+  
+      <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+Computer+Science/@40.1138069,-88.2274801,17z/data=!3m2!4b1!5s0x880cd76a5762dfb7:0xcf6a023935717398!4m6!3m5!1s0x880cd76baa8479a9:0x4e9f01d40d359630!8m2!3d40.1138028!4d-88.2249052!16s%2Fm%2F0yqkg1s?entry=ttu" class="page-description" target="_blank">201 N Goodwin Ave, Urbana, IL 61801</a></h6>
+  
+</div>
+
+<!-- Introduction -->
+
+<div style="display: flex; flex-wrap: wrap;">
+    <section class="profile">
+        <!-- Avoid inline styles where possible and use a separate CSS file or <style> block -->
+        <!--
+        To add more photos:
+             1. Upload the image to /assets/img/ (e.g., self_pic_4.jpg)
+             2. Copy a <div class="carousel-item">...</div> block below and update image path + caption
+             3. Ensure only one <div> has class="carousel-item active"
+        -->
+        <div id="profileCarousel" class="carousel slide profile-image-container" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 profile-img" src="https://Kivi-Yao.github.io/assets/img/self_pic_jw.jpg" alt="Zakynthos, Greece" />
+              <figcaption class="profile-caption">Taken at Zakynthos, Greece</figcaption>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 profile-img" src="https://Kivi-Yao.github.io/assets/img/Jinwei_pic.jpg" alt="Photo 2" />
+              <figcaption class="profile-caption">Taken at Bali, Indonesia</figcaption>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 profile-img" src="https://Kivi-Yao.github.io/assets/img/self_pic_champaign.jpg" alt="Champaign, United States" />
+              <figcaption class="profile-caption">Taken at Champaign, United States</figcaption>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#profileCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#profileCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+<script>
+(function () {
+function initProfileCarousel() {
+  var $c = $('#profileCarousel');
+  if ($c.length) {
+    var $items = $c.find('.carousel-item');
+    var n = $items.length;
+    if (n > 0) {
+      // Pick a random starting slide
+      var idx = Math.floor(Math.random() * n);
+      $items.removeClass('active');
+      $items.eq(idx).addClass('active');
+    }
+    // Initialize Bootstrap carousel with manual control only
+    $c.carousel({ interval: false, ride: false, wrap: true, keyboard: true });
+    // Ensure no auto-cycling
+    $c.carousel('pause');
+  }
+}
+// Run on first load and when re-executed after a pjax swap.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProfileCarousel);
+} else {
+  initProfileCarousel();
+}
+})();
+</script>
+
+        <div class="motto-enhanced">
+    ❄️ <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#E84A27" style="vertical-align: middle;">
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 2l1.41 1.41L10.83 6H20v2h-9.17l2.58 2.59L12 12l-4-4 4-4zm0 20l-1.41-1.41L13.17 18H4v-2h9.17l-2.58-2.59L12 12l4 4-4 4z" />
+    </svg>
+    <span class="motto-text">Imagination...dissolves, diffuses, dissipates, in order to re-create.</span>
+    <div style="text-align:right; font-size:0.9em; margin-top:0.3em;">— Samuel Taylor Coleridge</div>
+    ❄️
+  </div>
+
+        <!-- Use <p> tag for paragraphs instead of <br> for better semantics and readability -->
+        <h4 style="color: #E84A27;">Background</h4>
+        <p>
+            I am currently in the second year at UIUC, pursuing a (research-based)
+            <a href="https://siebelschool.illinois.edu/academics/graduate/ms-program" target="_blank" rel="noopener">
+              Master of Science in Computer Science (MSCS)
+            </a>.
+            I am co-advised by
+            <a href="https://cs.stanford.edu/~jiaxuan/" target="_blank" rel="noopener">
+              Prof. Jiaxuan You(UIUC)
+            </a>
+            and 
+            <a href="https://www.mit.edu/~geliu/" target="_blank" rel="noopener">
+              Prof. Ge Liu (UIUC)
+            </a>, whose guidance has shaped my research perspective on efficient modeling. In addition,
+            I have also gained invaluable insights into systems from
+            <a href="https://www.fanlai.me/" target="_blank" rel="noopener">
+              Prof. Fan Lai (UIUC)
+            </a> in his wonderful GenAI system course,
+            which together inspired my current research interest in system–modeling co-design.
+        </p>
+        
+
+        <p>
+            Before my journey at UIUC, I spent one year at <a href="https://www.epfl.ch/schools/ic/" target="_blank" rel="noopener">EPFL</a> as a fellowship PhD student in distributed systems, where I laid my academic foundations. Leaving peaceful and beautiful Switzerland is a hard decision: after one year of thinking and discussion with my career mentor <a href="https://people.epfl.ch/katerina.argyraki?lang=en" target="_blank" rel="noopener">Prof. Katerina Argyraki</a>, I followed my heart to explore ML System research. In <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>, I obtained my Bachelor's degree in Electronic Science and Technology, with Outstanding Thesis Award for designing FPGA subsystem for GNN acceleration, where was the start of my MLSys research. During my ML System research journey, I was lucky to work with wonderful advisors-- <a href="https://wangzeke.github.io/" target="_blank" rel="noopener">Prof. Zeke Wang(Zhejiang University)</a>,
+            <a href="https://scholar.google.ch/citations?user=QE9pa_cAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Tao Lin(Westlake University)</a>,  and
+            <a href="https://binhangyuan.github.io/site/" target="_blank" rel="noopener">Prof. Binhang Yuan(HKUST)</a>.
+        </p>
+
+        <p>
+            At UIUC, my research focuses on system-algorithm-modeling co-design for large models. System is my start point but I am doing algorithms/modeling as well. You can find my research interests as follows.
+        </p>
+        <hr class="section-divider" />
+        <h4 style="color: #E84A27;">Research Interest</h4>
+        
+        <div style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
+        
+
+<style>
+  .ro-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto auto minmax(0, 1fr);
+    grid-template-areas:
+      "lt  lt  stack rt  rt"
+      "alg ar1 stack ar2 app"
+      "lb  lb  stack rb  rb";
+    gap: 16px 12px;
+    align-items: center;
+    max-width: 800px;
+    margin: 1.5rem auto;
+  }
+
+  /* Center stack */
+  .ro-stack {
+    grid-area: stack;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(4px);
+  }
+  body.light-mode .ro-stack {
+    background: #f7f7f7;
+    border-color: #cccccc;
+  }
+
+  /* Nodes (draw.io pastel palette in light mode, translucent in dark) */
+  .ro-node {
+    padding: 9px 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    border: 1.5px solid;
+  }
+  .ro-modeling    { background: rgba(130, 179, 102, 0.22); border-color: #82b366; color: #c8e6b8; }
+  .ro-system      { background: rgba(108, 142, 191, 0.22); border-color: #6c8ebf; color: #c5d8f5; }
+  .ro-hardware    { background: rgba(150, 115, 166, 0.22); border-color: #9673a6; color: #ddc8e8; }
+  .ro-algorithm   { background: rgba(184, 84, 80, 0.22);   border-color: #b85450; color: #f3c6c4; }
+  .ro-application { background: rgba(214, 182, 86, 0.25);  border-color: #d6b656; color: #f2e3ae; }
+  body.light-mode .ro-modeling    { background: #d5e8d4; color: #3d5c3a; }
+  body.light-mode .ro-system      { background: #dae8fc; color: #2f4d75; }
+  body.light-mode .ro-hardware    { background: #e1d5e7; color: #5a4468; }
+  body.light-mode .ro-algorithm   { background: #f8cecc; color: #7a3230; }
+  body.light-mode .ro-application { background: #fff2cc; color: #6e5b1e; }
+
+  /* Algorithm / Application nodes and double-headed arrows */
+  .ro-algorithm   { grid-area: alg; justify-self: end; }
+  .ro-application { grid-area: app; justify-self: start; }
+  .ro-arrow-codesign { grid-area: ar1; }
+  .ro-arrow-support  { grid-area: ar2; }
+  .ro-arrow-box {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #cfcfcf;
+  }
+  body.light-mode .ro-arrow-box { color: #666666; }
+  .ro-arrow-box svg { display: block; }
+  .ro-arrow-codesign svg { color: #e08a86; }
+  .ro-arrow-support  svg { color: #d6b656; }
+  .ro-arrow-box svg.ro-arrow-v { display: none; }
+
+  /* Research line cards */
+  .ro-line {
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+  }
+  body.light-mode .ro-line {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .ro-line-title {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #d495b8;
+    margin-bottom: 6px;
+  }
+  body.light-mode .ro-line-title { color: #a0527d; }
+
+  /* Current-focus emphasis (set focus: true in _data/research.yml) */
+  .ro-line.ro-focus {
+    border-color: rgba(232, 74, 39, 0.6);
+    box-shadow: 0 0 16px rgba(232, 74, 39, 0.22);
+  }
+  body.light-mode .ro-line.ro-focus {
+    border-color: rgba(232, 74, 39, 0.45);
+    box-shadow: 0 2px 12px rgba(232, 74, 39, 0.15);
+    background: rgba(232, 74, 39, 0.03);
+  }
+  .ro-focus-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #e84a27;
+    border-radius: 999px;
+    padding: 1px 9px;
+    margin-left: 7px;
+    vertical-align: 2px;
+    white-space: nowrap;
+  }
+
+  .ro-paper {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin-top: 4px;
+    color: inherit;
+  }
+  a.ro-paper {
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin-left: -6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  a.ro-paper:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+    color: inherit;
+  }
+  body.light-mode a.ro-paper:hover { background: rgba(0, 0, 0, 0.06); }
+  .ro-venue { font-weight: 700; color: #ff8a80; }
+  body.light-mode .ro-venue { color: #cb4335; }
+  .ro-name { font-weight: 600; }
+  .ro-note, .ro-more { font-size: 0.78rem; font-style: italic; opacity: 0.75; }
+  .ro-more { margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .ro-wrap {
+      grid-template-columns: 1fr;
+      grid-template-areas: "lt" "lb" "alg" "ar1" "stack" "ar2" "app" "rt" "rb";
+    }
+    .ro-algorithm, .ro-application { justify-self: center; }
+    .ro-arrow-box { flex-direction: row; align-items: center; gap: 8px; }
+    .ro-arrow-box svg.ro-arrow-h { display: none; }
+    .ro-arrow-box svg.ro-arrow-v { display: block; }
+    .ro-node { white-space: normal; }
+  }
+</style>
+
+<div class="ro-wrap">
+
+  <div class="ro-stack">
+    <div class="ro-node ro-modeling">🦙 Modeling</div>
+    <div class="ro-node ro-system">⚙️ System</div>
+    <div class="ro-node ro-hardware">🖥️ Hardware</div>
+  </div>
+
+  <div class="ro-node ro-algorithm">🧮 Algorithm</div>
+
+  <div class="ro-arrow-box ro-arrow-codesign">
+    <span>Co-design</span>
+    <svg class="ro-arrow-h" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
+      <path d="M9 8 H55 M9 8 l7 -5.5 M9 8 l7 5.5 M55 8 l-7 -5.5 M55 8 l-7 5.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg class="ro-arrow-v" width="16" height="44" viewBox="0 0 16 44" aria-hidden="true">
+      <path d="M8 9 V35 M8 9 l-5.5 7 M8 9 l5.5 7 M8 35 l-5.5 -7 M8 35 l5.5 -7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <div class="ro-arrow-box ro-arrow-support">
+    <span>Support</span>
+    <svg class="ro-arrow-h" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true">
+      <path d="M9 8 H55 M9 8 l7 -5.5 M9 8 l7 5.5 M55 8 l-7 -5.5 M55 8 l-7 5.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg class="ro-arrow-v" width="16" height="44" viewBox="0 0 16 44" aria-hidden="true">
+      <path d="M8 9 V35 M8 9 l-5.5 7 M8 9 l5.5 7 M8 35 l-5.5 -7 M8 35 l5.5 -7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <div class="ro-node ro-application">🤖 Application</div>
+
+  
+    <div class="ro-line ro-focus" style="grid-area: lt;">
+      <div class="ro-line-title">System-modeling co-design<span class="ro-focus-badge">Current focus</span></div>
+      
+        
+          <a class="ro-paper" href="https://arxiv.org/abs/2606.04446" target="_blank" rel="noopener">
+            <span class="ro-venue">[arXiv'26]</span>
+            <span class="ro-name">D²SD</span>
+            
+          </a>
+        
+      
+      
+        <div class="ro-more">… more works to appear</div>
+      
+    </div>
+  
+    <div class="ro-line ro-focus" style="grid-area: lb;">
+      <div class="ro-line-title">Hardware-efficient algorithms<span class="ro-focus-badge">Current focus</span></div>
+      
+        
+          <a class="ro-paper" href="https://arxiv.org/abs/2404.00242" target="_blank" rel="noopener">
+            <span class="ro-venue">[ICLR'25 Spotlight]</span>
+            <span class="ro-name">DeFT</span>
+            
+          </a>
+        
+      
+      
+    </div>
+  
+    <div class="ro-line" style="grid-area: rt;">
+      <div class="ro-line-title">Agent applications</div>
+      
+        
+          <a class="ro-paper" href="https://arxiv.org/pdf/2412.17767" target="_blank" rel="noopener">
+            <span class="ro-venue">[ICML'25]</span>
+            <span class="ro-name">ResearchTown</span>
+            
+          </a>
+        
+      
+      
+    </div>
+  
+    <div class="ro-line" style="grid-area: rb;">
+      <div class="ro-line-title">Application-customized hardware</div>
+      
+        
+          <div class="ro-paper">
+            <span class="ro-venue">[ZJU Outstanding Thesis]</span>
+            <span class="ro-name">FPGA for Graph Sampling Acceleration</span>
+            <span class="ro-note">(my undergraduate project)</span>
+          </div>
+        
+      
+      
+    </div>
+  
+
+</div>
+
+        <figcaption style="font-style: italic; margin-top: 0.5rem;">An overview of past research. I am currently focusing on efficient and effective system-algorithm co-designs.</figcaption>
+        </div>
+
+        <p>
+          <u><strong>Research Goal</strong></u>:
+          To advance <span style="color: #E60000;">modeling–algorithm–system co-design</span> for large-scale machine learning systems by bridging generative model design, system implementation, and hardware constraints.
+        </p>
+
+        <p style="font-style: italic; color: #555; margin-top: 1rem;">
+          “A deeper understanding of the theoretical framework that shapes the design space is essential to building systems that surpass the performance, scalability, and robustness of the state of the art; and, conversely, the problems that arise when addressing systems’ pain points can serve as a compass to guide us to exciting new theory.”
+          — <a href="https://principled.cs.cornell.edu/" target="_blank" rel="noopener">Theory meets Practice @ Cornell, by Professor Lorenzo Alvisi</a>
+        </p>
+
+        <p style="margin-top: 0.8rem;">
+          My research aims to <span style="color: #E60000;">bridge theory and practice</span> in machine learning systems.
+        </p>
+
+        <p>
+          <u><strong>Research Interests</strong></u>:
+          Machine learning systems (MLSys), with a focus on the interaction between <strong>sequential</strong> and <strong>parallel</strong> generation in language modeling and inference systems.
+        </p>
+
+        <p>
+          <u><strong>Core Research Questions</strong></u>:
+          How can we systematically trade off <em>efficiency</em> and <em>effectiveness</em> of large models through joint modeling, algorithmic, and system-level design?
+        </p>
+
+        <p>
+        In details, I categorize my research interests into three interdependent dimensions:
+        </p>
+
+        <ul>
+        <li>
+            <strong>System: Efficiency &amp; Robustness in LLM Infrastructure</strong><br />
+            <ul>
+            <li>LLM Inference Efficiency: How to provide cheap and fast LLM inference services?</li>
+            <li>LLM Training Efficiency: How to train LLMs with limited resources while ensuring robustness?</li>
+            <li>ML-System SLO Trade-off: How to balance ML performance metrics (e.g., accuracy, perplexity) with system metrics (e.g., latency, throughput)?</li>
+            </ul>
+        </li>
+
+          <li style="margin-top: 1rem;">
+        <strong>Modeling: Beyond Auto-Regressive Patterns</strong><br />
+        <ul>
+        <li>How can we rethink or extend generative modeling paradigms beyond the auto-regressive (AR) models?</li>
+        <li>How to design architectures that are more expressive and efficient than AR models?</li>
+        <li>How to unify multimodal inputs (e.g., text, vision, code) into a shared and coherent representation space?</li>
+        </ul>
+        </li>
+
+        <li style="margin-top: 1rem;">
+            <strong>Algorithm: Hardware-Aware Algorithm Design</strong><br />
+            <ul>
+            <!-- <li>How can we design algorithms that fully leverage heterogeneous hardware such as FPGAs, GPUs, and NPUs?</li>
+            <li>How to abstract hardware features into software libraries to simplify hardware-efficient algorithm development?</li> -->
+            <li>How to co-design algorithms with low-level primitives to maximize hardware utilization?</li>
+            </ul>
+        </li>
+        </ul>
+        <hr class="section-divider" />
+        <!-- <p>
+            <span style="color: #0455A4;">
+            I am interested in machine learning systems (ML System), especially algorithms co-design for systems and modeling.
+            </span> 
+        My primary goal is to provide efficient, cheap and robust system services for real-world LM applications. To achieve this goal, I identified three main challenges: 
+        </p>
+        <p>
+        <strong>Challenge1 LLM Inference Efficiency</strong> <br>
+        How to provide cheap and fast LLM inference service.
+        </p>
+
+        <p>
+        <strong>Challenge2 LLM Training Efficiency</strong> <br>
+        How to provide efficient and robust LLM training.
+        </p>
+        
+        <p>
+        <strong>Challenge3 Trade-off between service-level-objects (SLOs) in ML and System</strong> <br>
+        How to do trade-offs between machine learning metrics (accuracy, PPL, etc) and system metrics (latency, throughtputs)
+        </p> -->
+
+        
+
+        <h4 style="color: #E84A27;">Research Philosophy</h4>
+
+        <h5 style="margin-top: 1rem;">I. The Principle of System and Algorithm Co-design</h5>
+        <ul>
+          <li><strong>[Algorithm &rarr; System]</strong> Pure system researchers are too late to know the promising ML algorithms in advance.  Effective system design requires anticipating, not reacting to, emerging ML algorithms.</li>
+          <li><strong>[System &rarr; Algorithm]</strong> <em>More is Different.</em>
+          Algorithms must be evaluated by their behavior at scale under real system constraints.</li>
+          <li><strong>[Quality-Efficiency Tradeoffs]</strong> Quality is prioritized before efficiency at the beginning, but efficiency determines the end.</li>
+          <li><strong>[Hardware Lottery]</strong> Eventually, algorithms don't survive just by being smart, but by being efficient on current hardware.</li>
+        </ul>
+
+        <h5 style="margin-top: 1rem;">II. My definition of Good Research in Machine Learning Systems</h5>
+        <ul>
+          <li><strong>[Two Ends]</strong> Two ends are both fine: fast delivery (e.g., system) on practical projects, or slow science with principles (e.g., theory).</li>
+          <li><strong>[Open-source]</strong> Great open-source (like SGLang, FlashInfer, etc.) is impactful.</li>
+          <li><strong>[Identify the True Bottleneck]</strong> Don't optimize for the sake of optimization; solve the bottleneck that the next generation of models will scream for.</li>
+        </ul>
+
+        <hr class="section-divider" />
+        <h4 style="color: #E84A27;">Open Source Contributions</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener">
+              <strong>sglang</strong>
+            </a>
+            — Leading the SGLang diffusion LLM team. Contributor and learner in this wonderful community. 
+            <ul>
+              <li>
+                Initiated block diffusion serving with a flexible decoding algorithm interface 
+                (<a href="https://lmsys.org/blog/2025-12-19-diffusion-llm/" target="_blank" rel="noopener">blog post</a>)
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener">
+              <strong>lm-evaluation-harness</strong>
+            </a>
+            — <a href="https://www.linkedin.com/posts/sgl-project_sglang-powers-lm-eval-harness-the-gold-standard-activity-7300198413252317185-vc2E/" target="_blank" rel="noopener">lead the integration of SGLang as a backend in lm-eval-harness</a>.
+          </li>
+        </ul>
+
+        <h4 style="color: #E84A27;">Miscellaneous</h4>
+        <p>
+            I am active in sharing paper readings on my another <a href="https://monstertail.github.io/#/" target="_blank" rel="noopener">Github Blog</a> and  <a href="https://www.zhihu.com/people/jing-wei-38-12" target="_blank" rel="noopener">Zhihu(知乎)</a>.
+
+            I like 🏀, 💪, 📚, 🐱, and 🎬.
+        </p>
+
+        
+    </section>
+</div>
+
+<!-- Add CSS (either inline or preferably in a separate stylesheet) -->
+<style>
+.profile {
+    padding: 0;
+}
+.motto {
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #444;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.motto:hover {
+    color: #E84A27; /* UIUC orange */
+    text-shadow: 0 2px 8px rgba(232, 74, 39, 0.4);
+    transform: scale(1.03);
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+.motto-enhanced {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #e84a27cc, #f0c9b2cc);
+    padding: 1.2rem 1rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.motto-enhanced .motto-text {
+    z-index: 2;
+    position: relative;
+}
+
+.motto-enhanced:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(232, 74, 39, 0.3);
+}
+
+/* ❄️ Snow animation effect */
+.motto-enhanced::before, .motto-enhanced::after {
+    content: "❄️";
+    position: absolute;
+    font-size: 1.2rem;
+    animation: snow 8s linear infinite;
+    opacity: 0.8;
+}
+
+.motto-enhanced::after {
+    animation-delay: 4s;
+    left: 60%;
+}
+
+@keyframes snow {
+    0% {
+        top: -10%;
+        left: 20%;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(-30px);
+    }
+}
+.profile-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Center horizontally */
+    align-items: center;     /* Center vertically*/
+    max-width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+.profile-img {
+    width: 100%;
+    height: auto; /*to maintain aspect ratio*/
+}
+.profile-caption {
+    text-align: center; /* Centers the text of the caption */
+    padding-top: 0.5rem; /* Adds some space between the image and the caption */
+    font-style: italic;
+    /* Add any additional styling you need for the caption here */
+}
+@media screen and (max-width: 576px) {
+    .profile-image-container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-bottom: 1rem;
+    }
+}
+#star-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+</style>
+
+<!-- News -->
+<hr class="section-divider" />
+
+<div class="news mt-3 p-0">
+  <h3 class="title mb-4 p-0" style="color: #E60000;">News</h3>
+  
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Jan 5, 2026
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>🎉 I was honored to receive a <strong>Siebel School Outstanding Teaching Assistant Award Nomination</strong> for my teaching service in the <strong>Spring 2025 semester</strong>.
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Mar 20, 2025
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>🎉 <strong>ResearchTown</strong>(LLM agents for automatic research) got accepted by ICML’25. Code is released <a href="https://github.com/ulab-uiuc/research-town">here</a>.
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Jan 22, 2025
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>🎉 <strong>DeFT</strong>(tree-attention algorithm for efficient LLM inference including reasoning) got accepted by ICLR’25’ as Spotlight(Top 5%)! Code is released <a href="https://github.com/LINs-lab/DeFT">here</a>.
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Aug 16, 2024
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>😄 Enrolled at MSCS Program and began a new semester at <strong>UIUC</strong>.
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Mar 2, 2024
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>🎉 <strong>DeFT</strong> got accepted by ICLR’24 AGI Workshop as Oral Presentation!
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Sep 1, 2023
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>💻 After one-year of consideration and suggested by my career mentor,  I decided to leave <strong>EPFL</strong>  for  ML System Research as no profs in EPFL are interested in ML System.
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Aug 30, 2022
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>💻 Enrolled <strong>EPFL</strong> as a PhD student with a fellowship from CS department.
+</p>
+      </div>
+    </div>
+  
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge danger-color-dark darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          Jun 30, 2022
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>💪 Graduated from <strong>Zhejiang University</strong> and received the B.Eng. in Electronic Science and Technology (with Outstanding Graduation Award and Outstanding Thesis Award).
+</p>
+      </div>
+    </div>
+  
+</div>
+
+<script type="text/javascript" id="clustrmaps" async="" src="//clustrmaps.com/map_v2.js?d=rh8EaugEE0CSbdOsjboVgNsiqIwoLvWU-B59Ft11K5k&amp;cl=ffffff&amp;w=a"></script>
+
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Copyright 2026 Jinwei Yao.
+    
+    
+  </footer>
+
+  <!-- Core JavaScript Files -->
+  <script src="https://Kivi-Yao.github.io/assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/popper.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/mdb.min.js" type="text/javascript"></script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/common.js"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/waifu.js?v=1785537551"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/APlayer.min.js"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/wa2.js?v=1785537551"></script>
+
+  <!-- Per-page setup: runs on first load and after every pjax swap -->
+  <script type="text/javascript">
+    function pageSetup() {
+      var navbarHeight = $('#navbar').outerHeight(true);
+      $('body').css({ 'padding-top': navbarHeight });
+      $('progress-container').css({ 'padding-top': navbarHeight });
+      var progressBar = $('#progress');
+      progressBar.css({ 'top': navbarHeight });
+      if ('max' in document.createElement('progress')) {
+        progressBar.attr({ max: $(document).height() - $(window).height(), value: $(window).scrollTop() });
+      }
+
+      // Project cards masonry layout
+      var $grid = $('#projects');
+      if ($grid.length) {
+        $grid.imagesLoaded().progress(function() {
+          $grid.masonry({ percentPosition: true });
+          $grid.masonry('layout');
+        });
+      }
+
+      // Tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Syntax highlighting for pjax-swapped content (initial load is
+      // covered by initHighlightingOnLoad; .hljs marks processed blocks)
+      if (window.hljs) {
+        $('.content pre code:not(.hljs)').each(function(i, block) { hljs.highlightBlock(block); });
+      }
+
+      // MathJax re-typeset for swapped content
+      if (window.MathJax && MathJax.Hub) {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, document.querySelector('.content')]);
+      }
+    }
+
+    $(document).ready(function() {
+      var progressBar = $('#progress');
+      var getMax = function() { return $(document).height() - $(window).height(); }
+      var getValue = function() { return $(window).scrollTop(); }
+      // Check if the browser supports the progress element.
+      if ('max' in document.createElement('progress')) {
+        $(document).on('scroll', function() {
+          progressBar.attr({ value: getValue() });
+        });
+        $(window).resize(function() {
+          var navbarHeight = $('#navbar').outerHeight(true);
+          $('body').css({ 'padding-top': navbarHeight });
+          $('progress-container').css({ 'padding-top': navbarHeight });
+          progressBar.css({ 'top': navbarHeight });
+          progressBar.attr({ max: getMax(), value: getValue() });
+        });
+      } else {
+        var max = getMax(), value, width;
+        var getWidth = function() {
+          value = getValue();
+          width = (value/max) * 100;
+          return width + '%';
+        }
+        var setWidth = function() { progressBar.css({ width: getWidth() }); };
+        setWidth();
+        $(document).on('scroll', setWidth);
+        $(window).on('resize', function() {
+          max = getMax();
+          setWidth();
+        });
+      }
+      pageSetup();
+    });
+
+    document.addEventListener('pjax:done', function() {
+      pageSetup();
+      if (typeof gtag === 'function') {
+        gtag('event', 'page_view', { page_location: location.href, page_title: document.title });
+      }
+    });
+  </script>
+
+  <!-- Code Syntax Highlighting -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <script src="https://Kivi-Yao.github.io/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Script Used for Randomizing the Projects Order -->
+  <!-- <script type="text/javascript">
+    $.fn.shuffleChildren = function() {
+      $.each(this.get(), function(index, el) {
+        var $el = $(el);
+        var $find = $el.children();
+
+        $find.sort(function() {
+          return 0.5 - Math.random();
+        });
+
+        $el.empty();
+        $find.appendTo($el);
+      });
+    };
+    $("#projects").shuffleChildren();
+  </script> -->
+
+  <!-- Masonry & tooltips now run inside pageSetup() above -->
+
+  <!-- pjax: swap only the content area on in-site navigation, keeping
+       the BGM player / Live2D / sprites alive across pages -->
+  <script src="https://Kivi-Yao.github.io/assets/js/pjax.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-15KDGWRRRM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-15KDGWRRRM');
+  </script>
+  <!-- 💫 星空背景动效 -->
+<script>
+  const canvas = document.getElementById('star-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  
+  function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  
+  function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+          stars.push({
+              x: Math.random() * canvas.width,
+              y: Math.random() * canvas.height,
+              r: Math.random() * 1.5 + 0.5,
+              speed: Math.random() * 0.2 + 0.05,
+              opacity: Math.random(),
+              flash: false
+          });
+      }
+  }
+  
+  function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255,255,255,${star.flash ? 1 : star.opacity})`;
+          ctx.fill();
+          star.y += star.speed;
+          if (star.y > canvas.height) {
+              star.y = 0;
+              star.x = Math.random() * canvas.width;
+          }
+      }
+  }
+  
+  function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
+  }
+  createStars(250);
+  animate();
+  
+  // 流星
+  function shootMeteor() {
+      let x = Math.random() * canvas.width;
+      let y = 0;
+      let length = 200;
+      let angle = Math.PI / 4;
+      let speed = 10;
+      let alpha = 1;
+  
+      function drawMeteor() {
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + length * Math.cos(angle), y + length * Math.sin(angle));
+          ctx.stroke();
+          ctx.restore();
+      }
+  
+      function animateMeteor() {
+          if (alpha <= 0) return;
+          drawStars();
+          drawMeteor();
+          x += speed * Math.cos(angle);
+          y += speed * Math.sin(angle);
+          alpha -= 0.02;
+          requestAnimationFrame(animateMeteor);
+      }
+  
+      animateMeteor();
+  }
+  
+  setInterval(() => {
+      if (Math.random() < 0.3) {
+          shootMeteor();
+      }
+  }, 5000);
+  
+  // 点击闪烁星星
+  canvas.addEventListener('click', e => {
+      const { offsetX, offsetY } = e;
+      for (let star of stars) {
+          const dx = star.x - offsetX;
+          const dy = star.y - offsetY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 40) {
+              star.flash = true;
+              setTimeout(() => (star.flash = false), 300);
+          }
+      }
+  });
+  </script>
+</body>
+</html>

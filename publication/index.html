@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Jinwei Yao | Publication</title>
+  <meta name="description" content="Academic website of Jinwei Yao.">
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/all.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/main.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/APlayer.min.css">
+  <link rel="stylesheet" href="https://Kivi-Yao.github.io/assets/css/waifu.css?v=1785537551">
+  <script src="https://Kivi-Yao.github.io/live2d/live2d.min.js"></script>
+</link>
+  <link rel="canonical" href="https://Kivi-Yao.github.io/publication/">
+  <style>
+  #star-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  body {
+    background: radial-gradient(ellipse at bottom, #0d1a26 0%, #000000 100%) fixed !important;
+    color: #fff;
+  }
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .publication-entry {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  body.light-mode .publication-entry {
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .publication-entry:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+    transform: translateY(-4px) scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body.light-mode .publication-entry:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px) scale(1.01);
+  }
+
+  .motto-enhanced {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    background: radial-gradient(circle at center, rgba(255,255,255,0.08), rgba(232, 74, 39, 0.15)),
+                linear-gradient(135deg, #e84a27cc, #f0c9b2cc);
+    animation: float 6s ease-in-out infinite;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    color: #fff;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+  <style>
+  body {
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  body.light-mode {
+    background: #fdfdfd !important;
+    color: #000 !important;
+  }
+
+  /* ❄️ Snow mode (WHITE ALBUM 2 easter egg): light-mode styling with a
+     random WA2 scene showing through a translucent white veil. */
+  body.light-mode.snow-mode {
+    background:
+      linear-gradient(rgba(253, 253, 253, 0.72), rgba(253, 253, 253, 0.72)),
+      var(--snow-bg, none) center / cover no-repeat fixed !important;
+  }
+
+  body.light-mode.snow-mode .content {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  @media (max-width: 767px) {
+    /* fixed background attachments misbehave on mobile Safari */
+    body.light-mode.snow-mode { background-attachment: scroll !important; }
+  }
+
+  body.light-mode .content {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+
+  body.light-mode .motto-enhanced {
+    background: linear-gradient(135deg, #ffeadb, #ffe6e6);
+    color: #222;
+  }
+
+  .academic-role-box {
+    background-color: rgba(255, 255, 255, 0.1); /* dark mode default */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  body.light-mode .academic-role-box {
+    background-color: rgba(0, 0, 0, 0.05); /* light mode adjustment */
+    color: #000;
+  }
+  .abstract-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .abstract-card:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  body.light-mode .abstract-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+  }
+  
+  body.light-mode .abstract-card:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  </style>
+  <style>
+  .course-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .course-card .list-group-item {
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  body:not(.light-mode) .course-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+  }
+  
+  body:not(.light-mode) .course-card .list-group-item {
+    background-color: transparent;
+    color: #ddd;
+  }
+  
+  body:not(.light-mode) .course-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.3);
+  }
+  </style>
+  <style>
+    #mode-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #e84a27;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    html.mode-transition, html.mode-transition * {
+      transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease !important;
+    }
+  </style>
+  <style>
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    border: none;
+    margin: 2.5rem auto;
+    max-width: 90%;
+  }
+  
+  body.light-mode .section-divider {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+  }
+  </style>
+</head>
+<body>
+  <!-- Theme toggle: runs immediately (not on DOMContentLoaded) so the button and the
+       saved mode apply even while slow third-party scripts are still loading -->
+  <script>
+  (function () {
+    const transition = () => {
+      document.documentElement.classList.add('mode-transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('mode-transition');
+      }, 500);
+    };
+
+    // ❄️ Snow mode is a WHITE ALBUM 2 easter egg: light styling with a
+    // random WA2 scene behind a translucent veil, re-rolled every visit.
+    const SNOW_BGS = [
+      '/assets/img/snow-bg/snow-1.jpg',
+      '/assets/img/snow-bg/snow-2.jpg',
+      '/assets/img/snow-bg/snow-3.jpg'
+    ];
+    const MODE_ICON = { light: '☀️', dark: '🌙', snow: '❄️' };
+    let currentMode = 'dark';
+
+    const toggle = document.createElement('button');
+    toggle.id = 'mode-toggle';
+    toggle.title = '切换主题 ☀️→🌙→❄️';
+
+    const setMode = (mode, animate) => {
+      if (animate) transition();
+      currentMode = mode;
+      // Snow rides on light-mode styling so every light rule applies;
+      // snow-mode itself only swaps the page background.
+      document.body.classList.toggle('light-mode', mode === 'light' || mode === 'snow');
+      document.body.classList.toggle('snow-mode', mode === 'snow');
+      if (mode === 'snow') {
+        const bg = SNOW_BGS[Math.floor(Math.random() * SNOW_BGS.length)];
+        document.body.style.setProperty('--snow-bg', 'url(' + bg + ')');
+      }
+      toggle.textContent = MODE_ICON[mode];
+      try { localStorage.setItem('mode', mode); } catch (e) { /* private mode */ }
+    };
+
+    toggle.addEventListener('click', () => {
+      setMode(currentMode === 'light' ? 'dark' : currentMode === 'dark' ? 'snow' : 'light', true);
+    });
+    document.body.appendChild(toggle);
+
+    // Step 1: Check localStorage first
+    let saved = null;
+    try { saved = localStorage.getItem('mode'); } catch (e) { /* private mode */ }
+    if (saved === 'light' || saved === 'dark' || saved === 'snow') {
+      setMode(saved, false);
+    } else {
+      // Step 2: Auto set based on local time
+      const hour = new Date().getHours();
+      setMode(hour >= 6 && hour < 18 ? 'light' : 'dark', false);
+    }
+  })();
+  </script>
+  <canvas id="star-canvas"></canvas>
+  <!-- Header -->
+  <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
+    <div class="container-fluid p-0">
+      
+        <a class="navbar-brand title font-weight-lighter" href="https://Kivi-Yao.github.io/"><span class="font-weight-bold">Jinwei</span> Yao</a>
+      
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/">
+                    About
+                    
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/resume.pdf">
+                    CV
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/publication/">
+                    Publication
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/blog/">
+                    Blog
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="https://Kivi-Yao.github.io/teaching/">
+                    Academic Role
+                </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scrolling Progress Bar -->
+  <progress id="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+
+  <!-- Content -->
+  <div class="content">
+    
+  <h1>Publication</h1>
+  <h6><nobr><em>*</em></nobr> denotes equal contribution and joint lead authorship.</h6>
+
+
+<p><br /></p>
+
+<!-- ✅ Tag selection UI -->
+<div class="mb-3">
+  <strong>Filter by Tag:</strong>
+  <div id="tagFilterButtons"></div>
+</div>
+
+<div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
+    <div class="col-sm-1 mt-2 p-0 pr-1">
+      <h3 class="bibliography-year">2026</h3>
+    </div>
+    <div class="col-sm-11 p-0">
+      <ol class="bibliography"><li><div class="content">
+  <div class="row m-0 mt-3 p-0 publication-entry align-items-center" data-tags="LLM, Parallel Generation">
+
+  <!-- ✅ Image column (Left-aligned with padding) -->
+  
+  <div class="col-md-3 col-sm-12 p-0 text-center d-flex align-items-center justify-content-center">
+    <img src="/assets/img/D2SD.png" alt="D²SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models" class="img-fluid rounded" style="max-width: 100%; height: auto; padding-right: 15px;" />
+  </div>
+  
+
+  <!-- ✅ Text column (Aligned & with spacing) -->
+  <div class="col-md-9 col-sm-12 p-0 d-flex align-items-center">
+    <div class="w-100">
+
+      <!-- ✅ Abbr badge (Inside text to prevent overlap) -->
+      
+      <div class="mb-2">
+        
+        <span class="badge font-weight-bold danger-color-dark darken-1 align-middle" style="white-space: normal; overflow: hidden; text-overflow: ellipsis;">
+            arXiv 2026
+        </span>
+        
+      </div>
+      
+
+      <!-- ✅ Main publication entry -->
+      <div class="col-sm-12 p-0">
+        
+        <div id="zhang2026d2sd" class="col p-0">
+          <h5 class="title mb-0">D²SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models.</h5>
+
+          <!-- ✅ Tags (Clickable for filtering) -->
+          
+          <div class="mt-1">
+            
+            
+              <span class="badge badge-info tag-button" data-tag="LLM" onclick="filterByTag('LLM')">
+                LLM
+              </span>
+            
+              <span class="badge badge-info tag-button" data-tag="Parallel Generation" onclick="filterByTag('Parallel Generation')">
+                Parallel Generation
+              </span>
+            
+          </div>
+          
+
+          <div class="author">
+            
+              
+                
+                  
+                    
+                      <nobr>Liyuan Zhang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Jiarui Zhang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    <nobr><em><nobr><em>Jinwei</em></nobr> <nobr><em>Yao</em></nobr></em>,</nobr>
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Ran Yan,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Yuchen Yang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Jiahao Zhang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Tongkai Yang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Yi Wu,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  and
+                  
+                    
+                      <nobr>Binhang Yuan</nobr>
+                    
+                  
+                
+              
+            
+          </div>
+
+          <div>
+            <p class="periodical font-italic">
+              
+                In arXiv preprint arXiv:2606.04446
+              
+              
+                2026.
+              
+            </p>
+          </div>
+
+          <div class="col p-0">
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#zhang2026d2sd-abstract" role="button" aria-expanded="false" aria-controls="zhang2026d2sd-abstract">Abstract</a>
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://arxiv.org/abs/2606.04446" target="_blank">PDF</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+
+          
+          <div class="col mt-2 p-0">
+            <div id="zhang2026d2sd-abstract" class="collapse">
+            <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3 abstract-card">
+                Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D²SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D²SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div></li></ol>
+    </div>
+  </div>
+
+<div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
+    <div class="col-sm-1 mt-2 p-0 pr-1">
+      <h3 class="bibliography-year">2025</h3>
+    </div>
+    <div class="col-sm-11 p-0">
+      <ol class="bibliography"><li><div class="content">
+  <div class="row m-0 mt-3 p-0 publication-entry align-items-center" data-tags="LLM, Agent">
+
+  <!-- ✅ Image column (Left-aligned with padding) -->
+  
+  <div class="col-md-3 col-sm-12 p-0 text-center d-flex align-items-center justify-content-center">
+    <img src="/assets/img/research_town.png" alt="ResearchTown: Simulator of Human Research Community" class="img-fluid rounded" style="max-width: 100%; height: auto; padding-right: 15px;" />
+  </div>
+  
+
+  <!-- ✅ Text column (Aligned & with spacing) -->
+  <div class="col-md-9 col-sm-12 p-0 d-flex align-items-center">
+    <div class="w-100">
+
+      <!-- ✅ Abbr badge (Inside text to prevent overlap) -->
+      
+      <div class="mb-2">
+        
+        <span class="badge font-weight-bold danger-color-dark darken-1 align-middle" style="white-space: normal; overflow: hidden; text-overflow: ellipsis;">
+            ICML 2025
+        </span>
+        
+      </div>
+      
+
+      <!-- ✅ Main publication entry -->
+      <div class="col-sm-12 p-0">
+        
+        <div id="yu2025researchtown" class="col p-0">
+          <h5 class="title mb-0">ResearchTown: Simulator of Human Research Community.</h5>
+
+          <!-- ✅ Tags (Clickable for filtering) -->
+          
+          <div class="mt-1">
+            
+            
+              <span class="badge badge-info tag-button" data-tag="LLM" onclick="filterByTag('LLM')">
+                LLM
+              </span>
+            
+              <span class="badge badge-info tag-button" data-tag="Agent" onclick="filterByTag('Agent')">
+                Agent
+              </span>
+            
+          </div>
+          
+
+          <div class="author">
+            
+              
+                
+                  
+                    
+                      <nobr>Haofe Yu,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Zhaocheng Hong,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Zirui Cheng,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Kunlun Zhu,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Keyang Xuan,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    <nobr><em><nobr><em>Jinwei</em></nobr> <nobr><em>Yao</em></nobr></em>,</nobr>
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Tao Feng,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  and
+                  
+                    
+                      <nobr>Jiaxuan You</nobr>
+                    
+                  
+                
+              
+            
+          </div>
+
+          <div>
+            <p class="periodical font-italic">
+              
+                In ICML 2025–International Conference on Machine Learning
+              
+              
+                2025.
+              
+            </p>
+          </div>
+
+          <div class="col p-0">
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#yu2025researchtown-abstract" role="button" aria-expanded="false" aria-controls="yu2025researchtown-abstract">Abstract</a>
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://arxiv.org/pdf/2412.17767" target="_blank">PDF</a>
+            
+            
+            
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://github.com/ulab-uiuc/research-town" target="_blank">Code</a>
+            
+            
+            
+            
+          </div>
+
+          
+          <div class="col mt-2 p-0">
+            <div id="yu2025researchtown-abstract" class="collapse">
+            <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3 abstract-card">
+                Large Language Models (LLMs) have demonstrated remarkable potential in scientific domains, yet a fundamental question remains unanswered: Can we simulate human research communities with LLMs? Addressing this question can deepen our understanding of the processes behind idea brainstorming and inspire the automatic discovery of novel scientific insights. In this work, we propose ResearchTown, a multi-agent framework for research community simulation. Within this framework, the human research community is simplified and modeled as an agent-data graph, where researchers and papers are represented as agent-type and data-type nodes, respectively, and connected based on their collaboration relationships. We also introduce TextGNN, a text-based inference framework that models various research activities (e.g., paper reading, paper writing, and review writing) as special forms of a unified message-passing process on the agent-data graph. To evaluate the quality of the research simulation, we present ResearchBench, a benchmark that uses a node-masking prediction task for scalable and objective assessment based on similarity. Our experiments reveal three key findings: (1) ResearchTown can provide a realistic simulation of collaborative research activities, including paper writing and review writing; (2) ResearchTown can maintain robust simulation with multiple researchers and diverse papers; (3) ResearchTown can generate interdisciplinary research ideas that potentially inspire novel research directions.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div></li></ol>
+    </div>
+  </div>
+
+<div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
+    <div class="col-sm-1 mt-2 p-0 pr-1">
+      <h3 class="bibliography-year">2024</h3>
+    </div>
+    <div class="col-sm-11 p-0">
+      <ol class="bibliography"><li><div class="content">
+  <div class="row m-0 mt-3 p-0 publication-entry align-items-center" data-tags="Highlight, LLM, Inference">
+
+  <!-- ✅ Image column (Left-aligned with padding) -->
+  
+  <div class="col-md-3 col-sm-12 p-0 text-center d-flex align-items-center justify-content-center">
+    <img src="/assets/img/DeFT.jpeg" alt="DeFT: Decoding with Flash Tree-Attention for Efficient Tree-structured LLM Inference" class="img-fluid rounded" style="max-width: 100%; height: auto; padding-right: 15px;" />
+  </div>
+  
+
+  <!-- ✅ Text column (Aligned & with spacing) -->
+  <div class="col-md-9 col-sm-12 p-0 d-flex align-items-center">
+    <div class="w-100">
+
+      <!-- ✅ Abbr badge (Inside text to prevent overlap) -->
+      
+      <div class="mb-2">
+        
+        <span class="badge font-weight-bold danger-color-dark darken-1 align-middle" style="white-space: normal; overflow: hidden; text-overflow: ellipsis;">
+            ICLR 2025 Spotlight, ICLR 2024 AGI Oral
+        </span>
+        
+      </div>
+      
+
+      <!-- ✅ Main publication entry -->
+      <div class="col-sm-12 p-0">
+        
+        <div id="yao2024deft" class="col p-0">
+          <h5 class="title mb-0">DeFT: Decoding with Flash Tree-Attention for Efficient Tree-structured LLM Inference.</h5>
+
+          <!-- ✅ Tags (Clickable for filtering) -->
+          
+          <div class="mt-1">
+            
+            
+              <span class="badge badge-info tag-button" data-tag="Highlight" onclick="filterByTag('Highlight')">
+                Highlight
+              </span>
+            
+              <span class="badge badge-info tag-button" data-tag="LLM" onclick="filterByTag('LLM')">
+                LLM
+              </span>
+            
+              <span class="badge badge-info tag-button" data-tag="Inference" onclick="filterByTag('Inference')">
+                Inference
+              </span>
+            
+          </div>
+          
+
+          <div class="author">
+            
+              
+                
+                  
+                    <nobr><em><nobr><em>Jinwei</em></nobr> <nobr><em>Yao*</em></nobr></em>,</nobr>
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Kaiqi Chen*,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Kexun Zhang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Jiaxuan You,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr><nobr>Binhang</nobr> <nobr>Yuan</nobr>,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Zeke Wang,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  and
+                  
+                    
+                      <nobr>Tao Lin</nobr>
+                    
+                  
+                
+              
+            
+          </div>
+
+          <div>
+            <p class="periodical font-italic">
+              
+                In International Conference on Learning Representations (ICLR) Spotlight(Top 5%), abridged in ICLR’24 workshop AGI (Oral).
+              
+              
+                2024.
+              
+            </p>
+          </div>
+
+          <div class="col p-0">
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#yao2024deft-abstract" role="button" aria-expanded="false" aria-controls="yao2024deft-abstract">Abstract</a>
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://arxiv.org/abs/2404.00242" target="_blank">PDF</a>
+            
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://Kivi-Yao.github.io/assets/pdf/DeFT_ICLR_25_poster.pdf" target="_blank">Poster</a>
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://github.com/LINs-lab/DeFT" target="_blank">Code</a>
+            
+            
+            
+            
+          </div>
+
+          
+          <div class="col mt-2 p-0">
+            <div id="yao2024deft-abstract" class="collapse">
+            <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3 abstract-card">
+                Large language models (LLMs) are increasingly employed for complex tasks that process multiple generation calls in a tree structure with shared prefixes of tokens, including few-shot prompting, multi-step reasoning, speculative decoding, etc. However, existing inference systems for tree-based applications are inefficient due to improper partitioning of queries and KV cache during attention calculation.This leads to two main issues: (1) a lack of memory access (IO) reuse for KV cache of shared prefixes, and (2) poor load balancing.As a result, there is redundant KV cache IO between GPU global memory and shared memory, along with low GPU utilization. To address these challenges, we propose DeFT(Decoding with Flash Tree-Attention), a hardware-efficient attention algorithm with prefix-aware and load-balanced KV cache partitions. DeFT reduces the number of read/write operations of KV cache during attention calculation through KV-Guided Grouping, a method that avoids repeatedly loading KV cache of shared prefixes in attention computation. Additionally, we propose Flattened Tree KV Splitting, a mechanism that ensures even distribution of the KV cache across partitions with little computation redundancy, enhancing GPU utilization during attention computations. By reducing 73-99% KV cache IO and nearly 100% IO for partial results during attention calculation, DeFT achieves up to 2.23/3.59x
+  speedup in the end-to-end/attention latency across three practical tree-based workloads compared to state-of-the-art attention algorithms.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div></li></ol>
+    </div>
+  </div>
+
+<div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
+    <div class="col-sm-1 mt-2 p-0 pr-1">
+      <h3 class="bibliography-year">2023</h3>
+    </div>
+    <div class="col-sm-11 p-0">
+      <ol class="bibliography"><li><div class="content">
+  <div class="row m-0 mt-3 p-0 publication-entry align-items-center" data-tags="Hardware, FPGA">
+
+  <!-- ✅ Image column (Left-aligned with padding) -->
+  
+  <div class="col-md-3 col-sm-12 p-0 text-center d-flex align-items-center justify-content-center">
+    <img src="/assets/img/FPGA.jpg" alt="Instruction-level power side-channel leakage evaluation of soft-core CPUs on shared FPGAs" class="img-fluid rounded" style="max-width: 100%; height: auto; padding-right: 15px;" />
+  </div>
+  
+
+  <!-- ✅ Text column (Aligned & with spacing) -->
+  <div class="col-md-9 col-sm-12 p-0 d-flex align-items-center">
+    <div class="w-100">
+
+      <!-- ✅ Abbr badge (Inside text to prevent overlap) -->
+      
+      <div class="mb-2">
+        
+        <span class="badge font-weight-bold danger-color-dark darken-1 align-middle" style="white-space: normal; overflow: hidden; text-overflow: ellipsis;">
+            HaSS 2023
+        </span>
+        
+      </div>
+      
+
+      <!-- ✅ Main publication entry -->
+      <div class="col-sm-12 p-0">
+        
+        <div id="glamovcanin2023instruction" class="col p-0">
+          <h5 class="title mb-0">Instruction-level power side-channel leakage evaluation of soft-core CPUs on shared FPGAs.</h5>
+
+          <!-- ✅ Tags (Clickable for filtering) -->
+          
+          <div class="mt-1">
+            
+            
+              <span class="badge badge-info tag-button" data-tag="Hardware" onclick="filterByTag('Hardware')">
+                Hardware
+              </span>
+            
+              <span class="badge badge-info tag-button" data-tag="FPGA" onclick="filterByTag('FPGA')">
+                FPGA
+              </span>
+            
+          </div>
+          
+
+          <div class="author">
+            
+              
+                
+                  
+                    
+                      <nobr>Ognjen Glamočanin,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Shashwat Shrivastava,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    <nobr><em><nobr><em>Jinwei</em></nobr> <nobr><em>Yao</em></nobr></em>,</nobr>
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Nour Ardo,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  
+                    
+                      <nobr>Mathias Payer,</nobr>
+                    
+                  
+                
+              
+            
+              
+                
+                  and
+                  
+                    
+                      <nobr>Mirjana Stojilović</nobr>
+                    
+                  
+                
+              
+            
+          </div>
+
+          <div>
+            <p class="periodical font-italic">
+              
+                In Journal of Hardware and Systems Security
+              
+              
+                2023.
+              
+            </p>
+          </div>
+
+          <div class="col p-0">
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#glamovcanin2023instruction-abstract" role="button" aria-expanded="false" aria-controls="glamovcanin2023instruction-abstract">Abstract</a>
+            
+            
+            
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://link.springer.com/article/10.1007/s41635-023-00135-1" target="_blank">PDF</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+
+          
+          <div class="col mt-2 p-0">
+            <div id="glamovcanin2023instruction-abstract" class="collapse">
+            <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3 abstract-card">
+                Side-channel disassembly attacks recover CPU instructions from power or electromagnetic side-channel traces measured during code execution. These attacks typically rely on physical access, proximity to the victim device, and high sampling rate measuring instruments. In this work, however, we analyze the CPU instruction-level power side-channel leakage in an environment that lacks physical access or expensive measuring equipment. We show that instruction leakage is present even in a multitenant FPGA scenario, where the victim uses a soft-core CPU, and the adversary deploys on-chip voltage-fluctuation sensors. Unlike previous remote power side-channel attacks, which either require a considerable number of victim traces or attack large victim circuits such as machine learning accelerators, we take an evaluator’s point of view and provide an analysis of the instruction-level power side-channel leakage of a small open-source RISC-V soft processor core. To investigate whether the power side-channel traces leak secrets, we profile the victim device and implement various instruction opcode classifiers based on both classical machine learning algorithms used in disassembly attacks, and novel, deep learning approaches. We explore how parameters such as placement, trace averaging, profiling templates, and different FPGA families (including a cloud-scale FPGA) impact the classification accuracy. Despite the limited leakage of the soft-core CPU victim and a reduced accuracy and sampling rate of on-chip sensors, we show that in a worst-case scenario for the evaluator, i.e., an attacker breaching physical separation, we can identify the opcode of executed instructions with an average accuracy as high as 86.46%. Our analysis shows that determining the executed instruction type is not a classification bottleneck, while leakages between instructions of the same type can be challenging for deep learning models to distinguish. We also show that the instruction-level leakage is significantly reduced in a cloud-scale FPGA scenario with higher soft-core CPU frequencies. Nevertheless, our results show that even small circuits, such as soft-core CPUs, leak potentially exploitable information through on-chip power side channels, and users should deploy mitigation techniques against disassembly attacks to protect their proprietary code and data.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div></li></ol>
+    </div>
+  </div>
+
+<!-- ✅ JavaScript for Multi-Tag Filtering (Fixed AND Logic) -->
+<script>
+(function () {
+  // Run on first load and when re-executed after a pjax swap; the IIFE
+  // keeps re-execution from redeclaring top-level let bindings.
+  function initPubFilter() {
+      generateTagButtons();
+      styleHighlightBadges();   // 🏅 make inner “Highlight” badges red
+  }
+  if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initPubFilter);
+  } else {
+      initPubFilter();
+  }
+
+  let selectedTags = new Set(); // ✅ Stores selected tags
+
+  function generateTagButtons() {
+      let tags = new Set();
+      document.querySelectorAll(".publication-entry").forEach(function (pub) {
+          let tagAttr = pub.getAttribute("data-tags");
+          if (tagAttr) {
+              tagAttr.split(",").forEach(function (tag) {
+                  tags.add(tag.trim());
+              });
+          }
+      });
+
+      let tagButtonsContainer = document.getElementById("tagFilterButtons");
+      tagButtonsContainer.innerHTML = "";
+
+      // Ensure "Highlight" always appears first and styled differently
+      if (tags.has("Highlight")) {
+          let highlightBtn = document.createElement("span");
+          highlightBtn.className = "badge badge-danger font-weight-bold tag-filter-button m-1";
+          highlightBtn.textContent = "🏅 Highlight";
+          highlightBtn.setAttribute("onclick", `toggleTag('Highlight')`);
+          tagButtonsContainer.appendChild(highlightBtn);
+          tags.delete("Highlight"); // Remove it to avoid duplication
+      }
+
+      tags.forEach(function (tag) {
+          let btn = document.createElement("span");
+          btn.className = "badge badge-primary tag-filter-button m-1";
+          btn.textContent = tag;
+          btn.setAttribute("onclick", `toggleTag('${tag}')`);
+          tagButtonsContainer.appendChild(btn);
+      });
+  }
+
+  function toggleTag(tag) {
+      if (selectedTags.has(tag)) {
+          selectedTags.delete(tag); // ✅ Unselect tag if clicked again
+      } else {
+          selectedTags.add(tag); // ✅ Select tag
+      }
+      updateFilter();
+  }
+
+  function updateFilter() {
+      let publications = document.querySelectorAll(".publication-entry");
+
+      publications.forEach(function(pub) {
+          let pubTags = pub.getAttribute("data-tags").toLowerCase().split(",").map(t => t.trim());
+
+          // ✅ Correct AND logic: Show publication if it contains *all* selected tags
+          if (selectedTags.size === 0 || [...selectedTags].every(t => pubTags.includes(t.toLowerCase()))) {
+              pub.style.display = "";
+          } else {
+              pub.style.display = "none";
+          }
+      });
+
+      // ✅ Update button styles based on selection
+      document.querySelectorAll(".tag-filter-button").forEach(function(btn) {
+          if (selectedTags.has(btn.textContent)) {
+              btn.classList.add("badge-dark");
+          } else {
+              btn.classList.remove("badge-dark");
+          }
+      });
+  }
+  // 🏅 Convert inner Highlight badges to red medal style, force inline color in case CSS is overridden
+  function styleHighlightBadges() {
+      document.querySelectorAll(".publication-entry span.badge").forEach(function (el) {
+          const txt = el.textContent.trim().replace("🏅", "").trim();
+          if (txt === "Highlight") {
+              // Remove any previous color classes
+              el.classList.remove("badge-primary", "badge-info", "badge-secondary");
+              // Add red badge class
+              el.classList.add("badge-danger", "font-weight-bold");
+              // Ensure label & medal
+              el.textContent = "🏅 Highlight";
+              // Fallback inline style if css fails
+              el.style.backgroundColor = "#dc3545";
+              el.style.color = "#fff";
+          }
+      });
+  }
+
+  // Tag buttons use inline onclick handlers, so expose the toggle globally.
+  window.toggleTag = toggleTag;
+})();
+</script>
+
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Copyright 2026 Jinwei Yao.
+    
+    
+  </footer>
+
+  <!-- Core JavaScript Files -->
+  <script src="https://Kivi-Yao.github.io/assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/popper.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/mdb.min.js" type="text/javascript"></script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/common.js"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/waifu.js?v=1785537551"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/APlayer.min.js"></script>
+  <script src="https://Kivi-Yao.github.io/assets/js/wa2.js?v=1785537551"></script>
+
+  <!-- Per-page setup: runs on first load and after every pjax swap -->
+  <script type="text/javascript">
+    function pageSetup() {
+      var navbarHeight = $('#navbar').outerHeight(true);
+      $('body').css({ 'padding-top': navbarHeight });
+      $('progress-container').css({ 'padding-top': navbarHeight });
+      var progressBar = $('#progress');
+      progressBar.css({ 'top': navbarHeight });
+      if ('max' in document.createElement('progress')) {
+        progressBar.attr({ max: $(document).height() - $(window).height(), value: $(window).scrollTop() });
+      }
+
+      // Project cards masonry layout
+      var $grid = $('#projects');
+      if ($grid.length) {
+        $grid.imagesLoaded().progress(function() {
+          $grid.masonry({ percentPosition: true });
+          $grid.masonry('layout');
+        });
+      }
+
+      // Tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Syntax highlighting for pjax-swapped content (initial load is
+      // covered by initHighlightingOnLoad; .hljs marks processed blocks)
+      if (window.hljs) {
+        $('.content pre code:not(.hljs)').each(function(i, block) { hljs.highlightBlock(block); });
+      }
+
+      // MathJax re-typeset for swapped content
+      if (window.MathJax && MathJax.Hub) {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, document.querySelector('.content')]);
+      }
+    }
+
+    $(document).ready(function() {
+      var progressBar = $('#progress');
+      var getMax = function() { return $(document).height() - $(window).height(); }
+      var getValue = function() { return $(window).scrollTop(); }
+      // Check if the browser supports the progress element.
+      if ('max' in document.createElement('progress')) {
+        $(document).on('scroll', function() {
+          progressBar.attr({ value: getValue() });
+        });
+        $(window).resize(function() {
+          var navbarHeight = $('#navbar').outerHeight(true);
+          $('body').css({ 'padding-top': navbarHeight });
+          $('progress-container').css({ 'padding-top': navbarHeight });
+          progressBar.css({ 'top': navbarHeight });
+          progressBar.attr({ max: getMax(), value: getValue() });
+        });
+      } else {
+        var max = getMax(), value, width;
+        var getWidth = function() {
+          value = getValue();
+          width = (value/max) * 100;
+          return width + '%';
+        }
+        var setWidth = function() { progressBar.css({ width: getWidth() }); };
+        setWidth();
+        $(document).on('scroll', setWidth);
+        $(window).on('resize', function() {
+          max = getMax();
+          setWidth();
+        });
+      }
+      pageSetup();
+    });
+
+    document.addEventListener('pjax:done', function() {
+      pageSetup();
+      if (typeof gtag === 'function') {
+        gtag('event', 'page_view', { page_location: location.href, page_title: document.title });
+      }
+    });
+  </script>
+
+  <!-- Code Syntax Highlighting -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <script src="https://Kivi-Yao.github.io/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Script Used for Randomizing the Projects Order -->
+  <!-- <script type="text/javascript">
+    $.fn.shuffleChildren = function() {
+      $.each(this.get(), function(index, el) {
+        var $el = $(el);
+        var $find = $el.children();
+
+        $find.sort(function() {
+          return 0.5 - Math.random();
+        });
+
+        $el.empty();
+        $find.appendTo($el);
+      });
+    };
+    $("#projects").shuffleChildren();
+  </script> -->
+
+  <!-- Masonry & tooltips now run inside pageSetup() above -->
+
+  <!-- pjax: swap only the content area on in-site navigation, keeping
+       the BGM player / Live2D / sprites alive across pages -->
+  <script src="https://Kivi-Yao.github.io/assets/js/pjax.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-15KDGWRRRM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-15KDGWRRRM');
+  </script>
+  <!-- 💫 星空背景动效 -->
+<script>
+  const canvas = document.getElementById('star-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  
+  function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  
+  function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+          stars.push({
+              x: Math.random() * canvas.width,
+              y: Math.random() * canvas.height,
+              r: Math.random() * 1.5 + 0.5,
+              speed: Math.random() * 0.2 + 0.05,
+              opacity: Math.random(),
+              flash: false
+          });
+      }
+  }
+  
+  function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255,255,255,${star.flash ? 1 : star.opacity})`;
+          ctx.fill();
+          star.y += star.speed;
+          if (star.y > canvas.height) {
+              star.y = 0;
+              star.x = Math.random() * canvas.width;
+          }
+      }
+  }
+  
+  function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
+  }
+  createStars(250);
+  animate();
+  
+  // 流星
+  function shootMeteor() {
+      let x = Math.random() * canvas.width;
+      let y = 0;
+      let length = 200;
+      let angle = Math.PI / 4;
+      let speed = 10;
+      let alpha = 1;
+  
+      function drawMeteor() {
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + length * Math.cos(angle), y + length * Math.sin(angle));
+          ctx.stroke();
+          ctx.restore();
+      }
+  
+      function animateMeteor() {
+          if (alpha <= 0) return;
+          drawStars();
+          drawMeteor();
+          x += speed * Math.cos(angle);
+          y += speed * Math.sin(angle);
+          alpha -= 0.02;
+          requestAnimationFrame(animateMeteor);
+      }
+  
+      animateMeteor();
+  }
+  
+  setInterval(() => {
+      if (Math.random() < 0.3) {
+          shootMeteor();
+      }
+  }, 5000);
+  
+  // 点击闪烁星星
+  canvas.addEventListener('click', e => {
+      const { offsetX, offsetY } = e;
+      for (let star of stars) {
+          const dx = star.x - offsetX;
+          const dy = star.y - offsetY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 40) {
+              star.flash = true;
+              setTimeout(() => (star.flash = false), 300);
+          }
+      }
+  });
+  </script>
+</body>
+</html>
