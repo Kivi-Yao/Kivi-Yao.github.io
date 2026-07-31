@@ -138,7 +138,14 @@
     document.body.appendChild(host);
 
     var COVER = '/assets/img/wa2/cover.jpg';
-    var LOCAL_MP3 = '/assets/audio/todokanai-koi.mp3';
+    /* Local files join the shuffled pool when present (hotlink-blocked
+     * versions can only be self-hosted; see assets/audio/README.md). */
+    var LOCAL_TRACKS = [
+      { file: '/assets/audio/todokanai-koi-setsuna.mp3',
+        name: '届かない恋 (小木曽雪菜 Ver.)', artist: '小木曽雪菜 (米澤円)' },
+      { file: '/assets/audio/todokanai-koi.mp3',
+        name: '届かない恋', artist: '上原れな' }
+    ];
     /* Streamed via NetEase Music's outer-link API — only these versions
      * allow hotlinking. The official recordings (上原れな / 雪菜 Live
      * versions) forbid it and can only play from a locally hosted file
@@ -222,17 +229,14 @@
       });
     }
 
-    fetch(LOCAL_MP3, { method: 'HEAD' }).then(function (res) {
-      if (res.ok) {
-        playlist.push({
-          name: '届かない恋',
-          artist: '上原れな',
-          url: LOCAL_MP3,
-          cover: COVER
-        });
-      }
-      start();
-    }).catch(start);
+    var probes = LOCAL_TRACKS.map(function (t) {
+      return fetch(t.file, { method: 'HEAD' }).then(function (res) {
+        if (res.ok) {
+          playlist.push({ name: t.name, artist: t.artist, url: t.file, cover: COVER });
+        }
+      }).catch(function () {});
+    });
+    Promise.all(probes).then(start, start);
   }
 
   function boot() {
