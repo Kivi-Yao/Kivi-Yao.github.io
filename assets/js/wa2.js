@@ -155,6 +155,8 @@
       cover: COVER
     }];
 
+    var KEY = 'wa2-bgm-state';
+
     function start() {
       // Shuffle so a random track opens each visit; order stays random too.
       for (var i = playlist.length - 1; i > 0; i--) {
@@ -171,10 +173,53 @@
         mutex: true,
         audio: playlist
       });
-      // APlayer sizes the marquee title while the fixed bar is still
-      // collapsed (width 0), leaving the song name blank until a track
-      // switch — force one re-switch after init to render it.
-      setTimeout(function () { ap.list.switch(0); }, 600);
+
+      // Cross-page continuity: this is a multi-page site, so navigation
+      // reloads everything. Persist the playing track + position in
+      // sessionStorage and resume it on the next page.
+      var saved = null;
+      try { saved = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+      var startIdx = 0;
+      if (saved) {
+        for (var k = 0; k < playlist.length; k++) {
+          if (playlist[k].name === saved.name) { startIdx = k; break; }
+        }
+      }
+
+      // The switch also fixes APlayer's blank-title bug: the marquee is
+      // sized while the fixed bar is still collapsed (width 0), so the
+      // name stays blank until a track switch re-renders it.
+      setTimeout(function () {
+        ap.list.switch(startIdx);
+        if (saved && saved.time > 1) {
+          ap.audio.addEventListener('loadedmetadata', function () {
+            ap.seek(saved.time);
+          }, { once: true });
+        }
+        if (saved && saved.playing) ap.play();
+      }, 600);
+
+      function snapshot(playing) {
+        try {
+          sessionStorage.setItem(KEY, JSON.stringify({
+            name: ap.list.audios[ap.list.index].name,
+            time: ap.audio.currentTime || 0,
+            playing: playing
+          }));
+        } catch (e) {}
+      }
+      // Playing intent comes from user-driven play/pause events only.
+      // On navigation the browser force-pauses the audio without firing
+      // listeners, so pagehide must not overwrite the intent — it only
+      // refreshes the position.
+      ap.on('play', function () { snapshot(true); });
+      ap.on('pause', function () { snapshot(false); });
+      setInterval(function () { if (!ap.audio.paused) snapshot(true); }, 2000);
+      window.addEventListener('pagehide', function () {
+        var prev = null;
+        try { prev = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+        snapshot(prev ? prev.playing : !ap.audio.paused);
+      });
     }
 
     fetch(LOCAL_MP3, { method: 'HEAD' }).then(function (res) {
