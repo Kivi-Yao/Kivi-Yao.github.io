@@ -156,21 +156,30 @@
     }];
 
     function start() {
-      new window.APlayer({
+      // Shuffle so a random track opens each visit; order stays random too.
+      for (var i = playlist.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = playlist[i]; playlist[i] = playlist[j]; playlist[j] = tmp;
+      }
+      var ap = new window.APlayer({
         container: host,
         fixed: true,
-        mini: true,
         loop: 'all',
+        order: 'random',
         preload: 'none',
         volume: 0.6,
         mutex: true,
         audio: playlist
       });
+      // APlayer sizes the marquee title while the fixed bar is still
+      // collapsed (width 0), leaving the song name blank until a track
+      // switch — force one re-switch after init to render it.
+      setTimeout(function () { ap.list.switch(0); }, 600);
     }
 
     fetch(LOCAL_MP3, { method: 'HEAD' }).then(function (res) {
       if (res.ok) {
-        playlist.unshift({
+        playlist.push({
           name: '届かない恋',
           artist: '上原れな',
           url: LOCAL_MP3,
