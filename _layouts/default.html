@@ -351,52 +351,80 @@
   <script src="{{ '/assets/js/APlayer.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
   <script src="{{ '/assets/js/wa2.js' | prepend: site.baseurl | prepend: site.url }}?v={{ site.time | date: '%s' }}"></script>
 
-  <!-- Scrolling Progress Bar -->
+  <!-- Per-page setup: runs on first load and after every pjax swap -->
   <script type="text/javascript">
-    $(document).ready(function() {
+    function pageSetup() {
       var navbarHeight = $('#navbar').outerHeight(true);
       $('body').css({ 'padding-top': navbarHeight });
       $('progress-container').css({ 'padding-top': navbarHeight });
       var progressBar = $('#progress');
       progressBar.css({ 'top': navbarHeight });
+      if ('max' in document.createElement('progress')) {
+        progressBar.attr({ max: $(document).height() - $(window).height(), value: $(window).scrollTop() });
+      }
+
+      // Project cards masonry layout
+      var $grid = $('#projects');
+      if ($grid.length) {
+        $grid.imagesLoaded().progress(function() {
+          $grid.masonry({ percentPosition: true });
+          $grid.masonry('layout');
+        });
+      }
+
+      // Tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Syntax highlighting for pjax-swapped content (initial load is
+      // covered by initHighlightingOnLoad; .hljs marks processed blocks)
+      if (window.hljs) {
+        $('.content pre code:not(.hljs)').each(function(i, block) { hljs.highlightBlock(block); });
+      }
+
+      // MathJax re-typeset for swapped content
+      if (window.MathJax && MathJax.Hub) {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, document.querySelector('.content')]);
+      }
+    }
+
+    $(document).ready(function() {
+      var progressBar = $('#progress');
       var getMax = function() { return $(document).height() - $(window).height(); }
-      var getValue = function() { return $(window).scrollTop(); }   
+      var getValue = function() { return $(window).scrollTop(); }
       // Check if the browser supports the progress element.
       if ('max' in document.createElement('progress')) {
-        // Set the 'max' attribute for the first time.
-        progressBar.attr({ max: getMax() });
-        progressBar.attr({ value: getValue() });
-    
         $(document).on('scroll', function() {
-          // On scroll only the 'value' attribute needs to be calculated.
           progressBar.attr({ value: getValue() });
         });
-
         $(window).resize(function() {
           var navbarHeight = $('#navbar').outerHeight(true);
           $('body').css({ 'padding-top': navbarHeight });
           $('progress-container').css({ 'padding-top': navbarHeight });
           progressBar.css({ 'top': navbarHeight });
-          // On resize, both the 'max' and 'value' attributes need to be calculated.
           progressBar.attr({ max: getMax(), value: getValue() });
         });
       } else {
         var max = getMax(), value, width;
         var getWidth = function() {
-          // Calculate the window width as a percentage.
           value = getValue();
           width = (value/max) * 100;
-          width = width + '%';
-          return width;
+          return width + '%';
         }
         var setWidth = function() { progressBar.css({ width: getWidth() }); };
         setWidth();
         $(document).on('scroll', setWidth);
         $(window).on('resize', function() {
-          // Need to reset the 'max' attribute.
           max = getMax();
           setWidth();
         });
+      }
+      pageSetup();
+    });
+
+    document.addEventListener('pjax:done', function() {
+      pageSetup();
+      if (typeof gtag === 'function') {
+        gtag('event', 'page_view', { page_location: location.href, page_title: document.title });
       }
     });
   </script>
@@ -424,26 +452,11 @@
     $("#projects").shuffleChildren();
   </script> -->
 
-  <!-- Project Cards Layout -->
-  <script type="text/javascript">
-    var $grid = $('#projects');
+  <!-- Masonry & tooltips now run inside pageSetup() above -->
 
-    // $grid.masonry({ percentPosition: true });
-    // $grid.masonry('layout');
-
-    // Trigger after images load.
-    $grid.imagesLoaded().progress(function() {
-      $grid.masonry({ percentPosition: true });
-      $grid.masonry('layout');
-    });
-  </script>
-
-  <!-- Enable Tooltips -->
-  <script type="text/javascript">
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+  <!-- pjax: swap only the content area on in-site navigation, keeping
+       the BGM player / Live2D / sprites alive across pages -->
+  <script src="{{ '/assets/js/pjax.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-15KDGWRRRM"></script>

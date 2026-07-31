@@ -54,7 +54,8 @@ address: <a href="https://www.google.com/maps/place/Thomas+M.+Siebel+Center+for+
         </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
+function initProfileCarousel() {
   var $c = $('#profileCarousel');
   if ($c.length) {
     var $items = $c.find('.carousel-item');
@@ -70,7 +71,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ensure no auto-cycling
     $c.carousel('pause');
   }
-});
+}
+// Run on first load and when re-executed after a pjax swap.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProfileCarousel);
+} else {
+  initProfileCarousel();
+}
+})();
 </script>
 
         <div class="motto-enhanced">

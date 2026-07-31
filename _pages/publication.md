@@ -28,10 +28,18 @@ years: [2026,2025,2024,2023]
 
 <!-- ✅ JavaScript for Multi-Tag Filtering (Fixed AND Logic) -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+(function () {
+  // Run on first load and when re-executed after a pjax swap; the IIFE
+  // keeps re-execution from redeclaring top-level let bindings.
+  function initPubFilter() {
       generateTagButtons();
       styleHighlightBadges();   // 🏅 make inner “Highlight” badges red
-  });
+  }
+  if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initPubFilter);
+  } else {
+      initPubFilter();
+  }
 
   let selectedTags = new Set(); // ✅ Stores selected tags
 
@@ -117,4 +125,8 @@ years: [2026,2025,2024,2023]
           }
       });
   }
+
+  // Tag buttons use inline onclick handlers, so expose the toggle globally.
+  window.toggleTag = toggleTag;
+})();
 </script>
