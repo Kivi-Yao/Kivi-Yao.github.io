@@ -106,6 +106,23 @@
     color: #000 !important;
   }
 
+  /* ❄️ Snow mode (WHITE ALBUM 2 easter egg): light-mode styling with a
+     random WA2 scene showing through a translucent white veil. */
+  body.light-mode.snow-mode {
+    background:
+      linear-gradient(rgba(253, 253, 253, 0.86), rgba(253, 253, 253, 0.86)),
+      var(--snow-bg, none) center / cover no-repeat fixed !important;
+  }
+
+  body.light-mode.snow-mode .content {
+    background-color: rgba(255, 255, 255, 0.55);
+  }
+
+  @media (max-width: 767px) {
+    /* fixed background attachments misbehave on mobile Safari */
+    body.light-mode.snow-mode { background-attachment: scroll !important; }
+  }
+
   body.light-mode .content {
     background-color: rgba(255, 255, 255, 0.8);
     color: #000;
@@ -225,29 +242,44 @@
       }, 500);
     };
 
-    const setMode = (mode, animate) => {
-      if (animate) transition();
-      if (mode === 'light') {
-        document.body.classList.add('light-mode');
-      } else {
-        document.body.classList.remove('light-mode');
-      }
-      try { localStorage.setItem('mode', mode); } catch (e) { /* private mode */ }
-    };
+    // ❄️ Snow mode is a WHITE ALBUM 2 easter egg: light styling with a
+    // random WA2 scene behind a translucent veil, re-rolled every visit.
+    const SNOW_BGS = [
+      '/assets/img/snow-bg/snow-1.jpg',
+      '/assets/img/snow-bg/snow-2.jpg',
+      '/assets/img/snow-bg/snow-3.jpg'
+    ];
+    const MODE_ICON = { light: '☀️', dark: '🌙', snow: '❄️' };
+    let currentMode = 'dark';
 
     const toggle = document.createElement('button');
     toggle.id = 'mode-toggle';
-    toggle.textContent = '☀️ / 🌙';
+    toggle.title = '切换主题 ☀️→🌙→❄️';
+
+    const setMode = (mode, animate) => {
+      if (animate) transition();
+      currentMode = mode;
+      // Snow rides on light-mode styling so every light rule applies;
+      // snow-mode itself only swaps the page background.
+      document.body.classList.toggle('light-mode', mode === 'light' || mode === 'snow');
+      document.body.classList.toggle('snow-mode', mode === 'snow');
+      if (mode === 'snow') {
+        const bg = SNOW_BGS[Math.floor(Math.random() * SNOW_BGS.length)];
+        document.body.style.setProperty('--snow-bg', 'url(' + bg + ')');
+      }
+      toggle.textContent = MODE_ICON[mode];
+      try { localStorage.setItem('mode', mode); } catch (e) { /* private mode */ }
+    };
+
     toggle.addEventListener('click', () => {
-      const isLight = document.body.classList.contains('light-mode');
-      setMode(isLight ? 'dark' : 'light', true);
+      setMode(currentMode === 'light' ? 'dark' : currentMode === 'dark' ? 'snow' : 'light', true);
     });
     document.body.appendChild(toggle);
 
     // Step 1: Check localStorage first
     let saved = null;
     try { saved = localStorage.getItem('mode'); } catch (e) { /* private mode */ }
-    if (saved === 'light' || saved === 'dark') {
+    if (saved === 'light' || saved === 'dark' || saved === 'snow') {
       setMode(saved, false);
     } else {
       // Step 2: Auto set based on local time
