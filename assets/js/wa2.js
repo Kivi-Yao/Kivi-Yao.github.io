@@ -10,15 +10,19 @@
 
   if (window.matchMedia('(max-width: 767px)').matches) return;
 
+  /* 12 numbered outfits per character (see assets/img/wa2/). */
+  function outfitPaths(who) {
+    var arr = [];
+    for (var i = 1; i <= 12; i++) {
+      arr.push('/assets/img/wa2/' + who + '-' + (i < 10 ? '0' : '') + i + '.png');
+    }
+    return arr;
+  }
+
   /* Short character lines & ambient phrases — no song lyrics. */
   var CHARACTERS = {
     setsuna: {
-      outfits: [
-        '/assets/img/wa2/setsuna-winter.png',
-        '/assets/img/wa2/setsuna-uniform.png',
-        '/assets/img/wa2/setsuna-dress.png',
-        '/assets/img/wa2/setsuna-yukata.png'
-      ],
+      outfits: outfitPaths('setsuna'),
       lines: [
         '雪、降ってきたね。',
         '私、ずるいから。',
@@ -30,12 +34,7 @@
       ]
     },
     kazusa: {
-      outfits: [
-        '/assets/img/wa2/kazusa-winter.png',
-        '/assets/img/wa2/kazusa-uniform.png',
-        '/assets/img/wa2/kazusa-dress.png',
-        '/assets/img/wa2/kazusa-yukata.png'
-      ],
+      outfits: outfitPaths('kazusa'),
       lines: [
         '……別に。',
         'バカ。',
@@ -51,7 +50,8 @@
   /* Sprite widget factory shared by both sides. */
   function makeWidget(id, charaKey, withSwitch, onSwitch) {
     var chara = CHARACTERS[charaKey];
-    var outfitIdx = 0;
+    // Random outfit on every page load; the dress button cycles from there.
+    var outfitIdx = Math.floor(Math.random() * chara.outfits.length);
     var lineIdx = 0;
     var tipsTimer = null;
 
@@ -64,7 +64,7 @@
         (withSwitch ? '<button class="wa2-switch" title="换成看板娘">⇄</button>' : '') +
         '<button class="wa2-dress" title="换装">👗</button>' +
       '</div>' +
-      '<img class="wa2-chara" src="' + chara.outfits[0] + '" alt="' + charaKey + '" draggable="false">';
+      '<img class="wa2-chara" src="' + chara.outfits[outfitIdx] + '" alt="' + charaKey + '" draggable="false">';
 
     var img = el.querySelector('.wa2-chara');
     var tipsEl = el.querySelector('.wa2-tips');
@@ -139,10 +139,16 @@
 
     var COVER = '/assets/img/wa2/cover.jpg';
     var LOCAL_MP3 = '/assets/audio/todokanai-koi.mp3';
-    /* Piano cover with an open outer link on NetEase Music; the original
-     * song forbids hotlinking, so it only plays if a locally hosted file
-     * exists (drop it into assets/audio/, see the README there). */
+    /* Streamed via NetEase Music's outer-link API — only these versions
+     * allow hotlinking. The official recordings (上原れな / 雪菜 Live
+     * versions) forbid it and can only play from a locally hosted file
+     * (drop it into assets/audio/, see the README there). */
     var playlist = [{
+      name: '届かない恋 (冬马和纱 Ver.)',
+      artist: '冬馬かずさ (生天目仁美)',
+      url: 'https://music.163.com/song/media/outer/url?id=1834009426.mp3',
+      cover: COVER
+    }, {
       name: '届かない恋 (Piano Cover)',
       artist: '遥君',
       url: 'https://music.163.com/song/media/outer/url?id=1446912475.mp3',
